@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Component/HomePage/Footer';
 import Section1 from '../Component/HomePage/Section1';
 import Section2 from '../Component/HomePage/Section2';
 import Section3 from '../Component/HomePage/Section3';
@@ -14,6 +15,7 @@ const App = () => {
       <Section3/>
       <Section4/>
       <Section5/>
+      <Footer/>
       
     </div>
    );

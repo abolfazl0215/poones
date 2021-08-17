@@ -2,7 +2,7 @@ import React from 'react';
 
 const Section5 = () => {
     return ( 
-        <div className="w-full p-6 mt-14 pb-52">
+        <div className="w-full p-6 mt-14 pb-6">
             <div className="w-full">
                 <h1 className="font-bold text-gray-600">چرا <span className="text-orange">پونس ؟</span></h1>
                 <div className="text-color tracking-wider leading-8 mt-3">
