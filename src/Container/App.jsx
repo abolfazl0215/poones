@@ -3,6 +3,7 @@ import Section1 from '../Component/HomePage/Section1';
 import Section2 from '../Component/HomePage/Section2';
 import Section3 from '../Component/HomePage/Section3';
 import Section4 from '../Component/HomePage/Section4';
+import Section5 from '../Component/HomePage/Section5';
 import Nav from '../Component/Nav/Nav';
 const App = () => {
   return ( 
@@ -12,6 +13,7 @@ const App = () => {
       <Section2/>
       <Section3/>
       <Section4/>
+      <Section5/>
       
     </div>
    );
