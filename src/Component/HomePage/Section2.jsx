@@ -13,28 +13,24 @@ const Section2 = () => {
         
     
     return (
-        <div className="mt-24">
+        <div className="mt-24 md:flex md:justify-around">
 
-            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl box-collapse" onClick={showCollapse1}>
-                <p className="text-center text-xl text-color">همراهی مربی<span className="relative top-1">&#9662;</span></p>
-                <div className={collapse1 ? "showCollapse text-center text-lg mt-3 text-color" : "hideCollapse"}>بهترین پشتیبانی و به روز ترین سطح آموزش موجود در ایران رو دریافت می‌کنید</div>
+            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl box-collapse md:w-1/5 cursor-pointer " onClick={showCollapse1}>
+                <p className="text-center text-xl text-color">همراهی مربی</p>
             </div>
 
 
-            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl  box-collapse" onClick={showCollapse2}>
-                <p className="text-center text-xl text-color"> تضمین کیفیت<span className="relative top-1">&#9662;</span></p>
-                <div className={collapse2 ? "showCollapse text-center text-lg mt-3 text-color" : "hideCollapse"}>بهترین پشتیبانی و به روز ترین سطح آموزش موجود در ایران رو دریافت می‌کنید</div>
+            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer " onClick={showCollapse2}>
+                <p className="text-center text-xl text-color"> تضمین کیفیت</p>
             </div>
 
-            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl  box-collapse" onClick={showCollapse3}>
-                <p className="text-center text-xl text-color">همراهی مربی<span className="relative top-1">&#9662;</span></p>
-                <div className={collapse3 ? "showCollapse text-center text-lg mt-3 text-color" : "hideCollapse"}>بهترین پشتیبانی و به روز ترین سطح آموزش موجود در ایران رو دریافت می‌کنید</div>
+            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer " onClick={showCollapse3}>
+                <p className="text-center text-xl text-color">همراهی مربی</p>
             </div>
 
 
-            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl  box-collapse" onClick={showCollapse4}>
-                <p className="text-center text-xl text-color"> تضمین کیفیت<span className="relative top-1">&#9662;</span></p>
-                <div className={collapse4 ? "showCollapse text-center text-lg mt-3 text-color" : "hideCollapse"}>بهترین پشتیبانی و به روز ترین سطح آموزش موجود در ایران رو دریافت می‌کنید</div>
+            <div className="w-3/4 my-3 p-2  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer " onClick={showCollapse4}>
+                <p className="text-center text-xl text-color"> تضمین کیفیت</p>
             </div>
         </div>
     );
