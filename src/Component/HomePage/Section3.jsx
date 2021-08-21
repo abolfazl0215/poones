@@ -2,9 +2,11 @@ import React from 'react'
 
 const Section3 = () => {
     return (
-        <div className="p-5 mt-14">
-            <h1 className="text-center text-color m-4 font-bold">دوره ها</h1>
-            <div className="w-full pb-4 course-shadow mt-5 ">
+        <div>
+
+            <h1 className="text-center text-color m-4 font-bold mt-14">دوره ها</h1>
+        <div className="p-5 md:flex md:justify-around">
+            <div className="w-full pb-4 course-shadow mt-5 md:w-30/100 ">
                 <img src="image/html.jpg" alt="" />
                 <h1 className="p-4  text-gray-600">دوره <span className="text-color">HTML</span> و <span className="text-color">CSS</span> مقدماتی تا پیشرفته</h1>
                 <div className="flex pr-4">
@@ -21,7 +23,7 @@ const Section3 = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full pb-4 course-shadow mt-5 ">
+            <div className="w-full pb-4 course-shadow mt-5  md:w-30/100">
                 <img src="image/html.jpg" alt="" />
                 <h1 className="p-4  text-gray-600">دوره <span className="text-color">HTML</span> و <span className="text-color">CSS</span> مقدماتی تا پیشرفته</h1>
                 <div className="flex pr-4">
@@ -38,7 +40,7 @@ const Section3 = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full pb-4 course-shadow mt-5 ">
+            <div className="w-full pb-4 course-shadow mt-5  md:w-30/100">
                 <img src="image/html.jpg" alt="" />
                 <h1 className="p-4  text-gray-600">دوره <span className="text-color">HTML</span> و <span className="text-color">CSS</span> مقدماتی تا پیشرفته</h1>
                 <div className="flex pr-4">
@@ -55,6 +57,7 @@ const Section3 = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
