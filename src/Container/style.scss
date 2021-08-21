@@ -74,12 +74,25 @@ body {
     width: 45%;
 }
 
-.md\:w-30\/100 {
-    width: 30%;
+@media (min-width: 768px) {
+    .md\:w-30\/100 {
+        width: 30%;
+    }
+    .md\:w-22\/100 {
+        width: 22%;
+    }
 }
 
-.md\:w-22\/100 {
-    width: 22%;
+@media (max-width: 768px) {
+    .sm-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .md-hidden {
+        display: none;
+    }
 }
 
 .circle {
