@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Section3 = () => {
+
     return (
         <div>
-
             <h1 className="text-center text-gray-600 bg-gray-50 font-bold text-2xl md:text-4xl mt-24">دوره های برتر پونس</h1>
             <div className="p-5 md:flex md:justify-around">
                 <div className="sm:w-full pb-4 course-shadow mt-5 md:w-30/100">
