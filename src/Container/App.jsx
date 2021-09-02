@@ -1,5 +1,6 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
+import SingleCourse from "../Component/Course/SingleCourse";
 import Footer from "../Component/HomePage/Footer";
 import Section1 from "../Component/HomePage/Section1";
 import Section2 from "../Component/HomePage/Section2";
@@ -13,13 +14,14 @@ const App = () => {
     <div>
       <ToastContainer />
       <Nav />
-      {/* <Section1/>
-      <Section2/>
-      <Section3/>
-      <Section4/>
-      <Section5/> */}
-      <Register />
-      {/* <Footer /> */}s
+      {/* <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 /> */}
+      {/* <Register /> */}
+      <SingleCourse />
+      {/* <Footer /> */}
     </div>
   );
 };
