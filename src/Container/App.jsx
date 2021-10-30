@@ -1,27 +1,22 @@
 import React from "react";
+import { Route, Switch } from "react-router";
 import { ToastContainer } from "react-toastify";
 import SingleCourse from "../Component/Course/SingleCourse";
-import Footer from "../Component/HomePage/Footer";
-import Section1 from "../Component/HomePage/Section1";
-import Section2 from "../Component/HomePage/Section2";
-import Section3 from "../Component/HomePage/Section3";
-import Section4 from "../Component/HomePage/Section4";
-import Section5 from "../Component/HomePage/Section5";
+import HomePage from "../Component/HomePage/HomePage";
 import Register from "../Component/Login/Register";
 import Nav from "../Component/Nav/Nav";
+import MainLayout from "../Layouts/MainLayout";
 const App = () => {
   return (
     <div>
       <ToastContainer />
-      <Nav />
-      {/* <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 /> */}
-      <Register />
-      {/* <SingleCourse /> */}
-      {/* <Footer /> */}
+      <MainLayout>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/register" component={Register} />
+          <Route path="/singlecourse" component={SingleCourse} />
+        </Switch>
+      </MainLayout>
     </div>
   );
 };
