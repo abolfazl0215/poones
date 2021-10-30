@@ -19,8 +19,8 @@ const App = () => {
       <Section3 />
       <Section4 />
       <Section5 /> */}
-      {/* <Register /> */}
-      <SingleCourse />
+      <Register />
+      {/* <SingleCourse /> */}
       {/* <Footer /> */}
     </div>
   );
