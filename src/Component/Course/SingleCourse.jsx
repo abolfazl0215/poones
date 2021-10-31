@@ -27,6 +27,7 @@ const SingleCourse = () => {
         </div>
         <div className="border-2 w-full md:w-4/5 p-5  md:order-1 bg-white">
           <iframe
+            title="معرفی دوره"
             className="w-full h-96"
             src="https://www.aparat.com/video/video/embed/videohash/CLrgf/vt/frame"
             allowFullScreen="true"

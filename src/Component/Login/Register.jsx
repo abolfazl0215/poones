@@ -1,37 +1,46 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useRef, useState } from "react";
 import toastr from "toastr";
+import { registerUser } from "../../Services/userService";
+import SimpleReactValidator from "simple-react-validator";
 
 const Register = () => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const [, forceUpdate] = useState();
+
+  const validator = useRef(
+    new SimpleReactValidator({
+      messages: {
+        required: "پرکردن این فیلد الزامی میباشد",
+        min: "مقدرا وارد شده نباید کمتر از 5 کاراکتر باشد",
+        email: "ایمیل وارد شده صحیح نمیباشد",
+      },
+      element: (message) => <div style={{ color: "red" }}>{message}</div>,
+    })
+  );
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const user = { fullname, email, password };
     console.log(user);
 
-    axios
-      .post(
-        "https://toplearnapi.ghorbany.dev/api/register",
-        JSON.stringify(user),
-        {
-          headers: { "Content-Type": "application/json" },
-        }
-      )
-      .then(({ data, status }) => {
+    try {
+      if (validator.current.allValid()) {
+        const { status } = await registerUser(user);
         if (status === 201) {
           toastr.success("کاربر با موفقیت ساخته شد");
         }
-        localStorage.setItem("fullname", fullname);
-        console.log(data);
-        alert(localStorage.getItem("fullname"));
-      })
-      .catch((err) => {
-        toastr.error("کاربر از قبل وجود دارد");
-        console.log(err);
-      });
+        // localStorage.setItem("fullname", fullname);
+      } else {
+        validator.current.showMessages();
+        forceUpdate(1);
+      }
+    } catch (err) {
+      toastr.error("کاربر از قبل وجود دارد");
+      console.log(err);
+    }
   };
 
   return (
@@ -60,6 +69,7 @@ const Register = () => {
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
             />
+            {validator.current.message("fullname", fullname, "min:5|required")}
           </label>
           <label>
             ایمیل:
@@ -71,6 +81,7 @@ const Register = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            {validator.current.message("email", email, "required|email")}
           </label>
           <label>
             رمز عبور:
@@ -82,6 +93,7 @@ const Register = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            {validator.current.message("password", password, "min:5|required")}
           </label>
         </div>
         <div className="p-3">
@@ -89,7 +101,7 @@ const Register = () => {
             type="submit"
             className="w-full bg-color text-white p-3 rounded-lg mt-3"
           >
-            ورود به پونس
+            ثبت نام
           </button>
         </div>
       </form>
