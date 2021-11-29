@@ -99,7 +99,7 @@ const Section3 = () => {
             </div>
           </div>
         </div>
-        <div className="sm:w-full pb-4 course-shadow mt-5  md:w-30/100 text-sm">
+        <div className="sm:w-full pb-4 course-shadow mt-5  md:w-30/100 text-sm ">
           <img src="image/html.jpg" alt="" />
           <h1 className="p-4  text-gray-600">
             دوره <span className="text-color">HTML</span> و{" "}
