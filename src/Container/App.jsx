@@ -2,9 +2,10 @@ import React from "react";
 import { Route, Switch } from "react-router";
 import SingleCourse from "../Component/Course/SingleCourse";
 import HomePage from "../Component/HomePage/HomePage";
-import Register from "../Component/Login/Register";
+import Register from "../Component/Register/Register";
 import MainLayout from "../Layouts/MainLayout";
 import Login from "./../Component/Login/Login";
+import Courses from "./../Component/Course/Courses";
 const App = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <Route path="/singlecourse" component={SingleCourse} />
+          <Route path="/courses" component={Courses} />
         </Switch>
       </MainLayout>
     </div>

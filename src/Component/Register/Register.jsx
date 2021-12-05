@@ -1,20 +1,40 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 import Context from "./../../Context/Context";
 
-const Login = () => {
+const Register = () => {
   const context = useContext(Context);
+
   return (
     <div>
       <h1 className="">.</h1>
+
       <form
-        onSubmit={(e) => context.handleSubmitLogin(e)}
+        onSubmit={(e) => context.handleSubmitRegister(e)}
         className="mt-16 md:mt-24 mx-auto  border-2 w-4/5 md:w-1/3 p-4 text-purple-900 text-sm rounded-lg"
       >
         <p className="text-center text-2xl font-extrabold">پونس</p>
-        <p className=" text-center p-3 mt-4 bg-color-fade rounded-lg">ورود</p>
+        <p className=" text-center p-3 mt-4 bg-color-fade rounded-lg">
+          ثبت نام
+        </p>
 
         <div className="p-3 mt-3">
+          <label>
+            نام و نام خانوادگی:
+            <br />
+            <input
+              type="text"
+              name="fullName"
+              className="w-full border-2 mt-2 h-11 rounded-lg"
+              value={context.fullName}
+              onChange={(e) => context.setFullName(e.target.value)}
+            />
+            {context.validator.current.message(
+              "fullname",
+              context.fullName,
+              "min:3|required"
+            )}
+          </label>
           <label>
             ایمیل:
             <br />
@@ -31,7 +51,6 @@ const Login = () => {
               "required|email"
             )}
           </label>
-          <p className="opacity-0">.</p>
           <label>
             رمز عبور:
             <br />
@@ -49,15 +68,12 @@ const Login = () => {
             )}
           </label>
         </div>
-        <p className="px-3 text-sm text-red-700">
-          <Link to="/register">هنوز ثبت نام نکردم! (ثبت نام)</Link>
-        </p>
         <div className="p-3">
           <button
             type="submit"
             className="w-full bg-color text-white p-3 rounded-lg mt-3"
           >
-            ورود به سایت
+            ثبت نام
           </button>
         </div>
       </form>
@@ -65,4 +81,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default withRouter(Register);

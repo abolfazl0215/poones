@@ -1,35 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import SlideToggle from "react-slide-toggle";
 
 const NavMobile = () => {
-  const isLogin = localStorage.getItem("fullName");
-  return (
-    <div>
-      <div className="w-full pb-1 bg-white fixed shadow-2xl flex  justify-between md-hidden">
-        <div className="flex">
-          {/* menu icon */}
-          <svg
-            className="m-2 cursor-pointer"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#9966ff"
-            stroke-width="1.5"
-            stroke-linecap="butt"
-            stroke-linejoin="round"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-          {/* end menu icon */}
+  const [showMenu, setShowMenu] = useState(false);
+  const handleShowMenu = () => setShowMenu(!showMenu);
 
+  return (
+    <div className=" md-hidden">
+      <div className="w-full py-1 bg-white fixed shadow-2xl flex  justify-between md-hidden">
+        <div className="flex">
+          <SlideToggle
+            collapsed="true"
+            render={({ toggle, setCollapsibleElement }) => (
+              <div>
+                {/* menu icon */}
+                {!showMenu ? (
+                  <div onClick={toggle}>
+                    <svg
+                      className="m-2 cursor-pointer"
+                      onClick={handleShowMenu}
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#9966ff"
+                      stroke-width="1.5"
+                      stroke-linecap="butt"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="3" y1="12" x2="21" y2="12"></line>
+                      <line x1="3" y1="6" x2="21" y2="6"></line>
+                      <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                  </div>
+                ) : (
+                  <div onClick={toggle}>
+                    <svg
+                      id="menuClose"
+                      className="m-2 cursor-pointer"
+                      onClick={handleShowMenu}
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#9966ff"
+                      strokeWidth="1.5"
+                      strokeLinecap="butt"
+                      strokeLinejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="15" y1="9" x2="9" y2="15"></line>
+                      <line x1="9" y1="9" x2="15" y2="15"></line>
+                    </svg>
+                  </div>
+                )}
+                {/* end menu icon */}
+
+                {/* menu collapse */}
+                <div
+                  ref={setCollapsibleElement}
+                  style={{ zIndex: "999" }}
+                  id="menu-collapse"
+                  className="w-full fixed bg-white md:hidden"
+                >
+                  <ul className="p-4 leading-10 text-sm font-bold text-gray-500">
+                    <li>
+                      <Link to="/">خانه</Link>
+                    </li>
+                    <li>
+                      <Link to="/courses">دوره های آموزشی</Link>
+                    </li>
+                    <li>درباره ما</li>
+                    <li>تماس با ما</li>
+                  </ul>
+                </div>
+                {/* end menu collapse */}
+              </div>
+            )}
+          />
           {/* logo pooNes */}
           <img
             src="image/poones.png"
-            className="w-4 h-4 mt-3 mr-2 cursor-pointer"
+            className="w-6 h-6 mt-3 mr-2 cursor-pointer"
             alt="logo"
           />
           {/* end logo pooNes */}
@@ -39,8 +94,8 @@ const NavMobile = () => {
           <svg
             className="m-2 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill="none"
             stroke="#9966ff"
@@ -60,8 +115,8 @@ const NavMobile = () => {
             <svg
               className="m-2 cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="30"
+              height="30"
               viewBox="0 0 24 24"
               fill="none"
               stroke="#9966ff"

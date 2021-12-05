@@ -1,0 +1,94 @@
+@font-face {
+    src: url('Shabnam-Light.ttf');
+    font-family: "Fetne";
+}
+html{
+    scroll-behavior: smooth;
+}
+#root {
+    font-family: "Fetne";
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 30px;
+}
+.text-small{
+    font-size: 16px;
+}
+.text-small-bold{
+    font-size: 16px;
+    font-weight: 500;
+}
+.bg-gradient{
+    background: linear-gradient(to left top, #9b87ff, #a28fff);
+    color: blueviolet;
+}
+
+.bg-color {
+    background: #9966ff;
+}
+
+.bg-color-fade {
+    background: #9966ff11;
+}
+
+.text-color {
+    color: #9966ff
+}
+
+.text-orange {
+    color: #ffbb00
+}
+
+.bg-orange {
+    background-color: #ffbb00
+}
+
+.course-shadow {
+    box-shadow: 0px 0px 5px #9966ff52;
+}
+
+.w-45\/100 {
+    width: 45%;
+}
+
+@media (min-width: 768px) {
+    .md\:w-30\/100 {
+        width: 30%;
+    }
+    .md\:w-22\/100 {
+        width: 22%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sm-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .md-hidden {
+        display: none;
+    }
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.hideCollapse {
+    display: none;
+}
+
+.showCollapse {
+    display: block;
+}
+
+.border-theme {
+    border: solid 1px #9966ff;
+}
+
+.show{
+    display: block !important;
+}

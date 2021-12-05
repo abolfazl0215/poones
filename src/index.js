@@ -1,8 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import './index.css';
-import './Container/style.scss';
 import App from './Container/App.jsx';
 import { BrowserRouter } from 'react-router-dom';
+import GlobalState from './Context/GlobalState.jsx';
 
-render( < BrowserRouter > < App / > < /BrowserRouter>  , document.getElementById('root'))
+render( < BrowserRouter > <GlobalState>< App / ></GlobalState> < /BrowserRouter>  , document.getElementById('root'))

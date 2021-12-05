@@ -8,11 +8,11 @@ const Section5 = () => {
           <div className="w-1/3 hidden md:block">
             <img src="image/3.png" alt="ss" />
           </div>
-          <div className="text-color float-right tracking-wider leading-8 my-auto  md:text-xl">
-            <h1 className="font-bold text-gray-600 md:text-xl">
+          <div className="text-gray-700 float-right my-auto text-small">
+            <h1 className="font-bold text-gray-800 text-lg">
               چرا <span className="text-orange">پونس ؟</span>
             </h1>
-            <p className="flex text-sm">
+            <p className="flex">
               <span className="absolute mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@ const Section5 = () => {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5">مشاوره رایگان</span>
+              <span className=" mr-5 mt-2">مشاوره رایگان</span>
             </p>
-            <p className="flex text-sm">
+            <p className="flex">
               <span className="absolute mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -46,9 +46,9 @@ const Section5 = () => {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5">پشتیبانی فوق العاده</span>
+              <span className=" mr-5 mt-2">پشتیبانی فوق العاده</span>
             </p>
-            <p className="flex text-sm">
+            <p className="flex">
               <span className="absolute mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,11 +64,11 @@ const Section5 = () => {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5">
+              <span className=" mr-5 mt-2">
                 همراهی شما عزیزان از شروع تا ورود به بازار کار
               </span>
             </p>
-            <p className="flex text-sm">
+            <p className="flex">
               <span className="absolute mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -84,11 +84,11 @@ const Section5 = () => {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5">
+              <span className=" mr-5 mt-2">
                 احترام به وقت شما عزیزان و ارایه محتوای باارزش
               </span>
             </p>
-            <p className="flex text-sm">
+            <p className="flex">
               <span className="absolute mt-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ const Section5 = () => {
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5">
+              <span className=" mr-5 mt-2">
                 محتوای باکیفیت و باارزش نسبت به هزینه و گاها رایگان
               </span>
             </p>
