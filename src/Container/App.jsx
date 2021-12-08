@@ -6,6 +6,7 @@ import Register from "../Component/Register/Register";
 import MainLayout from "../Layouts/MainLayout";
 import Login from "./../Component/Login/Login";
 import Courses from "./../Component/Course/Courses";
+import Cart from "../Component/Cart/Cart";
 const App = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/singlecourse" component={SingleCourse} />
           <Route path="/courses" component={Courses} />
+          <Route path="/cart" component={Cart} />
         </Switch>
       </MainLayout>
     </div>

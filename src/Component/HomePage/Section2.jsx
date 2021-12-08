@@ -6,7 +6,7 @@ const Section2 = () => {
       <div className="w-1/2 my-3 p-5  mx-auto rounded-xl box-collapse md:w-1/5 cursor-pointer ">
         <div className="text-center">
           <img
-            className="mx-auto w-1/3"
+            className="mx-auto w-1/4"
             src="/image/icons/support.gif"
             alt="support"
           />
@@ -21,7 +21,7 @@ const Section2 = () => {
       <div className="w-1/2 my-3 p-5  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer ">
         <div className="text-center">
           <img
-            className="mx-auto w-1/3"
+            className="mx-auto w-1/4"
             src="/image/icons/return.gif"
             alt="return"
           />
@@ -36,7 +36,7 @@ const Section2 = () => {
       <div className="w-1/2 my-3 p-5  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer ">
         <div className="text-center">
           <img
-            className="mx-auto w-1/3"
+            className="mx-auto w-1/4"
             src="/image/icons/quality.gif"
             alt="support"
           />
@@ -52,7 +52,7 @@ const Section2 = () => {
       <div className="w-1/2 my-3 p-5  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer ">
         <div className="text-center">
           <img
-            className="mx-auto w-1/3"
+            className="mx-auto w-1/4"
             src="/image/icons/performance.gif"
             alt="support"
           />

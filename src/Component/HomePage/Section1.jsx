@@ -2,12 +2,13 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className="pt-20  md:pt-28 bg-purple-50">
+    <div className="pt-24  md:pt-28 bg-purple-50">
       <div className="md:flex">
         <img src="image/Web.png" className="w-2/3 m-auto md:w-1/4" alt="logo" />
         <div className="md:mx-auto md:my-auto ">
           <h1 className="text-xl text-center mt-5 md:text-3xl md:font-extrabold">
-            آموزشگاه آنلاین <span style={{ color: "#ffbb00" }}>پونس</span>
+            آموزشگاه آنلاین{" "}
+            <span style={{ color: "#ffbb00", fontWeight: "900" }}>پونس</span>
           </h1>
           <p
             style={{ fontSize: "16px" }}
