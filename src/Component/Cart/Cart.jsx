@@ -106,7 +106,9 @@ const Cart = () => {
           ))}
         </div>
       ) : (
-        ""
+        <div className="w-2/3 p-4 text-white rounded text-center mx-auto font-bold bg-color">
+          سبدخرید شما خالی است
+        </div>
       )}
     </div>
   );
