@@ -1,17 +1,17 @@
 import React, { useContext, useEffect } from "react";
 import { BiTrash } from "react-icons/bi";
-import Context from "./../../Context/Context";
+import CartContext from "./../../Context/CartContext";
 const Cart = () => {
-  const context = useContext(Context);
+  const cartContext = useContext(CartContext);
   useEffect(() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }, []);
   return (
     <div className="pt-24 b-8">
-      {context.cartShop ? (
+      {cartContext.cartShop ? (
         <div className="w-full px-2 flex flex-wrap">
-          {context.cartShop.map((p) => (
+          {cartContext.cartShop.map((p) => (
             <section
               //   style={{ zIndex: "-1" }}
               className="p-4 w-full md:w-1/2 text-sm"
@@ -22,16 +22,11 @@ const Cart = () => {
                 </h1>
                 <div className="relative">
                   <BiTrash
-                    onClick={() => context.deleteFromCart(p.id)}
+                    onClick={() => cartContext.deleteFromCart(p.id)}
                     className="cursor-pointer absolute left-2 text-red-400 text-xl"
                   />
                 </div>
-                <img
-                  onClick={() => context.deleteFromCart(1)}
-                  className="w-28 md:w-32 h-auto"
-                  src={p.image_url}
-                  alt=""
-                />
+                <img className="w-28 md:w-32 h-auto" src={p.image_url} alt="" />
                 <div className="text-gray-800 float-right mr-3 text-xs md:text-sm">
                   <p className="flex">
                     <span className="absolute mt-2">

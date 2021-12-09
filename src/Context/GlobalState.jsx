@@ -5,7 +5,6 @@ import toastr from "toastr";
 import { registerUser } from "../Services/userService";
 import { loginUser } from "../Services/userService";
 import Context from "./Context";
-import _products from "./Products.json";
 
 const GlobalState = ({ children, history }) => {
   const [fullName, setFullName] = useState("");
@@ -16,69 +15,10 @@ const GlobalState = ({ children, history }) => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [getStorage, setStorage] = useState("");
 
-  const [products, setProducts] = useState([]);
-  const [singleCourse, setSingleCourse] = useState("");
-  const [cartShop, setCartShop] = useState([]);
-  const [toast, setToast] = useState([]);
-
-  const setProduct = () => {
-    localStorage.setItem("products", JSON.stringify(_products));
-  };
-  const getProducts = () => {
-    const allProduct = localStorage.getItem("products");
-    const parseProduct = JSON.parse(allProduct);
-    setProducts(parseProduct);
-  };
-  const goToCourse = (id) => {
-    const course = products.find((p) => p.id === id);
-    const _course = course;
-    localStorage.setItem("singleCourse", JSON.stringify(_course));
-    setSingleCourse(course);
-  };
   useEffect(() => {
     const data = localStorage.getItem("fullName");
     setStorage(data);
-    // console.log(Storage);
   }, [getStorage]);
-
-  const goToCart = (id) => {
-    if (localStorage.getItem("cart")) {
-      const filterCourse = cartShop.filter((p) => p.id === id);
-      if (filterCourse.length <= 0) {
-        const _cart = cartShop;
-        _cart.push(singleCourse);
-        setCartShop(_cart);
-        localStorage.setItem("cart", JSON.stringify(cartShop));
-      }
-    } else {
-      const _cart = [];
-      _cart.push(singleCourse);
-      localStorage.setItem("cart", JSON.stringify(_cart));
-      setCartShop(_cart);
-    }
-    const parseCart = JSON.parse(localStorage.getItem("cart"));
-    setCartShop(parseCart);
-  };
-
-  const deleteFromCart = (id) => {
-    // alert(id);
-    const filteredCart = cartShop.filter((p) => p.id !== id);
-    if (cartShop.length <= 1) {
-      localStorage.removeItem("cart");
-    } else {
-      localStorage.setItem("cart", filteredCart);
-    }
-    setCartShop(filteredCart);
-  };
-
-  useEffect(() => {
-    setProduct();
-    getProducts();
-    const parseCart = JSON.parse(localStorage.getItem("cart"));
-    setCartShop(parseCart);
-    const parseSingleCourse = JSON.parse(localStorage.getItem("singleCourse"));
-    setSingleCourse(parseSingleCourse);
-  }, []);
 
   const validator = useRef(
     new SimpleReactValidator({
@@ -110,6 +50,7 @@ const GlobalState = ({ children, history }) => {
           toastr.success("ورود موفقیت آمیز بود");
           localStorage.setItem("fullName", data);
           history.replace("/");
+          // for rerender
           setStorage("");
         }
         if (status === 203) {
@@ -120,7 +61,7 @@ const GlobalState = ({ children, history }) => {
         forceUpdate(1);
       }
     } catch (err) {
-      toastr.error("مشکلی پیش آمده");
+      toastr.error("لطفا اتصال اینترنت خودرا بررسی کنید");
     }
     // end validation form
     reset();
@@ -139,6 +80,7 @@ const GlobalState = ({ children, history }) => {
           toastr.success("کاربر با موفقیت ساخته شد");
           localStorage.setItem("fullName", fullName);
           history.replace("/");
+          // for rerender
           setStorage("");
         }
         if (status === 203) {
@@ -189,12 +131,6 @@ const GlobalState = ({ children, history }) => {
           closeModal,
           handleLogout,
           modalIsOpen,
-          products,
-          singleCourse,
-          goToCourse,
-          goToCart,
-          cartShop,
-          deleteFromCart,
         }}
       >
         {/* <CartHandler /> */}

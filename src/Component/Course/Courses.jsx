@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
-import Context from "./../../Context/Context";
+import CartContext from "./../../Context/CartContext";
 
 const Courses = ({ location }) => {
-  const context = useContext(Context);
+  const cartContext = useContext(CartContext);
   return (
     <div className="inline-block md:pt-24 pt-10">
       {location.pathname === "/" ? (
@@ -18,9 +18,9 @@ const Courses = ({ location }) => {
         ""
       )}
       <div className="p-5 mt-4 md:flex md:justify-between">
-        {context.products.map((p) => (
+        {cartContext.courses.map((p) => (
           <div
-            onClick={() => context.goToCourse(p.id)}
+            onClick={() => cartContext.goToCourse(p.id)}
             className="sm:w-full pb-4 course-shadow mt-5 md:m-3 md:w-30/100 sm:text-sm text-small"
           >
             <Link to="/singleCourse">

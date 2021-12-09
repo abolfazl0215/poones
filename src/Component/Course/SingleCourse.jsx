@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import { CgSoftwareDownload } from "react-icons/cg";
-import Context from "./../../Context/Context";
+import CartContext from "./../../Context/CartContext";
 
 const SingleCourse = () => {
-  const context = useContext(Context);
+  const cartContext = useContext(CartContext);
 
   useEffect(() => {
     document.body.scrollTop = 0;
@@ -18,7 +18,7 @@ const SingleCourse = () => {
     <div className="md:p-8 p-3 bg-color-fade">
       <h1>.</h1>
       <h1 className="mt-12 w-full text-center border-2 font-bold text-purple-900 text-xl rounded p-3 bg-white">
-        {context.singleCourse.name}
+        {cartContext.singleCourse.name}
       </h1>
       <div className="w-full flex justify-between mt-3 flex-wrap">
         <div className="md:w-1/5 w-full mt-3 md:mt-0 md:pl-3 order-2 md:order-1">
@@ -26,7 +26,9 @@ const SingleCourse = () => {
             <p className="font-bold text-purple-800 text-sm md:text-xs">
               <span className="text-orange">$ </span>
               قیمت این دوره :{" "}
-              <span className="text-orange">{context.singleCourse.price}</span>
+              <span className="text-orange">
+                {cartContext.singleCourse.price}
+              </span>
             </p>
             <hr className="mt-2" />
             <p className="mt-5 mr-2">مدت زمان دوره : 23:40:00</p>
@@ -34,7 +36,9 @@ const SingleCourse = () => {
             <p className="mt-2 mr-2">سطح دوه : مقدماتی تا پیشرفته</p>
             <button
               id="goCart"
-              onClick={() => context.goToCart(context.singleCourse.id)}
+              onClick={() =>
+                cartContext.goToCart(cartContext.singleCourse.name)
+              }
               className="bg-purple-900 text-white p-2 w-full text-center rounded-md mt-6 text-xl"
             >
               ثبت نام این دوره

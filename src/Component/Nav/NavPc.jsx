@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Context from "../../Context/Context";
+import CartContext from "./../../Context/CartContext";
 const Modal = require("react-modal");
 
 const NavPc = () => {
   const context = useContext(Context);
+  const cartContext = useContext(CartContext);
   return (
     <div className="sm-hidden">
       <div className="w-full bg-white fixed shadow-2xl flex  justify-between">
@@ -28,11 +30,10 @@ const NavPc = () => {
           {/* icon shopping cart */}
           <Link to="/cart">
             <div className="hover:bg-gray-100 rounded-full p-2 my-auto ml-6 cursor-pointer relative">
-              <span
-                style={{ paddingTop: "1px", fontSize: "4px" }}
-                className="h-4 w-4 font-bold rounded-3xl bg-red-500 text-white text-center  absolute right-7"
-              >
-                {localStorage.getItem("cart") ? context.cartShop.length : "0"}
+              <span className="h-5 w-5 font-bold font-sm -pt-1 rounded-3xl bg-red-500 text-white text-center  absolute right-7">
+                {localStorage.getItem("cart")
+                  ? cartContext.cartShop.length
+                  : "0"}
               </span>
               <svg
                 className="m-2 cursor-pointer"

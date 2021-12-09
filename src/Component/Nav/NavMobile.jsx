@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import SlideToggle from "react-slide-toggle";
 import Modal from "react-modal";
 import Context from "../../Context/Context";
+import CartContext from "./../../Context/CartContext";
 
 const NavMobile = () => {
   const [showMenu, setShowMenu] = useState(false);
   const handleShowMenu = () => setShowMenu(!showMenu);
 
   const context = useContext(Context);
+  const cartContext = useContext(CartContext);
 
   return (
     <div className=" md-hidden  ">
@@ -99,11 +101,8 @@ const NavMobile = () => {
           {/* icon shoppingCart */}
           <div className="relative">
             <Link to="/cart">
-              <span
-                style={{ paddingTop: "1px", fontSize: "4px" }}
-                className="h-4 w-4 font-bold rounded-3xl bg-red-500 text-white text-center  absolute right-6"
-              >
-                {context.cartShop ? context.cartShop.length : "0"}
+              <span className="h-5 w-5 font-bold font-sm -pt-1 rounded-3xl bg-red-500 text-white text-center  absolute right-6">
+                {cartContext.cartShop ? cartContext.cartShop.length : "0"}
               </span>
               <svg
                 className="m-2 cursor-pointer"
