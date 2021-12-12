@@ -9,7 +9,7 @@ const Cart = () => {
   }, []);
   return (
     <div className="pt-24 b-8">
-      {cartContext.cartShop ? (
+      {cartContext.cartShop.length > 0 ? (
         <div className="w-full px-2 flex flex-wrap">
           {cartContext.cartShop.map((p) => (
             <section

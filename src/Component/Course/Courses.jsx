@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
-import { withRouter } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 import CartContext from "./../../Context/CartContext";
 
-const Courses = ({ location }) => {
+const Courses = () => {
+  const location = useLocation();
   const cartContext = useContext(CartContext);
   return (
     <div className="inline-block md:pt-24 pt-10">
@@ -77,4 +77,4 @@ const Courses = ({ location }) => {
   );
 };
 
-export default withRouter(Courses);
+export default Courses;

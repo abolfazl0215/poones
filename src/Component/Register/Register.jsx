@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 import Context from "./../../Context/Context";
 
 const Register = () => {
@@ -68,6 +68,9 @@ const Register = () => {
             )}
           </label>
         </div>
+        <p className="px-3 text-sm text-red-700">
+          <Link to="/login">قبلا ثبت نام کردم (ورود به سایت)</Link>
+        </p>
         <div className="p-3">
           <button
             type="submit"
@@ -81,4 +84,4 @@ const Register = () => {
   );
 };
 
-export default withRouter(Register);
+export default Register;

@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
-import { withRouter } from "react-router";
+import { useNavigate } from "react-router-dom";
 import SimpleReactValidator from "simple-react-validator";
 import toastr from "toastr";
 import { registerUser } from "../Services/userService";
 import { loginUser } from "../Services/userService";
 import Context from "./Context";
 
-const GlobalState = ({ children, history }) => {
+const GlobalState = ({ children }) => {
+  // const location = useLocation();
+  const navigate = useNavigate();
+
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -49,7 +52,7 @@ const GlobalState = ({ children, history }) => {
         if (status === 201) {
           toastr.success("ورود موفقیت آمیز بود");
           localStorage.setItem("fullName", data);
-          history.replace("/");
+          navigate("/");
           // for rerender
           setStorage("");
         }
@@ -79,7 +82,7 @@ const GlobalState = ({ children, history }) => {
         if (status === 201) {
           toastr.success("کاربر با موفقیت ساخته شد");
           localStorage.setItem("fullName", fullName);
-          history.replace("/");
+          navigate("/");
           // for rerender
           setStorage("");
         }
@@ -140,4 +143,4 @@ const GlobalState = ({ children, history }) => {
   );
 };
 
-export default withRouter(GlobalState);
+export default GlobalState;

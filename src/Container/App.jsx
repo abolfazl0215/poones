@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import SingleCourse from "../Component/Course/SingleCourse";
 import HomePage from "../Component/HomePage/HomePage";
 import Register from "../Component/Register/Register";
@@ -11,14 +11,14 @@ const App = () => {
   return (
     <div>
       <MainLayout>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
-          <Route path="/singlecourse" component={SingleCourse} />
-          <Route path="/courses" component={Courses} />
-          <Route path="/cart" component={Cart} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/singlecourse" element={<SingleCourse />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
       </MainLayout>
     </div>
   );
