@@ -9,11 +9,11 @@ const Cart = () => {
   }, []);
   return (
     <div className="pt-24 b-8">
-      {cartContext.cartShop.length > 0 ? (
+      {cartContext.cartShop && cartContext.cartShop.length > 0 ? (
         <div className="w-full px-2 flex flex-wrap">
           {cartContext.cartShop.map((p) => (
             <section
-              //   style={{ zIndex: "-1" }}
+              //   style={{ zIndex: "-1" }} 
               className="p-4 w-full md:w-1/2 text-sm"
             >
               <div className=" border-2 rounded flex flex-wrap p-3 ">
