@@ -51,11 +51,14 @@ export default function Nav() {
                   >
                     {showMenu ? (
                       <div onClick={handleShowMenu}>
-                        <ArrowCircleUpIcon onClick={toggle} />
+                        <ArrowCircleUpIcon
+                          sx={{ fontSize: "1.2em" }}
+                          onClick={toggle}
+                        />
                       </div>
                     ) : (
                       <div onClick={handleShowMenu}>
-                        <MenuIcon onClick={toggle} />
+                        <MenuIcon sx={{ fontSize: "1.2em" }} onClick={toggle} />
                       </div>
                     )}
                     {/* menu collapse */}
@@ -125,7 +128,7 @@ export default function Nav() {
                   </span>
 
                   <ShoppingCartOutlinedIcon
-                    sx={{ fontWeight: "100", fontSize: "1.7em" }}
+                    sx={{ fontWeight: "100", fontSize: "1.8em" }}
                   />
                 </Link>
               </IconButton>
@@ -134,7 +137,7 @@ export default function Nav() {
                 <Link to={context.getStorage ? "" : "/login"}>
                   <AccountCircleOutlinedIcon
                     onClick={context.getStorage ? handleOpen : null}
-                    sx={{ fontSize: "1.1em" }}
+                    sx={{ fontSize: "1.2em" }}
                   />
                 </Link>
               </IconButton>

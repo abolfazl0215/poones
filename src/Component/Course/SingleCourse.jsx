@@ -1,28 +1,25 @@
 import React, { useContext, useEffect } from "react";
 import { CgSoftwareDownload } from "react-icons/cg";
 import CartContext from "./../../Context/CartContext";
+import Comments from "./Comments";
 
 const SingleCourse = () => {
   const cartContext = useContext(CartContext);
 
-  useEffect(() => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }, []);
-
-  // document.getElementById("goCart").addEventListener("click",()=>{
-  //   alert("hi")
-  // })
+  // useEffect(() => {
+  //   document.body.scrollTop = 0;
+  //   document.documentElement.scrollTop = 0;
+  // }, []);
 
   return (
-    <div className="md:p-8 p-3 bg-color-fade">
+    <div className="md:p-8 p-3 bg-gray-50">
       <h1>.</h1>
-      <h1 className="mt-12 w-full text-center border-2 font-bold text-purple-900 text-xl rounded p-3 bg-white">
+      <h1 className="mt-12 w-full text-center border-singleCourse font-bold text-color text-xl rounded p-3 bg-white">
         {cartContext.singleCourse.name}
       </h1>
       <div className="w-full flex justify-between mt-3 flex-wrap">
         <div className="md:w-1/5 w-full mt-3 md:mt-0 md:pl-3 order-2 md:order-1">
-          <div className=" border-2 h-full text-gray-600 p-5 bg-white rounded">
+          <div className=" border-singleCourse h-full text-gray-600 p-5 bg-white rounded">
             <p className="font-bold text-purple-800 text-sm md:text-xs">
               <span className="text-orange">$ </span>
               قیمت این دوره :{" "}
@@ -39,13 +36,13 @@ const SingleCourse = () => {
               onClick={() =>
                 cartContext.goToCart(cartContext.singleCourse.name)
               }
-              className="bg-purple-900 text-white p-2 w-full text-center rounded-md mt-6 text-xl"
+              className="bg-color text-white p-2 w-full text-center rounded-md mt-6 text-xl"
             >
               ثبت نام این دوره
             </button>
           </div>
         </div>
-        <div className="border-2 w-full md:w-4/5 p-5  md:order-1 bg-white rounded">
+        <div className="border-singleCourse w-full md:w-4/5 p-5  md:order-1 bg-white rounded">
           <iframe
             title="معرفی دوره"
             className="w-full h-96"
@@ -56,7 +53,7 @@ const SingleCourse = () => {
           ></iframe>
         </div>
       </div>
-      <div className="mt-3 border-2 p-5 text-gray-600 bg-white rounded">
+      <div className="mt-3 border-singleCourse p-5 text-gray-600 bg-white rounded">
         <p className="text-2xl">توضیحات :</p>
         <br />
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, qui!
@@ -76,105 +73,108 @@ const SingleCourse = () => {
         unde voluptatem in cupiditate vero, aspernatur quas odit laudantium ad
         illum!
       </div>
-      <div className="border-2 w-full mt-3 md:p-5 p-3  bg-white rounded">
-        <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 bg-color-fade p-2 mt-4">
+      <div className="border-singleCourse w-full mt-3 md:p-5 p-3  bg-white rounded">
+        <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 bg-gray-100 p-2 mt-4">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center border-2 border-purple-500 pt-1 text-white font-semibold"></p>
+            <p className="w-8 h-8 rounded-full text-center border-2 border-color pt-1 text-white font-semibold"></p>
             <p className="pt-1 mr-4">فصل اول : آشنایی با دوره</p>
           </div>
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 shadow-sm p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center bg-purple-600 pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               1
             </p>
             <p className="pt-1 mr-4"> معرفی دوره</p>
           </div>
           <div className="flex">
             <p className="pt-2 ml-3">00:7:00</p>
-            <p className="p-2 rounded-full border-2 border-blue-500">
+            <p className="p-2 rounded-full border-2 border-color">
               <CgSoftwareDownload />
             </p>
           </div>
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 shadow-sm p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center bg-purple-600 pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               2
             </p>
             <p className="pt-1 mr-4"> گرفتن بهترین نتیجه از این دوره</p>
           </div>
           <div className="flex">
             <p className="pt-2 ml-3">00:3:00</p>
-            <p className="p-2 rounded-full border-2 border-blue-500">
+            <p className="p-2 rounded-full border-2 border-color">
               <CgSoftwareDownload />
             </p>
           </div>
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center bg-purple-600 pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               3
             </p>
             <p className="pt-1 mr-4"> آماده سازی محیط کدنویسی</p>
           </div>
           <div className="flex">
             <p className="pt-2 ml-3">00:15:00</p>
-            <p className="p-2 rounded-full border-2 border-blue-500">
+            <p className="p-2 rounded-full border-2 border-color">
               <CgSoftwareDownload />
             </p>
           </div>
         </div>
         {/* session2 */}
-        <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 bg-color-fade p-2 mt-4">
+        <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 bg-gray-100 p-2 mt-4">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center border-2 border-purple-500 pt-1 text-white font-semibold"></p>
+            <p className="w-8 h-8 rounded-full text-center border-2 border-color pt-1 text-white font-semibold"></p>
             <p className="pt-1 mr-4">فصل دوم : html</p>
           </div>
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 shadow-sm p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center bg-purple-600 pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               1
             </p>
             <p className="pt-1 mr-4"> معرفی دوره</p>
           </div>
           <div className="flex">
             <p className="pt-2 ml-3">00:7:00</p>
-            <p className="p-2 rounded-full border-2 border-blue-500">
+            <p className="p-2 rounded-full border-2 border-color">
               <CgSoftwareDownload />
             </p>
           </div>
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 shadow-sm p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center bg-purple-600 pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               2
             </p>
             <p className="pt-1 mr-4"> گرفتن بهترین نتیجه از این دوره</p>
           </div>
           <div className="flex">
             <p className="pt-2 ml-3">00:3:00</p>
-            <p className="p-2 rounded-full border-2 border-blue-500">
+            <p className="p-2 rounded-full border-2 border-color">
               <CgSoftwareDownload />
             </p>
           </div>
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 shadow-sm p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center bg-purple-600 pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               3
             </p>
             <p className="pt-1 mr-4"> آماده سازی محیط کدنویسی</p>
           </div>
           <div className="flex">
             <p className="pt-2 ml-3">00:15:00</p>
-            <p className="p-2 rounded-full border-2 border-blue-500">
+            <p className="p-2 rounded-full border-2 border-color">
               <CgSoftwareDownload />
             </p>
           </div>
         </div>
       </div>
+      {/* comments */}
+      <Comments />
+      {/* end comments */}
     </div>
   );
 };
