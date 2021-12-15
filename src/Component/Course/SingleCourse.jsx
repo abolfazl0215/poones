@@ -6,10 +6,10 @@ import Comments from "./Comments";
 const SingleCourse = () => {
   const cartContext = useContext(CartContext);
 
-  // useEffect(() => {
-  //   document.body.scrollTop = 0;
-  //   document.documentElement.scrollTop = 0;
-  // }, []);
+  useEffect(() => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
 
   return (
     <div className="md:p-8 p-3 bg-gray-50">
@@ -82,7 +82,7 @@ const SingleCourse = () => {
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 shadow-sm p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 border-singleCourse rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               1
             </p>
             <p className="pt-1 mr-4"> معرفی دوره</p>

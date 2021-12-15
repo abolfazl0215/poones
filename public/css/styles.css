@@ -55,7 +55,7 @@
 }
 
 .border-singleCourse{
-    border: 1px solid rgb(226, 226, 226);
+    border: 1px solid #e2e2e2;
     border-radius: 3px;
 }
 .border-singleCourse-response{
