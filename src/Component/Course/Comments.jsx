@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import http from "../../Services/httpService";
 import Context from "./../../Context/Context";
 import toastr from "toastr";
+import "./index.css";
 
 const Comments = () => {
   const [comment, setComment] = useState("");
@@ -34,19 +35,19 @@ const Comments = () => {
     }
   };
   return (
-    <div className="border-singleCourse w-full mt-3 md:p-5 p-3  bg-white rounded pb-32">
+    <div className="borderSingleCourse w-full mt-3 md:p-5 p-3  bg-white rounded pb-32">
       <h3 className="font-bold p-2 text-gray-700">نظرات :</h3>
       <form onSubmit={(e) => handleSubmit(e)} className="pb-6">
         <textarea
           onChange={(e) => setComment(e.target.value)}
           name="comment"
           rows="6"
-          className="w-full p-2 border-2 border-gray-200"
+          className="w-full p-2 borderSingleCourse"
           placeholder="نظرت رو برام بنویس ..."
         ></textarea>
         {context.getStorage ? (
           <button
-            className="bg-color text-white font-bold px-4 py-2 rounded w-full md:w-1/5"
+            className="bg-color mt-2 text-white font-bold px-4 py-2 rounded w-full md:w-1/5"
             type="submit"
           >
             ارسال نظر
@@ -59,9 +60,10 @@ const Comments = () => {
       </form>
       {comments
         .filter((p) => p.isAllowed === true)
+        .reverse()
         .map((c) => (
           <div>
-            <div className="w-full border-singleCourse mt-4 p-2">
+            <div className="w-full borderSingleCourse mt-4 p-2">
               <div className="flex">
                 <div className="w-12 h-12 circle bg-gray-200"></div>
                 <p className="mt-4 mr-2 text-sm font-bold">علی محمدی</p>
@@ -70,7 +72,7 @@ const Comments = () => {
             </div>
             {c.response ? (
               <div className="pr-4">
-                <div className="w-full border-singleCourse-response mt-2 p-2">
+                <div className="w-full borderSingleCourseResponse mt-2 p-2">
                   <div className="flex">
                     <img
                       src="image/avatar.png"

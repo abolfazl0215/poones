@@ -11,6 +11,7 @@ const CartState = ({ children }) => {
   const setCourse = () => {
     localStorage.setItem("courses", JSON.stringify(_courses));
   };
+
   const getCourses = () => {
     const allCourse = localStorage.getItem("courses");
     const parseCourse = JSON.parse(allCourse);

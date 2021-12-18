@@ -2,7 +2,7 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className="pt-24  md:pt-28 bg-purple-50">
+    <div className="pt-24  md:pt-28 bg-gray-50">
       <div className="md:flex">
         <img src="image/Web.png" className="w-2/3 m-auto md:w-1/4" alt="logo" />
         <div className="md:mx-auto md:my-auto ">

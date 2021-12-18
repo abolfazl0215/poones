@@ -26,9 +26,7 @@
 .bg-color {
     background: #5d3fd3;
 }
-.border-color{
-    border-color: #5d3fd3;
-}
+
 
 .bg-color-fade {
     background: #9966ff11;
@@ -52,16 +50,6 @@
 
 .w-45\/100 {
     width: 45%;
-}
-
-.border-singleCourse{
-    border: 1px solid #e2e2e2;
-    border-radius: 3px;
-}
-.border-singleCourse-response{
-    border: 1px solid #9cdbe6;
-    border-radius: 3px;
-
 }
 
 @media (min-width: 768px) {
@@ -105,3 +93,4 @@
 .show{
     display: block !important;
 }
+

@@ -15,7 +15,6 @@ const GlobalState = ({ children }) => {
   const [password, setPassword] = useState("");
 
   const [, forceUpdate] = useState(false);
-  const [modalIsOpen, setIsOpen] = React.useState(false);
   const [getStorage, setStorage] = useState("");
 
   useEffect(() => {
@@ -102,20 +101,6 @@ const GlobalState = ({ children }) => {
     reset();
   };
 
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-    setStorage("");
-  }
-
-  const handleLogout = () => {
-    localStorage.removeItem("fullName");
-    closeModal();
-    setStorage("");
-  };
   return (
     <div>
       <Context.Provider
@@ -128,12 +113,9 @@ const GlobalState = ({ children }) => {
           setPassword,
           validator,
           getStorage,
+          setStorage,
           handleSubmitLogin,
           handleSubmitRegister,
-          openModal,
-          closeModal,
-          handleLogout,
-          modalIsOpen,
         }}
       >
         {/* <CartHandler /> */}

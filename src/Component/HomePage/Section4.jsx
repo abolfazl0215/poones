@@ -2,7 +2,7 @@ import React from "react";
 
 const Section4 = () => {
   return (
-    <div className="p-8 mt-20 flex flex-wrap w-full justify-between bg-color-fade text-lg">
+    <div className="p-8 mt-20 flex flex-wrap w-full justify-between bg-gray-50 text-lg">
       <div className="w-45/100 p-4 shadow-lg bg-white rounded-lg mt-4 md:w-22/100">
         <div className="flex justify-center">
           <span className="p-2 font-bold circle m-2 shadow-md  text-color text-sm font-bold ">

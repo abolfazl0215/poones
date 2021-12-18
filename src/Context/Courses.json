@@ -1,5 +1,4 @@
 [
-    {"name":"دوره طراحی ریسپانسیو","price":"100,000","image_url":"/image/html.jpg","id":1},
-    {"name":"دوره جامع جاوااسکریپت","price":"200,000","image_url":"/image/js.jpeg","id":2},
-    {"name":"دوره حرفه ای ریکت","price":"300,000","image_url":"/image/react.jpeg","id":3}
+    {"name":"دوه هیولای طراحی سایت","price":"رایگان","image_url":"/image/courseDesign.jpg","id":1}
+
 ]

@@ -10,7 +10,7 @@ const Courses = () => {
       {location.pathname === "/" ? (
         <div className="text-center">
           <h1 className="inline-block py-2 px-4 rounded-3xl text-white bg-color font-bold md:text-xl">
-            دوره های برتر پونس
+            دوره های پونس
           </h1>
           <hr style={{ height: "1.9px" }} className="bg-color -mt-5" />
         </div>
@@ -25,7 +25,7 @@ const Courses = () => {
           >
             <Link to="/singleCourse">
               <img
-                className="h-3/4 border-4 border-white"
+                className="border-4 border-white"
                 src={p.image_url}
                 alt="course"
               />

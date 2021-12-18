@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { CgSoftwareDownload } from "react-icons/cg";
 import CartContext from "./../../Context/CartContext";
 import Comments from "./Comments";
+import "./index.css";
 
 const SingleCourse = () => {
   const cartContext = useContext(CartContext);
@@ -14,12 +15,12 @@ const SingleCourse = () => {
   return (
     <div className="md:p-8 p-3 bg-gray-50">
       <h1>.</h1>
-      <h1 className="mt-12 w-full text-center border-singleCourse font-bold text-color text-xl rounded p-3 bg-white">
+      <h1 className="mt-12 w-full text-center borderSingleCourse font-bold text-color text-xl rounded p-3 bg-white">
         {cartContext.singleCourse.name}
       </h1>
       <div className="w-full flex justify-between mt-3 flex-wrap">
         <div className="md:w-1/5 w-full mt-3 md:mt-0 md:pl-3 order-2 md:order-1">
-          <div className=" border-singleCourse h-full text-gray-600 p-5 bg-white rounded">
+          <div className=" borderSingleCourse h-full text-gray-600 p-5 bg-white rounded">
             <p className="font-bold text-purple-800 text-sm md:text-xs">
               <span className="text-orange">$ </span>
               قیمت این دوره :{" "}
@@ -42,7 +43,7 @@ const SingleCourse = () => {
             </button>
           </div>
         </div>
-        <div className="border-singleCourse w-full md:w-4/5 p-5  md:order-1 bg-white rounded">
+        <div className="borderSingleCourse w-full md:w-4/5 p-5  md:order-1 bg-white rounded">
           <iframe
             title="معرفی دوره"
             className="w-full h-96"
@@ -53,7 +54,7 @@ const SingleCourse = () => {
           ></iframe>
         </div>
       </div>
-      <div className="mt-3 border-singleCourse p-5 text-gray-600 bg-white rounded">
+      <div className="mt-3 borderSingleCourse p-5 text-gray-600 bg-white rounded">
         <p className="text-2xl">توضیحات :</p>
         <br />
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, qui!
@@ -73,7 +74,7 @@ const SingleCourse = () => {
         unde voluptatem in cupiditate vero, aspernatur quas odit laudantium ad
         illum!
       </div>
-      <div className="border-singleCourse w-full mt-3 md:p-5 p-3  bg-white rounded">
+      <div className="borderSingleCourse w-full mt-3 md:p-5 p-3  bg-white rounded">
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 bg-gray-100 p-2 mt-4">
           <div className="flex">
             <p className="w-8 h-8 rounded-full text-center border-2 border-color pt-1 text-white font-semibold"></p>
@@ -82,7 +83,7 @@ const SingleCourse = () => {
         </div>
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 shadow-sm p-2 mt-2">
           <div className="flex">
-            <p className="w-8 h-8 border-singleCourse rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
+            <p className="w-8 h-8 rounded-full text-center bg-color pt-2 md:pt-1 text-white font-semibold">
               1
             </p>
             <p className="pt-1 mr-4"> معرفی دوره</p>
