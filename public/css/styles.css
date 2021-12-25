@@ -1,96 +1,94 @@
 @font-face {
-    src: url('Shabnam-Light.ttf');
-    font-family: "Fetne";
+  src: url("Shabnam-Light.ttf");
+  font-family: "Fetne";
 }
-*{
-    scroll-behavior: smooth;
-    font-family: "Fetne";
+* {
+  scroll-behavior: smooth;
+  font-family: "Fetne";
 }
 #root {
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 30px;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 30px;
 }
-.text-small{
-    font-size: 16px;
+.text-small {
+  font-size: 16px;
 }
-.text-small-bold{
-    font-size: 16px;
-    font-weight: 500;
+.text-small-bold {
+  font-size: 16px;
+  font-weight: 500;
 }
-.bg-gradient{
-    background: linear-gradient(to left top, #9b87ff, #a28fff);
-    color: blueviolet;
+.bg-gradient {
+  background: linear-gradient(to left top, #9b87ff, #a28fff);
+  color: blueviolet;
 }
 
 .bg-color {
-    background: #5d3fd3;
+  background: #5d3fd3;
 }
 
-
 .bg-color-fade {
-    background: #9966ff11;
+  background: #9966ff11;
 }
 
 .text-color {
-    color: #5d3fd3
+  color: #5d3fd3;
 }
 
 .text-orange {
-    color: #ffbb00
+  color: #ffbb00;
 }
 
 .bg-orange {
-    background-color: #ffbb00
+  background-color: #ffbb00;
 }
 
 .course-shadow {
-    border : solid 1px rgb(231, 231, 231);
+  border: solid 1px rgb(231, 231, 231);
 }
 
 .w-45\/100 {
-    width: 45%;
+  width: 45%;
 }
 
 @media (min-width: 768px) {
-    .md\:w-30\/100 {
-        width: 30%;
-    }
-    .md\:w-22\/100 {
-        width: 22%;
-    }
+  .md\:w-30\/100 {
+    width: 30%;
+  }
+  .md\:w-22\/100 {
+    width: 22%;
+  }
 }
-
 
 @media (max-width: 768px) {
-    .sm-hidden {
-        display: none;
-    }
+  .sm-hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
-    .md-hidden {
-        display: none;
-    }
+  .md-hidden {
+    display: none;
+  }
 }
 
 .circle {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .hideCollapse {
-    display: none;
+  display: none;
 }
 
 .showCollapse {
-    display: block;
+  display: block;
 }
 
 .border-theme {
-    border: solid 1px #9966ff;
+  border: solid 1px #9966ff;
 }
 
-.show{
-    display: block !important;
+.show {
+  display: block !important;
 }
 

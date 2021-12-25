@@ -1,0 +1,1 @@
+.vjs-poster {     background-size: cover!important;     object-fit: cover!important; }  video[poster] {     object-fit: contain;     background-color:transparent; } 
