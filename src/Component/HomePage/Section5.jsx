@@ -2,14 +2,14 @@ import React from "react";
 
 const Section5 = () => {
   return (
-    <div className="w-full p-6 mt-20 pb-6">
+    <div className="w-full p-6 px-8 mt-20 pb-6">
       <div className="w-full">
         <div className="flex justify-around">
           <div className="w-1/4 hidden md:block">
             <img src="image/3.png" alt="ss" />
           </div>
-          <div className="text-gray-700 float-right my-auto text-small">
-            <h1 className="font-bold text-gray-800 text-lg">
+          <div className="text-gray-700 float-right my-auto text-small sm:text-sm">
+            <h1 className="font-bold text-gray-600 text-lg">
               چرا <span className="text-orange">پونس ؟</span>
             </h1>
             <p className="flex">
