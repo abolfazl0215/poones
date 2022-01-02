@@ -13,16 +13,15 @@ const SingleCourse = () => {
   }, []);
 
   return (
-    <div className="md:p-8 p-3 bg-gray-50">
+    <div className="md:p-8 p-3">
       <h1>.</h1>
-      <h1 className="mt-12 w-full text-center borderSingleCourse font-bold text-color text-xl rounded p-3 bg-white">
+      <h1 className="mt-12 w-full text-center bg-gray-100  font-bold text-color text-xl rounded p-3 bg-white">
         {cartContext.singleCourse.name}
       </h1>
-      <div className="w-full flex justify-between mt-3 flex-wrap">
+      <div className="w-full flex justify-between mt-3 flex-wrap shadow-xl">
         <div className="md:w-1/5 w-full mt-3 md:mt-0 md:pl-3 order-2 md:order-1">
-          <div className=" borderSingleCourse h-full text-gray-600 p-5 bg-white rounded">
-            <p className="font-bold text-purple-800 text-sm md:text-xs">
-              <span className="text-orange">$ </span>
+          <div className="  h-full text-gray-600 p-5 bg-white rounded">
+            <p className="font-bold text-purple-800 text-sm">
               قیمت این دوره :{" "}
               <span className="text-orange">
                 {cartContext.singleCourse.price}
@@ -43,10 +42,10 @@ const SingleCourse = () => {
             </button>
           </div>
         </div>
-        <div className="borderSingleCourse w-full md:w-4/5 p-5  md:order-1 bg-white rounded">
+        <div className=" w-full md:w-4/5 p-5  md:order-1 bg-white rounded">
           <iframe
             title="معرفی دوره"
-            className="w-full h-96"
+            className="w-full h-96 rounded"
             src="https://www.aparat.com/video/video/embed/videohash/CLrgf/vt/frame"
             allowFullScreen="true"
             webkitallowfullscreen="true"
@@ -54,27 +53,21 @@ const SingleCourse = () => {
           ></iframe>
         </div>
       </div>
-      <div className="mt-3 borderSingleCourse p-5 text-gray-600 bg-white rounded">
-        <p className="text-2xl">توضیحات :</p>
+      <div className="mt-3  p-5 text-gray-600 bg-white rounded shadow-xl">
+        <p className="text-2xl p-3 text-center">توضیحات</p>
         <br />
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, qui!
-        Quos, quidem? Saepe tenetur exercitationem libero, corrupti ea amet est
-        delectus debitis? Eos quisquam sapiente, laboriosam iste atque commodi
-        alias. Blanditiis laborum inventore esse aliquam odio sint optio sit eos
-        dolor minus, numquam assumenda quaerat, corrupti ad, nostrum ratione
-        exercitationem. Repellat repellendus sint earum sapiente asperiores in
-        expedita modi quam? Nulla, vel enim quibusdam eligendi odio unde?
-        Similique corrupti aliquam maiores optio minus reprehenderit unde
-        voluptates assumenda, ratione quis cupiditate voluptas, eius, vero amet
-        possimus tenetur dolorum repellendus fugiat doloremque! Enim vitae
-        voluptas quo facere possimus eveniet dolores in quidem similique odit
-        repudiandae quos ut reprehenderit sit omnis obcaecati ad maxime culpa
-        hic, alias error voluptatum tempore? Facilis, ipsum soluta. Est, iste
-        nostrum officia ipsam a quae et fuga harum, consectetur architecto dolor
-        unde voluptatem in cupiditate vero, aspernatur quas odit laudantium ad
-        illum!
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+        سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
+        متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
+        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
+        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان
+        خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان
+        رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+        پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
       </div>
-      <div className="borderSingleCourse w-full mt-3 md:p-5 p-3  bg-white rounded">
+      <div className=" w-full mt-3 md:p-5 p-3  bg-white rounded shadow-xl">
         <div className="w-full md:h-14 h-auto flex justify-between text-xs md:text-lg text-gray-700 bg-gray-100 p-2 mt-4">
           <div className="flex">
             <p className="w-8 h-8 rounded-full text-center border-2 border-color pt-1 text-white font-semibold"></p>

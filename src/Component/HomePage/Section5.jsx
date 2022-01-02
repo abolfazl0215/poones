@@ -2,10 +2,10 @@ import React from "react";
 
 const Section5 = () => {
   return (
-    <div className="w-full p-6 mt-14 pb-6">
+    <div className="w-full p-6 mt-20 pb-6">
       <div className="w-full">
         <div className="flex justify-around">
-          <div className="w-1/3 hidden md:block">
+          <div className="w-1/4 hidden md:block">
             <img src="image/3.png" alt="ss" />
           </div>
           <div className="text-gray-700 float-right my-auto text-small">

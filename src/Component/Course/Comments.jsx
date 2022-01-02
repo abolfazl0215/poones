@@ -35,7 +35,7 @@ const Comments = () => {
     }
   };
   return (
-    <div className="borderSingleCourse w-full mt-3 md:p-5 p-3  bg-white rounded pb-32">
+    <div className="shadow-xl w-full mt-3 md:p-5 p-3  bg-white rounded pb-32">
       <h3 className="font-bold p-2 text-gray-700">نظرات :</h3>
       <form onSubmit={(e) => handleSubmit(e)} className="pb-6">
         <textarea

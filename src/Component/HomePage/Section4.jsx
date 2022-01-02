@@ -2,7 +2,7 @@ import React from "react";
 
 const Section4 = () => {
   return (
-    <div className="p-8 md:px-28 mt-20 flex rounded-3xl md:rounded-none flex-wrap w-full justify-between bg-gray-100 text-lg">
+    <div className="p-8 md:px-40 mt-20 flex rounded-3xl md:rounded-none flex-wrap w-full justify-between bg-gray-100 text-lg">
       <div className="w-45/100 p-4 shadow-lg bg-white rounded-lg mt-4 md:w-22/100">
         <div className="flex justify-center">
           <span className="p-2 font-extrabold circle m-2  text-color text-sm font-bold ">

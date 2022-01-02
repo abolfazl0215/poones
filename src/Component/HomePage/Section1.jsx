@@ -34,22 +34,25 @@ const Section1 = () => {
         ></path>
       </svg> */}
       <div className="absolute w-full -bottom-8  text-center">
-        <div className="rounded-full cursor-pointer p-2 bg-white border-4 border-gray-100 mx-auto inline-block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="29"
-            height="29"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#5d3fd3"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="bevel"
-          >
-            <path d="M12 5v13M5 12l7 7 7-7" />
-          </svg>
-        </div>
+        <a href="#bottom">
+          <div className="rounded-full cursor-pointer p-2 bg-white border-4 border-gray-100 mx-auto inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="29"
+              height="29"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5d3fd3"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="bevel"
+            >
+              <path d="M12 5v13M5 12l7 7 7-7" />
+            </svg>
+          </div>
+        </a>
       </div>
+      <div id="bottom"></div>
     </div>
   );
 };
