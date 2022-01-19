@@ -12,7 +12,7 @@ const Register = () => {
 
       <form
         onSubmit={(e) => context.handleSubmitRegister(e)}
-        className="mt-16 md:mt-24 mx-auto  border-2 w-4/5 md:w-1/3 p-4 text-purple-900 text-sm rounded-lg"
+        className="mt-16 md:mt-24 mx-auto  border-2  border-gray-200 w-4/5 md:w-1/3 p-4 text-indigo-700 text-sm rounded-lg"
       >
         <p className="text-center text-2xl font-extrabold">پونس</p>
         <p className=" text-center p-3 mt-4 bg-color-fade rounded-lg">
@@ -22,11 +22,11 @@ const Register = () => {
         <div className="p-3 mt-3">
           <label>
             نام و نام خانوادگی:
-            <br />
+            </label>
             <input
               type="text"
               name="fullName"
-              className="w-full border-2 mt-2 h-11 rounded-lg"
+              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
               value={context.fullName}
               onChange={(e) => context.setFullName(e.target.value)}
             />
@@ -36,14 +36,13 @@ const Register = () => {
               context.fullName,
               "min:3|required"
             )}
-          </label>
           <label>
             ایمیل:
-            <br />
+            </label>
             <input
               type="email"
               name="email"
-              className="w-full border-2 mt-2 h-11 rounded-lg"
+              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
               value={context.email}
               onChange={(e) => context.setEmail(e.target.value)}
             />
@@ -52,14 +51,13 @@ const Register = () => {
               context.email,
               "required|email"
             )}
-          </label>
           <label>
-            رمز عبور:
-            <br />
+          رمز عبور:
+          </label>
             <input
               type="password"
               name="password"
-              className="w-full border-2 mt-2 h-11 rounded-lg"
+              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
               value={context.password}
               onChange={(e) => context.setPassword(e.target.value)}
             />
@@ -68,14 +66,14 @@ const Register = () => {
               context.password,
               "min:5|required"
             )}
-          </label>
           <label>
             تکرار رمز عبور
-            <br />
+            </label>
+            
             <input
               type="password"
               name="confirmPassword"
-              className="w-full border-2 mt-2 h-11 rounded-lg"
+              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
               value={context.confirmPassword}
               onChange={(e) => context.setConfirmPassword(e.target.value)}
             />
@@ -85,7 +83,6 @@ const Register = () => {
               context.confirmPassword,
               "min:5|required"
             )}
-          </label>
         </div>
         <p className="px-3 text-sm text-red-700">
           <Link to="/login">قبلا ثبت نام کردم (ورود به سایت)</Link>
@@ -93,7 +90,7 @@ const Register = () => {
         <div className="p-3">
           <button
             type="submit"
-            className="w-full bg-color text-white p-3 rounded-lg mt-3"
+            className="w-full bg-indigo-600 text-white p-3 rounded-lg mt-3"
           >
             ثبت نام
           </button>

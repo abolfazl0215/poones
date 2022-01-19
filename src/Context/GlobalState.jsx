@@ -13,6 +13,8 @@ const GlobalState = ({ children }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailLogin, setEmailLogin] = useState("");
+  const [passwordLogin, setPasswordLogin] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordConfirmResponse,setPasswordConfirmResponse] = useState("")
 
@@ -35,6 +37,16 @@ const GlobalState = ({ children }) => {
       element: (message) => <div style={{ color: "red" }}>{message}</div>,
     })
   );
+  const loginValidator=useRef(
+    new SimpleReactValidator({
+      messages: {
+        required: "پرکردن این فیلد الزامی میباشد",
+        min: "مقدرا وارد شده کمتر از حد مجاز است",
+        email: "ایمیل وارد شده صحیح نمیباشد",
+      },
+      element: (message) => <div style={{ color: "red" }}>{message}</div>,
+    })
+  );
 
   const reset = () => {
     setFullName("");
@@ -44,19 +56,20 @@ const GlobalState = ({ children }) => {
 
   const handleSubmitLogin = async (e) => {
     e.preventDefault();
-    const user = { email, password };
+    const user = { email:emailLogin, password:passwordLogin };
     console.log(user);
 
     //start validation form
     try {
-      if (validator.current.allValid()) {
+      if (loginValidator.current.allValid()) {
         const { status, data } = await loginUser(user);
+        console.log(data)
         if (status === 201) {
           toastr.success("ورود موفقیت آمیز بود");
           localStorage.setItem("fullName", data);
           navigate("/");
           // for rerender
-          setStorage("");
+          setStorage(data);
         }
         if (status === 203) {
           toastr.error("کاربر وجود ندارد");
@@ -121,10 +134,15 @@ const GlobalState = ({ children }) => {
           setEmail,
           password,
           setPassword,
+          emailLogin,
+          setEmailLogin,
+          passwordLogin,
+          setPasswordLogin,
           confirmPassword,
           setConfirmPassword,
           passwordConfirmResponse,
           validator,
+          loginValidator,
           getStorage,
           setStorage,
           handleSubmitLogin,

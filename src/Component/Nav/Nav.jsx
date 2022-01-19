@@ -183,7 +183,7 @@ export default function Nav() {
                 {localStorage.getItem("fullName")}
               </p>
               <hr />
-              <p onClick={handleLogout} className="p-2 cursor-pointer">
+              <p onClick={() => { handleLogout();handleClose()}} className="p-2 cursor-pointer">
                 خروج از حساب کاربری
               </p>
             </Box>

@@ -39,7 +39,7 @@ const Section4 = () => {
             3 +
           </span>
         </div>
-        <p className="text-gray-500 w-2/3 mx-auto text-center text-sm md:text-xs">
+        <p className="text-gray-500 w-2/3 mx-auto text-center text-sm">
           سال سابقه فعالیت حرفه ای
         </p>
       </div>

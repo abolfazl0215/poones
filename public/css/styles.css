@@ -1,10 +1,14 @@
 @font-face {
-  src: url("IRANYekanWebRegular.woff2");
-  font-family: "Fetne";
+  font-family: "iranYekan";
+  src: url("IRANYekanWebRegular.woff2") format('woff2')
+}
+@font-face {
+  font-family: "iranYekan2";
+  src: url("IRANYekanWebRegular.woff") format('woff')
 }
 * {
   scroll-behavior: smooth;
-  font-family: "Fetne";
+  font-family: "iranYekan","iranYekan2";
 }
 #root {
   margin: 0px;
