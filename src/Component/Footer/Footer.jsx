@@ -4,8 +4,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-100 pb-8 p-2 mt-28 text-center rounded-tl-3xl rounded-tr-3xl">
-      <p className="font-bold  text-color border-2 border-gray-100 rounded-3xl bg-white p-2 px-4 w-1/2 md:w-1/4 mx-auto -mt-8">
+    <div className="bg-gray-100 pb-8 p-2 mt-28 text-center rounded-tl-3xl rounded-tr-3xl border-t-2 border-gray-200">
+      <p className="font-bold  text-color border-2 border-gray-200 rounded-3xl bg-white p-2 px-4 w-1/2 md:w-1/4 mx-auto -mt-8">
         درباره من
       </p>
       <p className="mt-6 text-sm px-4 md:px-32 text-gray-700 leading-6">

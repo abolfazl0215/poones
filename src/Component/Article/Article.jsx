@@ -29,32 +29,55 @@ const Article = (props) => {
     <div className="md:pt-24 pt-10">
       {location.pathname === "/" ? (
         <div className="text-center">
-          <h1 className="inline-block py-2 px-4 rounded-3xl text-white bg-color font-bold md:text-xl">
+          <h1 className="inline-block py-2 px-8 rounded-3xl text-white bg-indigo-600 font-bold md:text-xl">
             آخرین مقالات
           </h1>
-          <hr style={{ height: "1.9px" }} className="bg-color -mt-5" />
+          <hr style={{ height: "1.9px" }} className="bg-indigo-600 -mt-5" />
         </div>
       ) : (
         ""
       )}
-      <div className="p-5 mt-4 md:flex md:justify-between">
-        {cartContext.courses.map((p) => (
-          <div className="sm:w-full pb-4  course-shadow mt-5 md:m-3 md:w-30/100 sm:text-sm text-small relative">
-            <video
-              ref={videoRef}
-              id="video"
-              className="video-js vjs-fluid w-full h-auto7"
-              controls
-              data-setup={{}}
-              poster="/image/roadMap.jpg"
-            >
-              <source src={video} />
-            </video>
-            <h1 className="p-4 text-gray-600 font-bold text-center">
-              نقشه راه طراحی وب
-            </h1>
+      <div className="p-5 md:px-20 mt-4 md:flex flex-wrap md:justify-start">
+        {cartContext.courses.map((p) => ( 
+          <div className="sm:w-full pb-4 md:p-4  mt-5 md:w-1/3 sm:text-sm text-small relative">
+            <div className="course-shadow p-1">
+              <video
+                ref={videoRef}
+                id="video"
+                className="video-js vjs-fluid w-full h-auto7"
+                controls
+                data-setup={{}}
+                poster="/image/roadMap.jpg"
+              >
+                <source src={video} />
+              </video>
+              <h1 className="p-4 text-gray-600 font-bold text-center">
+                نقشه راه طراحی وب
+              </h1>
+            </div>
           </div>
         ))}
+        {cartContext.courses.map((p) => (
+          <div className="sm:w-full pb-4 md:p-4  mt-5 md:w-1/3 sm:text-sm text-small relative">
+            <div className="course-shadow p-1">
+              <video
+                ref={videoRef}
+                id="video"
+                className="video-js vjs-fluid w-full h-auto7"
+                controls
+                data-setup={{}}
+                poster="/image/roadMap.jpg"
+              >
+                <source src={video} />
+              </video>
+              <h1 className="p-4 text-gray-600 font-bold text-center">
+                نقشه راه طراحی وب
+              </h1>
+            </div>
+          </div>
+        ))}
+        
+      
       </div>
     </div>
   );

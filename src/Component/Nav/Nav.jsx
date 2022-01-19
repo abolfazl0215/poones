@@ -16,6 +16,11 @@ import Backdrop from "@mui/material/Backdrop";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import { Link } from "react-router-dom";
+import { BiHomeHeart } from "react-icons/bi";
+import { CgMenuRight } from "react-icons/cg";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
+import { VscCallIncoming } from "react-icons/vsc";
+
 
 const useStyles = makeStyles({
   bgWhite: {
@@ -52,7 +57,7 @@ export default function Nav() {
                 collapsed="true"
                 render={({ toggle, setCollapsibleElement }) => (
                   <IconButton
-                    sx={{ display: { md: "none" }, mr: 1, color: "#5d3fd3" }}
+                    sx={{ display: { md: "none" }, mr: 1, color: "#4f46e5" }}
                   >
                     {showMenu ? (
                       <div onClick={handleShowMenu}>
@@ -71,21 +76,21 @@ export default function Nav() {
                       ref={setCollapsibleElement}
                       style={{ zIndex: "999" }}
                       id="menu-collapse"
-                      className="w-full fixed right-0 top-16 text-right border-b-2 bg-white md:hidden"
+                      className="w-full fixed right-0 top-16 text-right bg-white shadow-xl md:hidden"
                     >
                       <ul className="p-4 pt-0 leading-10 text-sm font-bold text-gray-500">
-                        <li>
-                          <Link to="/">
-                            <p>خانه</p>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/courses">
-                            <p>دوره های آموزشی</p>
-                          </Link>
-                        </li>
-                        <li>درباره ما</li>
-                        <li>تماس با ما</li>
+                        <Link to="/">
+                          <li onClick={() => { toggle(); handleShowMenu();}}>
+                              <p className="inline"><BiHomeHeart className="inline mr-1 ml-2 text-lg"/>خانه </p>
+                          </li>
+                        </Link>
+                        <Link to="/courses">
+                          <li onClick={() => { toggle(); handleShowMenu();}}>
+                              <p className="inline"><CgMenuRight className="inline mr-1 ml-2 text-lg"/>دوره های آموزشی</p>
+                          </li>
+                        </Link>
+                        <li onClick={() => { toggle(); handleShowMenu();}}><AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg"/>درباره من</li>
+                        <li onClick={() => { toggle(); handleShowMenu();}}><VscCallIncoming className="inline mr-1 ml-2 text-lg"/>تماس با من</li>
                       </ul>
                     </div>
                     {/* end menu collapse */}
@@ -123,7 +128,7 @@ export default function Nav() {
               <IconButton
                 sx={{
                   ml: { xs: 1, md: 4 },
-                  color: "#5d3fd3",
+                  color: "#4f46e5",
                   fontSize: "0.90em",
                 }}
               >
@@ -138,7 +143,7 @@ export default function Nav() {
                 </Link>
               </IconButton>
 
-              <IconButton sx={{ ml: 1, color: "#5d3fd3" }}>
+              <IconButton sx={{ ml: 1, color: "#4f46e5" }}>
                 <Link to={context.getStorage ? "" : "/login"}>
                   <AccountCircleOutlinedIcon
                     onClick={context.getStorage ? handleOpen : null}

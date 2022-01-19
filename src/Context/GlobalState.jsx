@@ -13,9 +13,12 @@ const GlobalState = ({ children }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordConfirmResponse,setPasswordConfirmResponse] = useState("")
 
   const [, forceUpdate] = useState(false);
   const [getStorage, setStorage] = useState("");
+
 
   useEffect(() => {
     const data = localStorage.getItem("fullName");
@@ -72,27 +75,34 @@ const GlobalState = ({ children }) => {
   const handleSubmitRegister = async (e) => {
     forceUpdate(1);
     e.preventDefault();
-    const user = { fullName, email, password };
-
+    const user = { fullName, email, password , confirmPassword };
+    
     //start validation form
     try {
+
+      setPasswordConfirmResponse("")
       if (validator.current.allValid()) {
-        const { status } = await registerUser(user);
-        if (status === 201) {
-          toastr.success("کاربر با موفقیت ساخته شد");
+          if(password === confirmPassword){
+          const {status} = await registerUser(user);
+          
+          if (status === 201) {
+            toastr.success("کاربر با موفقیت ساخته شد");
+            localStorage.setItem("fullName", fullName);
+            navigate("/");
+            // for rerender
+            setStorage("");
+          }
+          if (status === 203) {
+            toastr.error("کاربر از قبل وجود دارد");
+          }
           localStorage.setItem("fullName", fullName);
-          navigate("/");
-          // for rerender
-          setStorage("");
+        } else{
+          setPasswordConfirmResponse("رمزعبورها مطابقت ندارند")
         }
-        if (status === 203) {
-          toastr.error("کاربر از قبل وجود دارد");
+      }else {
+          validator.current.showMessages();
+          forceUpdate(1);
         }
-        localStorage.setItem("fullName", fullName);
-      } else {
-        validator.current.showMessages();
-        forceUpdate(1);
-      }
     } catch (err) {
       toastr.error("لطفا اتصال اینترنت خودرا بررسی کنید");
       console.log(err);
@@ -111,6 +121,9 @@ const GlobalState = ({ children }) => {
           setEmail,
           password,
           setPassword,
+          confirmPassword,
+          setConfirmPassword,
+          passwordConfirmResponse,
           validator,
           getStorage,
           setStorage,

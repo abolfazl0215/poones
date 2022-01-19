@@ -4,6 +4,7 @@ import Context from "./../../Context/Context";
 
 const Register = () => {
   const context = useContext(Context);
+  
 
   return (
     <div>
@@ -29,6 +30,7 @@ const Register = () => {
               value={context.fullName}
               onChange={(e) => context.setFullName(e.target.value)}
             />
+            
             {context.validator.current.message(
               "fullname",
               context.fullName,
@@ -64,6 +66,23 @@ const Register = () => {
             {context.validator.current.message(
               "password",
               context.password,
+              "min:5|required"
+            )}
+          </label>
+          <label>
+            تکرار رمز عبور
+            <br />
+            <input
+              type="password"
+              name="confirmPassword"
+              className="w-full border-2 mt-2 h-11 rounded-lg"
+              value={context.confirmPassword}
+              onChange={(e) => context.setConfirmPassword(e.target.value)}
+            />
+            <p className="text-red-400">{context.passwordConfirmResponse}</p>
+            {context.validator.current.message(
+              "confirmPassword",
+              context.confirmPassword,
               "min:5|required"
             )}
           </label>
