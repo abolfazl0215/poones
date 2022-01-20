@@ -7,14 +7,14 @@ import "./index.css";
 const Comments = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
-
+  console.log("comment is :",comment)
   const context = useContext(Context);
 
   useEffect(async () => {
     try {
       const getComment = await http.get("https://api.pounes.ir/getComment");
       setComments(getComment.data.comments);
-      console.log(comments);
+      console.log("data is :",getComment.data.message);
     } catch (err) {
       console.log(err);
     }
@@ -24,14 +24,18 @@ const Comments = () => {
     e.preventDefault();
     const fullName = localStorage.getItem("fullName");
     try {
-      await http.post(
-        "https://api.pounes.ir/setComment",
-        JSON.stringify({ comment, fullName })
-      );
-      toastr.success("نظر شما به زودی ثبت میشود");
+      if (fullName) {
+        await http.post(
+          "https://api.pounes.ir/setComment",
+          JSON.stringify({ comment, fullName })
+        );
+        toastr.success("نظر شما به زودی ثبت میشود");
+      } else {
+        toastr.warning("برای ثبت نظر ابتدا در سایت ثبت نام کنید")
+      }
     } catch (err) {
       console.log(err);
-      toastr.error("نظر شما به زودی ثبت میشود");
+      toastr.error("فکر کنم اینترنتت خاموش شده");
     }
   };
   return (
@@ -47,7 +51,7 @@ const Comments = () => {
         ></textarea>
         {context.getStorage ? (
           <button
-            className="bg-color mt-2 text-white font-bold px-4 py-2 rounded w-full md:w-1/5"
+            className="bg-indigo-600 mt-2 text-white font-bold px-4 py-2 rounded w-full md:w-1/5"
             type="submit"
           >
             ارسال نظر
@@ -58,40 +62,44 @@ const Comments = () => {
           </button>
         )}
       </form>
-      {comments
-        .filter((p) => p.isAllowed === true)
-        .reverse()
-        .map((c) => (
-          <div>
-            <div className="w-full borderSingleCourse mt-4 p-2">
-              <div className="flex">
-                <div className="w-12 h-12 circle bg-gray-200"></div>
-                <p className="mt-4 mr-2 text-sm font-bold">علی محمدی</p>
-              </div>
-              <p className="m-2 mt-4 text-sm">{c.comment}</p>
-            </div>
-            {c.response ? (
-              <div className="pr-4">
-                <div className="w-full borderSingleCourseResponse mt-2 p-2">
-                  <div className="flex">
-                    <img
-                      src="image/avatar.png"
-                      alt="avatar"
-                      className="w-12 h-12 circle border-2 "
-                    ></img>
-                    <p className="mt-4 mr-2 text-sm font-bold">
-                      ابوالفضل مختاری{" "}
-                      <span className="text-sm font-light">(مدیرسایت)</span>
-                    </p>
-                  </div>
-                  <p className="m-2 mt-4 text-sm">{c.response}</p>
+      {comments ? 
+        <div>
+        {comments
+          .filter((p) => p.isAllowed === true)
+          .reverse()
+          .map((c) => (
+            <div>
+              <div className="w-full borderSingleCourse mt-4 p-2">
+                <div className="flex">
+                  <div className="w-12 h-12 circle bg-gray-200"></div>
+                  <p className="mt-4 mr-2 text-sm font-bold">علی محمدی</p>
                 </div>
+                <p className="m-2 mt-4 text-sm">{c.comment}</p>
               </div>
-            ) : (
-              ""
-            )}
-          </div>
-        ))}
+              {c.response ? (
+                <div className="pr-4">
+                  <div className="w-full borderSingleCourseResponse mt-2 p-2">
+                    <div className="flex">
+                      <img
+                        src="image/avatar.png"
+                        alt="avatar"
+                        className="w-12 h-12 circle border-2 "
+                      ></img>
+                      <p className="mt-4 mr-2 text-sm font-bold">
+                        ابوالفضل مختاری{" "}
+                        <span className="text-sm font-light">(مدیرسایت)</span>
+                      </p>
+                    </div>
+                    <p className="m-2 mt-4 text-sm">{c.response}</p>
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+          ))}
+        </div>
+        : ""}
     </div>
   );
 };

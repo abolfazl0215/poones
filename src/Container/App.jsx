@@ -1,16 +1,17 @@
-import React from "react";
+import React,{lazy} from "react";
 import { Route, Routes } from "react-router-dom";
-import SingleCourse from "../Component/Course/SingleCourse";
 import HomePage from "../Component/HomePage/HomePage";
-import Register from "../Component/Register/Register";
 import MainLayout from "../Layouts/MainLayout";
-import Login from "./../Component/Login/Login";
-import Courses from "./../Component/Course/Courses";
-import Cart from "../Component/Cart/Cart";
+const SingleCourse = lazy(() => import("../Component/Course/SingleCourse"));
+const Register = lazy(() => import("../Component/Register/Register"));
+const Login = lazy(() => import("./../Component/Login/Login"));
+const Courses = lazy(() => import("./../Component/Course/Courses"));
+const Cart = lazy(() => import("../Component/Cart/Cart"));
 const App = () => {
   return (
     <div>
-      <MainLayout>
+    
+        <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<Register />} />
@@ -19,7 +20,7 @@ const App = () => {
           <Route path="/courses" element={<Courses />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
-      </MainLayout>
+        </MainLayout>
     </div>
   );
 };

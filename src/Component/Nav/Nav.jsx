@@ -97,12 +97,14 @@ export default function Nav() {
                   </IconButton>
                 )}
               />
-
-              <img
-                className="w-7 h-7 mr-2 cursor-pointer"
-                src="image/poones.png"
-                alt=""
-              />
+              <picture>
+                      <source srcSet="/image/poones.webp" className="w-7 h-7 mr-2 cursor-pointer" />
+                      <img
+                        className="w-7 h-7 mr-2 cursor-pointer"
+                        src="/image/poones.png"
+                        alt="logo"
+                      />
+              </picture>
               <Box
                 sx={{
                   mr: 2,

@@ -6,7 +6,7 @@ const Courses = () => {
   const location = useLocation();
   const cartContext = useContext(CartContext);
   return (
-    <div className="inline-block md:pt-24 pt-10">
+    <div className="inline-block w-full md:pt-24 pt-10">
       {location.pathname === "/" ? (
         <div className="text-center">
           <h1 className="inline-block py-2 px-8 rounded-3xl text-white bg-indigo-600 font-bold md:text-xl">
@@ -17,19 +17,22 @@ const Courses = () => {
       ) : (
         ""
       )}
-      <div className="p-5 md:px-20 mt-4 md:flex flex-wrap md:justify-start">
+      <div className="p-5 w-full md:px-20 mt-4 md:flex flex-wrap md:justify-start">
         {cartContext.courses.map((p) => (
           <div
             onClick={() => cartContext.goToCourse(p.id)}
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small"
           >
             <div className="pb-4 course-shadow">
-            <Link to="/singleCourse">
-              <img
-                className="border-4 border-white"
-                src={p.image_url}
-                alt="course"
-              />
+              <Link to="/singleCourse" className="p-0">
+                <picture>
+                  <source srcSet={p.image_url1} />
+                  <img
+                    className="border-4 border-white"
+                    src={p.image_url2}
+                    alt="course"
+                  />
+                </picture>
               <h1 className="p-4 text-gray-600 font-bold">{p.name}</h1>
               <div className="flex pr-4">
                 <svg
@@ -80,12 +83,15 @@ const Courses = () => {
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small"
           >
             <div className="pb-4 course-shadow">
-            <Link to="/singleCourse">
-              <img
-                className="border-4 border-white"
-                src={p.image_url}
-                alt="course"
-              />
+              <Link to="/singleCourse" className="p-0">
+                <picture>
+                  <source srcSet={p.image_url1} />
+                  <img
+                    className="border-4 border-white"
+                    src={p.image_url2}
+                    alt="course"
+                  />
+                </picture>
               <h1 className="p-4 text-gray-600 font-bold">{p.name}</h1>
               <div className="flex pr-4">
                 <svg
@@ -136,12 +142,15 @@ const Courses = () => {
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small"
           >
             <div className="pb-4 course-shadow">
-            <Link to="/singleCourse">
-              <img
-                className="border-4 border-white"
-                src={p.image_url}
-                alt="course"
-              />
+              <Link to="/singleCourse" className="p-0">
+                <picture>
+                  <source srcSet={p.image_url1} />
+                  <img
+                    className="border-4 border-white"
+                    src={p.image_url2}
+                    alt="course"
+                  />
+                </picture>
               <h1 className="p-4 text-gray-600 font-bold">{p.name}</h1>
               <div className="flex pr-4">
                 <svg
@@ -186,6 +195,7 @@ const Courses = () => {
             </div>
           </div>
         ))}
+        
         
         
         

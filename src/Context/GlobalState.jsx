@@ -52,6 +52,7 @@ const GlobalState = ({ children }) => {
     setFullName("");
     setEmail("");
     setPassword("");
+    setConfirmPassword("");
   };
 
   const handleSubmitLogin = async (e) => {
@@ -75,11 +76,11 @@ const GlobalState = ({ children }) => {
           toastr.error("کاربر وجود ندارد");
         }
       } else {
-        validator.current.showMessages();
+        loginValidator.current.showMessages();
         forceUpdate(1);
       }
     } catch (err) {
-      toastr.error("لطفا اتصال اینترنت خودرا بررسی کنید");
+      toastr.error("فکر کنم اینترنتت خاموش شده");
     }
     // end validation form
     reset();
@@ -89,14 +90,15 @@ const GlobalState = ({ children }) => {
     forceUpdate(1);
     e.preventDefault();
     const user = { fullName, email, password , confirmPassword };
-    
+    console.log(user)
     //start validation form
     try {
-
+      
       setPasswordConfirmResponse("")
       if (validator.current.allValid()) {
-          if(password === confirmPassword){
+        if(password === confirmPassword){
           const {status} = await registerUser(user);
+          console.log("hib")
           
           if (status === 201) {
             toastr.success("کاربر با موفقیت ساخته شد");
@@ -117,7 +119,7 @@ const GlobalState = ({ children }) => {
           forceUpdate(1);
         }
     } catch (err) {
-      toastr.error("لطفا اتصال اینترنت خودرا بررسی کنید");
+      toastr.error("فکر کنم اینترنتت خاموش شده");
       console.log(err);
     }
     // end validation form

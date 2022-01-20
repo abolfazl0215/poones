@@ -10,7 +10,7 @@ axios.interceptors.response.use(null, error => {
         error.response.status < 500;
     if (!expectedErrors) {
         console.log(error);
-        toastr.error("مشکلی از سمت سرور رخ داده است.");
+        toastr.error("فکر کنم اینترنتت خاموش شده");
     }
 
     return Promise.reject(error);

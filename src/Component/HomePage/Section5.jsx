@@ -6,7 +6,10 @@ const Section5 = () => {
       <div className="w-full">
         <div className="flex justify-around">
           <div className="w-1/4 hidden md:block">
-            <img src="image/3.png" alt="ss" />
+            <picture>
+              <source srcSet="/image/3.webp" />
+              <img src="/image/3.png" alt="website image" />
+            </picture>
           </div>
           <div className="text-gray-700 float-right my-auto text-small sm:text-sm">
             <h1 className="font-bold text-gray-600 text-lg">
@@ -20,7 +23,7 @@ const Section5 = () => {
                   height="18"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#9966ff"
+                  stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
                   stroke-linejoin="round"
@@ -38,7 +41,7 @@ const Section5 = () => {
                   height="18"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#9966ff"
+                  stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
                   stroke-linejoin="round"
@@ -56,7 +59,7 @@ const Section5 = () => {
                   height="18"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#9966ff"
+                  stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
                   stroke-linejoin="round"
@@ -76,7 +79,7 @@ const Section5 = () => {
                   height="18"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#9966ff"
+                  stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
                   stroke-linejoin="round"
@@ -96,7 +99,7 @@ const Section5 = () => {
                   height="18"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#9966ff"
+                  stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
                   stroke-linejoin="round"
