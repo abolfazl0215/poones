@@ -1,30 +1,18 @@
-import React, { useContext, useEffect, useRef } from "react";
+import React, { memo } from "react";
 import { useLocation } from "react-router-dom";
-import CartContext from "./../../Context/CartContext";
-import "./index.css";
-import video from "./main4.mp4";
-import videojs from "video.js";
-import "video.js/dist/video-js.css";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Box from "@mui/material/Box";
+import Backdrop from "@mui/material/Backdrop";
+
 
 const Article = (props) => {
   const location = useLocation();
-  const cartContext = useContext(CartContext);
-  const videoRef = useRef(null);
-  const playerRef = useRef(null);
-  const { options, onReady } = props;
+  
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  useEffect(() => {
-    // make sure Video.js player is only initialized once
-    if (!playerRef.current) {
-      const videoElement = videoRef.current;
-      if (!videoElement) return;
-
-      const player = (playerRef.current = videojs(videoElement, options, () => {
-        console.log("player is ready");
-        onReady && onReady(player);
-      }));
-    }
-  }, [options, videoRef]);
   return (
     <div className="md:pt-24 pt-10">
       {location.pathname === "/" ? (
@@ -37,45 +25,138 @@ const Article = (props) => {
       ) : (
         ""
       )}
-      <div className="p-5 md:px-20 mt-4 md:flex flex-wrap md:justify-start">
-        {cartContext.courses.map((p) => ( 
-          <div className="sm:w-full pb-4 md:p-4  mt-5 md:w-1/3 sm:text-sm text-small relative">
+      <div className="p-5 md:px-20 mt-4 md:flex relative flex-wrap md:justify-start">
+          
+        <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
             <div className="course-shadow p-1">
-              <video
-                ref={videoRef}
-                id="video"
-                className="video-js vjs-fluid w-full h-auto7"
-                controls
-                data-setup={{}}
-                poster="/image/roadMap.jpg"
-              >
-                <source src={video} />
-              </video>
+            <img className="w-full" src="/image/roadMap.jpg" />
               <h1 className="p-4 text-gray-600 font-bold text-center">
                 نقشه راه طراحی وب
               </h1>
             </div>
           </div>
-        ))}
-        {cartContext.courses.map((p) => (
-          <div className="sm:w-full pb-4 md:p-4  mt-5 md:w-1/3 sm:text-sm text-small relative">
+          <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <Box
+              sx={{
+                bgcolor: "background.paper",
+                position: "absolute",
+                top: "7%",
+                height:"80vh",
+                width:"80%",
+                marginRight: "10%",
+                p: 1,
+                borderRadius: "5px",
+              }}
+            >
+            <iframe
+            title="معرفی دوره"
+            className="w-full h-full rounded"
+            src="https://www.aparat.com/video/video/embed/videohash/CLrgf/vt/frame"
+            allowFullScreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+          ></iframe>
+            </Box>
+          </Fade>
+        </Modal>
+        <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
             <div className="course-shadow p-1">
-              <video
-                ref={videoRef}
-                id="video"
-                className="video-js vjs-fluid w-full h-auto7"
-                controls
-                data-setup={{}}
-                poster="/image/roadMap.jpg"
-              >
-                <source src={video} />
-              </video>
+            <img className="w-full" src="/image/roadMap.jpg" />
               <h1 className="p-4 text-gray-600 font-bold text-center">
                 نقشه راه طراحی وب
               </h1>
             </div>
           </div>
-        ))}
+          <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <Box
+              sx={{
+                bgcolor: "background.paper",
+                position: "absolute",
+                top: "7%",
+                height:"80vh",
+                width:"80%",
+                marginRight: "10%",
+                p: 1,
+                borderRadius: "5px",
+              }}
+            >
+            <iframe
+            title="معرفی دوره"
+            className="w-full h-full rounded"
+            src="https://www.aparat.com/video/video/embed/videohash/CLrgf/vt/frame"
+            allowFullScreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+          ></iframe>
+            </Box>
+          </Fade>
+        </Modal>
+        <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
+            <div className="course-shadow p-1">
+            <img className="w-full" src="/image/roadMap.jpg" />
+              <h1 className="p-4 text-gray-600 font-bold text-center">
+                نقشه راه طراحی وب
+              </h1>
+            </div>
+          </div>
+          <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <Box
+              sx={{
+                bgcolor: "background.paper",
+                position: "absolute",
+                top: "7%",
+                height:"80vh",
+                width:"80%",
+                marginRight: "10%",
+                p: 1,
+                borderRadius: "5px",
+              }}
+            >
+            <iframe
+            title="معرفی دوره"
+            className="w-full h-full rounded"
+            src="https://www.aparat.com/video/video/embed/videohash/CLrgf/vt/frame"
+            allowFullScreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+          ></iframe>
+            </Box>
+          </Fade>
+        </Modal>
+        
         
       
       </div>
@@ -83,4 +164,4 @@ const Article = (props) => {
   );
 };
 
-export default Article;
+export default memo(Article);

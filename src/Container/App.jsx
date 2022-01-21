@@ -1,7 +1,7 @@
-import React,{lazy} from "react";
+import React,{lazy, Suspense} from "react";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "../Component/HomePage/HomePage";
-import MainLayout from "../Layouts/MainLayout";
+const HomePage = lazy(() => import("../Component/HomePage/HomePage"));
+const MainLayout = lazy(() => import("../Layouts/MainLayout"));
 const SingleCourse = lazy(() => import("../Component/Course/SingleCourse"));
 const Register = lazy(() => import("../Component/Register/Register"));
 const Login = lazy(() => import("./../Component/Login/Login"));
@@ -10,7 +10,7 @@ const Cart = lazy(() => import("../Component/Cart/Cart"));
 const App = () => {
   return (
     <div>
-    
+      <Suspense fallback={<div className="mt-28 p-12 font-extrabold text-center bg-red-100">الان میاد ...</div>}>
         <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -21,6 +21,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
         </Routes>
         </MainLayout>
+      </Suspense>
     </div>
   );
 };

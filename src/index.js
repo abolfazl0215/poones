@@ -5,4 +5,4 @@ import { BrowserRouter } from 'react-router-dom';
 import GlobalState from './Context/GlobalState.jsx';
 import CartState from './Context/CartState';
 
-render( <BrowserRouter> <GlobalState><CartState><App /></CartState></GlobalState> </BrowserRouter>  , document.getElementById('root'))
+render( <BrowserRouter> <GlobalState><CartState><App /></CartState></GlobalState> </BrowserRouter> , document.getElementById('root'))

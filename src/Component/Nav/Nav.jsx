@@ -98,7 +98,7 @@ export default function Nav() {
                 )}
               />
               <picture>
-                      <source srcSet="/image/poones.webp" className="w-7 h-7 mr-2 cursor-pointer" />
+                      <source srcSet="/image/poones.webp" />
                       <img
                         className="w-7 h-7 mr-2 cursor-pointer"
                         src="/image/poones.png"
