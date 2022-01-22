@@ -2,9 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SimpleReactValidator from "simple-react-validator";
 import toastr from "toastr";
-import { registerUser } from "../Services/userService";
-import { loginUser } from "../Services/userService";
+import jwt from "jsonwebtoken"
+import { getUsers, registerUser,loginUser } from "../Services/userService";
 import Context from "./Context";
+import http from '../Services/httpService'
 
 const GlobalState = ({ children }) => {
   // const location = useLocation();
@@ -19,13 +20,13 @@ const GlobalState = ({ children }) => {
   const [passwordConfirmResponse,setPasswordConfirmResponse] = useState("")
 
   const [, forceUpdate] = useState(false);
-  const [getStorage, setStorage] = useState("");
+  const [loginUpdate, setLoginUpdate] = useState();
 
 
   useEffect(() => {
     const data = localStorage.getItem("fullName");
-    setStorage(data);
-  }, [getStorage]);
+    setLoginUpdate(data);
+  }, [loginUpdate]);
 
   const validator = useRef(
     new SimpleReactValidator({
@@ -64,15 +65,20 @@ const GlobalState = ({ children }) => {
     try {
       if (loginValidator.current.allValid()) {
         const { status, data } = await loginUser(user);
-        console.log(data)
-        if (status === 201) {
+        localStorage.setItem('token', data.token)
+        console.log(jwt.decode(data.token))
+        const decode=jwt.decode(data.token)
+        if (status === 200) {
           toastr.success("ورود موفقیت آمیز بود");
-          localStorage.setItem("fullName", data);
           navigate("/");
           // for rerender
-          setStorage(data);
+          const arr=[]
+          const fName=decode.user.fullName
+          arr.push(fName)
+          setLoginUpdate(arr)
+          console.log(loginUpdate)
         }
-        if (status === 203) {
+        if (status === 422) {
           toastr.error("کاربر وجود ندارد");
         }
       } else {
@@ -97,20 +103,16 @@ const GlobalState = ({ children }) => {
       setPasswordConfirmResponse("")
       if (validator.current.allValid()) {
         if(password === confirmPassword){
-          const {status} = await registerUser(user);
-          console.log("hib")
-          
+          const {status,data} = await registerUser(user);
           if (status === 201) {
             toastr.success("کاربر با موفقیت ساخته شد");
-            localStorage.setItem("fullName", fullName);
+            localStorage.setItem("token", data.token);
             navigate("/");
             // for rerender
-            setStorage("");
           }
           if (status === 203) {
             toastr.error("کاربر از قبل وجود دارد");
           }
-          localStorage.setItem("fullName", fullName);
         } else{
           setPasswordConfirmResponse("رمزعبورها مطابقت ندارند")
         }
@@ -123,8 +125,19 @@ const GlobalState = ({ children }) => {
       console.log(err);
     }
     // end validation form
-    reset();
+    // reset();
   };
+
+  const getUser = async () => {
+    try {
+        const decode = jwt.decode(localStorage.getItem("token"))
+        const mail = decode.user.email;
+        const { data } = await http.post("http://localhost:3000/getUser",JSON.stringify({email:mail}));
+        localStorage.setItem('token',data.token)
+    } catch (err) {
+        console.log(err)
+    }
+  }
 
   return (
     <div>
@@ -145,10 +158,11 @@ const GlobalState = ({ children }) => {
           passwordConfirmResponse,
           validator,
           loginValidator,
-          getStorage,
-          setStorage,
+          loginUpdate,
+          setLoginUpdate,
           handleSubmitLogin,
           handleSubmitRegister,
+          getUser
         }}
       >
         {/* <CartHandler /> */}

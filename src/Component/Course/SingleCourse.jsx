@@ -1,22 +1,60 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CgSoftwareDownload } from "react-icons/cg";
-import CartContext from "./../../Context/CartContext";
+import toastr from "toastr";
 import Comments from "./Comments";
+import Course from "./Courses.json";
+import http from '../../Services/httpService';
+import jwt from 'jsonwebtoken'
 import "./index.css";
+import Context from "../../Context/Context";
+
 
 const SingleCourse = () => {
-  const cartContext = useContext(CartContext);
+  const [allowed, setAllowed] = useState(false)
 
-  useEffect(() => {
+  const context = useContext(Context)
+
+  const goToCourse =async (course) => {
+    try {
+      const token = localStorage.getItem("token")
+      if (token) {
+        const email = jwt.decode(token).user.email
+            const { status , data } = await http.post(
+              "http://localhost:3000/registerCourse",
+              JSON.stringify({ course,email })
+        );
+        console.log(data.token)
+            if (status === 201) {
+              toastr.success("به دوره خوش اومدی .")
+              setAllowed(true)
+            }
+          } else {
+            toastr.error("لطفا اول تو سایت ثبت نام کن")
+          }
+    } catch (err) {
+      console.log(err)
+    }
+
+  }
+
+  useEffect(async() => {
     document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.documentElement.scrollTop = 0; 
+    
+    if (localStorage.getItem("token")) {
+      const decode = jwt.decode(localStorage.getItem('token'));
+      const isAllowed = decode.user.courses    
+      if (isAllowed.length>0) {
+        setAllowed(true)
+      }
+    }
   }, []);
 
   return (
     <div className="md:p-8 p-3">
       <h1>.</h1>
       <h1 className="mt-12 w-full text-center bg-gray-100  font-bold text-color text-xl rounded p-3 bg-white">
-        {cartContext.singleCourse.name}
+        {Course[0].name}
       </h1>
       <div className="w-full flex justify-between mt-3 flex-wrap shadow-xl">
         <div className="md:w-1/5 w-full mt-3 md:mt-0 md:pl-3 order-2 md:order-1">
@@ -24,22 +62,30 @@ const SingleCourse = () => {
             <p className="font-bold text-purple-800 text-sm">
               قیمت این دوره :{" "}
               <span className="text-orange">
-                {cartContext.singleCourse.price}
+                {Course[0].price}
               </span>
             </p>
             <hr className="mt-2" />
             <p className="mt-5 mr-2">مدت زمان دوره : 23:40:00</p>
-            <p className="mt-2 mr-2">تعداد دانشجو : 223</p>
+            <p className="mt-2 mr-2">تعداد دانشجو : {}</p>
             <p className="mt-2 mr-2">سطح دوه : مقدماتی تا پیشرفته</p>
-            <button
-              id="goCart"
-              onClick={() =>
-                cartContext.goToCart(cartContext.singleCourse.name)
-              }
-              className="bg-color text-white p-2 w-full text-center rounded-md mt-6 text-xl"
-            >
-              ثبت نام این دوره
-            </button>
+             
+            {allowed ? (
+              <div>
+                <p className="text-green-500 pr-2 pt-4">شما قبلا در این دوره ثبت نام کردی !</p>
+              </div>
+            ): (
+              <button
+                id="goCart"
+                  onClick={() => {
+                    goToCourse("course1");
+                    context.getUser()
+                  }}
+                className="bg-color text-white p-2 w-full text-center rounded-md mt-6 text-xl"
+              >
+                ثبت نام این دوره
+              </button>
+            )}
           </div>
         </div>
         <div className=" w-full md:w-4/5 p-5  md:order-1 bg-white rounded">

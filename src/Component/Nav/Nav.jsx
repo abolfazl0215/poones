@@ -20,6 +20,7 @@ import { BiHomeHeart } from "react-icons/bi";
 import { CgMenuRight } from "react-icons/cg";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { VscCallIncoming } from "react-icons/vsc";
+import jwt from 'jsonwebtoken'
 
 
 const useStyles = makeStyles({
@@ -43,8 +44,8 @@ export default function Nav() {
   const classes = useStyles();
 
   const handleLogout = () => {
-    localStorage.removeItem("fullName");
-    context.setStorage("");
+    localStorage.removeItem("token");
+
   };
 
   return (
@@ -146,9 +147,9 @@ export default function Nav() {
               </IconButton>
 
               <IconButton sx={{ ml: 1, color: "#4f46e5" }}>
-                <Link to={context.getStorage ? "" : "/login"}>
+                <Link to={localStorage.getItem("token") ? "" : "/login"}>
                   <AccountCircleOutlinedIcon
-                    onClick={context.getStorage ? handleOpen : null}
+                    onClick={localStorage.getItem("token") ? handleOpen : null}
                     sx={{ fontSize: "1.2em" }}
                   />
                 </Link>
@@ -182,7 +183,7 @@ export default function Nav() {
               }}
             >
               <p className="p-2 cursor-pointer">
-                {localStorage.getItem("fullName")}
+                {localStorage.getItem("token") ? jwt.decode(localStorage.getItem("token")).user.fullName : ""}
               </p>
               <hr />
               <p onClick={() => { handleLogout();handleClose()}} className="p-2 cursor-pointer">
