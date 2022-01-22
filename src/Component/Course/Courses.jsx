@@ -23,12 +23,12 @@ const Courses = () => {
             onClick={() => cartContext.goToCourse(p.id)}
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small"
           >
-            <div className="pb-4 course-shadow">
+            <div className="pb-4 shadow-lg rounded overflow-hidden">
               <Link to="/singleCourse" className="p-0">
                 <picture>
                   <source srcSet={p.image_url1} />
                   <img
-                    className="border-4 border-white"
+                    // className="border-4 border-white"
                     src={p.image_url2}
                     alt="course"
                   />
@@ -82,12 +82,12 @@ const Courses = () => {
             onClick={() => cartContext.goToCourse(p.id)}
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small"
           >
-            <div className="pb-4 course-shadow">
+            <div className="pb-4 shadow-lg rounded overflow-hidden">
               <Link to="/singleCourse" className="p-0">
                 <picture>
                   <source srcSet={p.image_url1} />
                   <img
-                    className="border-4 border-white"
+                    // className="border-4 border-white"
                     src={p.image_url2}
                     alt="course"
                   />
@@ -141,12 +141,12 @@ const Courses = () => {
             onClick={() => cartContext.goToCourse(p.id)}
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small"
           >
-            <div className="pb-4 course-shadow">
+            <div className="pb-4 shadow-lg rounded overflow-hidden">
               <Link to="/singleCourse" className="p-0">
                 <picture>
                   <source srcSet={p.image_url1} />
                   <img
-                    className="border-4 border-white"
+                    // className="border-4 border-white"
                     src={p.image_url2}
                     alt="course"
                   />
@@ -195,6 +195,7 @@ const Courses = () => {
             </div>
           </div>
         ))}
+        
         
         
         
