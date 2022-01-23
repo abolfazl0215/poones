@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CartContext from "./../../Context/CartContext";
 
-const Courses = () => {
+const AllCourse = () => {
   const location = useLocation();
   const cartContext = useContext(CartContext);
+  const [length,setLength]=useState("")
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="inline-block w-full md:pt-24 pt-10">
       {location.pathname === "/" ? (
@@ -28,7 +32,7 @@ const Courses = () => {
                 <picture>
                   <source srcSet={p.image_url1} />
                   <img
-                    // className="border-4 border-white"
+                    className="w-full"
                     src={p.image_url2}
                     alt="course"
                   />
@@ -87,7 +91,7 @@ const Courses = () => {
                 <picture>
                   <source srcSet={p.image_url1} />
                   <img
-                    // className="border-4 border-white"
+                    className="w-full"
                     src={p.image_url2}
                     alt="course"
                   />
@@ -146,7 +150,7 @@ const Courses = () => {
                 <picture>
                   <source srcSet={p.image_url1} />
                   <img
-                    // className="border-4 border-white"
+                    className="w-full"
                     src={p.image_url2}
                     alt="course"
                   />
@@ -195,7 +199,7 @@ const Courses = () => {
             </div>
           </div>
         ))}
-        
+
         
         
         
@@ -205,4 +209,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default AllCourse;

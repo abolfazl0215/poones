@@ -10,7 +10,6 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import { makeStyles } from "@mui/styles";
 import SlideToggle from "react-slide-toggle";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
-import Context from "./../../Context/Context";
 import CartContext from "./../../Context/CartContext";
 import Backdrop from "@mui/material/Backdrop";
 import Modal from "@mui/material/Modal";
@@ -21,6 +20,7 @@ import { CgMenuRight } from "react-icons/cg";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { VscCallIncoming } from "react-icons/vsc";
 import jwt from 'jsonwebtoken'
+import Context from "../../Context/Context";
 
 
 const useStyles = makeStyles({
@@ -38,8 +38,8 @@ export default function Nav() {
   const handleClose = () => setOpen(false);
   const handleShowMenu = () => setShowMenu(!showMenu);
 
-  const context = useContext(Context);
   const cartContext = useContext(CartContext);
+  const context = useContext(Context);
 
   const classes = useStyles();
 
@@ -47,6 +47,7 @@ export default function Nav() {
     localStorage.removeItem("token");
 
   };
+  
 
   return (
     <div>
@@ -147,7 +148,7 @@ export default function Nav() {
               </IconButton>
 
               <IconButton sx={{ ml: 1, color: "#4f46e5" }}>
-                <Link to={localStorage.getItem("token") ? "" : "/login"}>
+                <Link to={context.token ? "":"/login"}>
                   <AccountCircleOutlinedIcon
                     onClick={localStorage.getItem("token") ? handleOpen : null}
                     sx={{ fontSize: "1.2em" }}
@@ -186,7 +187,7 @@ export default function Nav() {
                 {localStorage.getItem("token") ? jwt.decode(localStorage.getItem("token")).user.fullName : ""}
               </p>
               <hr />
-              <p onClick={() => { handleLogout();handleClose()}} className="p-2 cursor-pointer">
+              <p onClick={() => { handleLogout(); handleClose();context.setToken(false)}} className="p-2 cursor-pointer">
                 خروج از حساب کاربری
               </p>
             </Box>

@@ -1,8 +1,6 @@
 import React from "react";
 import web from "./web.png";
 import "./index.css"; 
-import { FiCrosshair } from "react-icons/fi";
-import { FiHelpCircle } from "react-icons/fi";
 
 const Section1 = () => {
   return (

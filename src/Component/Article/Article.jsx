@@ -34,7 +34,7 @@ const Article = (props) => {
           
         <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
             <div className="shadow-lg rounded overflow-hidden">
-            <img className="w-full" src="/image/roadMap.jpg" />
+            <img className="w-full" src="/image/roadMap.jpg" alt="roadMap"/>
               <h1 className="p-4 text-gray-600 font-bold text-center">
                 نقشه راه طراحی وب
               </h1>
@@ -84,7 +84,7 @@ const Article = (props) => {
         </Modal>
         <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
             <div className="shadow-lg rounded overflow-hidden">
-            <img className="w-full" src="/image/roadMap.jpg" />
+            <img className="w-full" src="/image/roadMap.jpg" alt="roadMap"/>
               <h1 className="p-4 text-gray-600 font-bold text-center">
                 نقشه راه طراحی وب
               </h1>
@@ -134,7 +134,7 @@ const Article = (props) => {
         </Modal>
         <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
             <div className="shadow-lg rounded overflow-hidden">
-            <img className="w-full" src="/image/roadMap.jpg" />
+            <img className="w-full" src="/image/roadMap.jpg" alt="roadMap"/>
               <h1 className="p-4 text-gray-600 font-bold text-center">
                 نقشه راه طراحی وب
               </h1>

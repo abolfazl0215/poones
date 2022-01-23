@@ -3,19 +3,20 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
-import Courses from "./../Course/Courses";
 import Article from "./../Article/Article";
+import AllCourse from "../Course/AllCourse";
 
-const HomePage = () => {
+const Home = () => {
+
   useEffect(() => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo(0, 0);
   }, []);
+  
   return (
     <div>
       <Section1 />
       <Section2 />
-      <Courses />
+      <AllCourse />
       <Article />
       <Section4 />
       <Section5 />
@@ -23,4 +24,4 @@ const HomePage = () => {
   );
 };
 
-export default React.memo(HomePage);
+export default Home;

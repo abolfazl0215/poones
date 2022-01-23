@@ -8,7 +8,3 @@ export const registerUser = user => {
 export const loginUser = user => {
     return http.post(`${config.pounesapi}/login`, JSON.stringify(user))
 }
-
-export const getUsers = email => {
-    return http.post(`${config.pounesapi}/getUser`, JSON.stringify(email))
-}

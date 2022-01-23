@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import SimpleReactValidator from "simple-react-validator";
 import toastr from "toastr";
 import jwt from "jsonwebtoken"
-import { getUsers, registerUser,loginUser } from "../Services/userService";
+import { registerUser,loginUser } from "../Services/userService";
 import Context from "./Context";
-import http from '../Services/httpService'
+import http from "../Services/httpService"
 
 const GlobalState = ({ children }) => {
   // const location = useLocation();
@@ -22,11 +22,18 @@ const GlobalState = ({ children }) => {
   const [, forceUpdate] = useState(false);
   const [loginUpdate, setLoginUpdate] = useState();
 
+  const [token, setToken] = useState(false);
 
   useEffect(() => {
     const data = localStorage.getItem("fullName");
     setLoginUpdate(data);
   }, [loginUpdate]);
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      setToken(true)
+    }
+    
+  })
 
   const validator = useRef(
     new SimpleReactValidator({
@@ -64,10 +71,10 @@ const GlobalState = ({ children }) => {
     //start validation form
     try {
       if (loginValidator.current.allValid()) {
-        const { status, data } = await loginUser(user);
+        const {status,data} = await loginUser(user);
         localStorage.setItem('token', data.token)
-        console.log(jwt.decode(data.token))
-        const decode=jwt.decode(data.token)
+        const decode = jwt.decode(data.token)
+        setToken(true)
         if (status === 200) {
           toastr.success("ورود موفقیت آمیز بود");
           navigate("/");
@@ -76,20 +83,22 @@ const GlobalState = ({ children }) => {
           const fName=decode.user.fullName
           arr.push(fName)
           setLoginUpdate(arr)
-          console.log(loginUpdate)
-        }
-        if (status === 422) {
-          toastr.error("کاربر وجود ندارد");
+          reset();
         }
       } else {
         loginValidator.current.showMessages();
         forceUpdate(1);
       }
     } catch (err) {
-      toastr.error("فکر کنم اینترنتت خاموش شده");
+      if (err.response.status === 404) {
+        toastr.error("کاربر وجود ندارد");
+      }
+      if (err.response.status === 422) {
+        toastr.error("نام کاربری یا رمزعبور اشتباه است");
+      }
     }
     // end validation form
-    reset();
+    
   };
 
   const handleSubmitRegister = async (e) => {
@@ -99,7 +108,6 @@ const GlobalState = ({ children }) => {
     console.log(user)
     //start validation form
     try {
-      
       setPasswordConfirmResponse("")
       if (validator.current.allValid()) {
         if(password === confirmPassword){
@@ -108,11 +116,9 @@ const GlobalState = ({ children }) => {
             toastr.success("کاربر با موفقیت ساخته شد");
             localStorage.setItem("token", data.token);
             navigate("/");
-            // for rerender
+            reset();
           }
-          if (status === 203) {
-            toastr.error("کاربر از قبل وجود دارد");
-          }
+          setToken(true)
         } else{
           setPasswordConfirmResponse("رمزعبورها مطابقت ندارند")
         }
@@ -121,23 +127,15 @@ const GlobalState = ({ children }) => {
           forceUpdate(1);
         }
     } catch (err) {
-      toastr.error("فکر کنم اینترنتت خاموش شده");
-      console.log(err);
+      if (err.response.status === 422) {
+        toastr.error("کاربر از قبل وجود دارد");
+      }
     }
     // end validation form
-    // reset();
+    
   };
 
-  const getUser = async () => {
-    try {
-        const decode = jwt.decode(localStorage.getItem("token"))
-        const mail = decode.user.email;
-        const { data } = await http.post("http://localhost:3000/getUser",JSON.stringify({email:mail}));
-        localStorage.setItem('token',data.token)
-    } catch (err) {
-        console.log(err)
-    }
-  }
+  
 
   return (
     <div>
@@ -162,7 +160,8 @@ const GlobalState = ({ children }) => {
           setLoginUpdate,
           handleSubmitLogin,
           handleSubmitRegister,
-          getUser
+          token,
+          setToken
         }}
       >
         {/* <CartHandler /> */}

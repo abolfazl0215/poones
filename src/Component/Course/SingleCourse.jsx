@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CgSoftwareDownload } from "react-icons/cg";
 import toastr from "toastr";
 import Comments from "./Comments";
@@ -6,13 +6,11 @@ import Course from "./Courses.json";
 import http from '../../Services/httpService';
 import jwt from 'jsonwebtoken'
 import "./index.css";
-import Context from "../../Context/Context";
 
 
 const SingleCourse = () => {
   const [allowed, setAllowed] = useState(false)
 
-  const context = useContext(Context)
 
   const goToCourse =async (course) => {
     try {
@@ -20,7 +18,7 @@ const SingleCourse = () => {
       if (token) {
         const email = jwt.decode(token).user.email
             const { status , data } = await http.post(
-              "http://localhost:3000/registerCourse",
+              "https://api.pounes.ir/registerCourse",
               JSON.stringify({ course,email })
         );
         console.log(data.token)
@@ -37,6 +35,19 @@ const SingleCourse = () => {
 
   }
 
+  const getUser = async () => {
+    try {
+        const decode = jwt.decode(localStorage.getItem("token"))
+        const mail = decode.user.email;
+        const { data } = await http.post("https://api.pounes.ir/getUser",JSON.stringify({email:mail}));
+      localStorage.setItem('token', data.token)
+      setAllowed(true)
+    } catch (err) {
+        console.log(err)
+    }
+  }
+  const [length,setLength]=useState("")
+
   useEffect(async() => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0; 
@@ -45,8 +56,15 @@ const SingleCourse = () => {
       const decode = jwt.decode(localStorage.getItem('token'));
       const isAllowed = decode.user.courses    
       if (isAllowed.length>0) {
-        setAllowed(true)
+        setAllowed(true);
       }
+    }
+
+    try {
+      const { data } =await http.post("http://localhost:3000/getLength",JSON.stringify({course:"course1"}))
+    setLength(data.length)
+    } catch (err) {
+      console.log(err)
     }
   }, []);
 
@@ -67,7 +85,7 @@ const SingleCourse = () => {
             </p>
             <hr className="mt-2" />
             <p className="mt-5 mr-2">مدت زمان دوره : 23:40:00</p>
-            <p className="mt-2 mr-2">تعداد دانشجو : {}</p>
+            <p className="mt-2 mr-2">تعداد دانشجو : {length}</p>
             <p className="mt-2 mr-2">سطح دوه : مقدماتی تا پیشرفته</p>
              
             {allowed ? (
@@ -79,7 +97,7 @@ const SingleCourse = () => {
                 id="goCart"
                   onClick={() => {
                     goToCourse("course1");
-                    context.getUser()
+                    getUser()
                   }}
                 className="bg-color text-white p-2 w-full text-center rounded-md mt-6 text-xl"
               >
