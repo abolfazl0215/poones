@@ -6,6 +6,8 @@
 .pnp.js
 /build
 /.psd
+/.rar
+*.rar
 
 # testing
 /coverage
