@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
+import toastr from "toastr";
+import jwt from "jsonwebtoken";
+
 import http from "../../Services/httpService";
 import Context from "./../../Context/Context";
-import toastr from "toastr";
 import "./index.css";
 
 const Comments = () => {
@@ -22,14 +24,16 @@ const Comments = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const fullName = localStorage.getItem("fullName");
+    const token = context.token;
     try {
-      if (fullName) {
+      if (token) {
+        const fullName =await jwt.decode(localStorage.getItem("token"))
         await http.post(
           "https://api.pounes.ir/setComment",
-          JSON.stringify({ comment, fullName })
+          JSON.stringify({ comment, fullName:fullName.user.fullName })
         );
         toastr.success("نظر شما به زودی ثبت میشود");
+        setComment("")
       } else {
         toastr.warning("برای ثبت نظر ابتدا در سایت ثبت نام کنید")
       }
@@ -43,13 +47,15 @@ const Comments = () => {
       <h3 className="font-bold p-2 text-gray-700">نظرات :</h3>
       <form onSubmit={(e) => handleSubmit(e)} className="pb-6">
         <textarea
+          required
           onChange={(e) => setComment(e.target.value)}
+          value={comment}
           name="comment"
           rows="6"
           className="w-full p-2 borderSingleCourse"
           placeholder="نظرت رو برام بنویس ..."
         ></textarea>
-        {context.getStorage ? (
+        {context.token ? (
           <button
             className="bg-indigo-600 mt-2 text-white font-bold px-4 py-2 rounded w-full md:w-1/5"
             type="submit"

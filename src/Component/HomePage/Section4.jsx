@@ -6,7 +6,7 @@ const Section4 = () => {
       <div className="w-45/100 p-4 shadow-lg bg-white rounded-lg mt-4 md:w-22/100">
         <div className="flex justify-center">
           <span className="p-2 font-extrabold circle m-2  text-color text-sm font-bold ">
-            30 +
+            ----
           </span>
         </div>
         <p className="text-gray-500 w-2/3 mx-auto text-center text-sm ">
@@ -16,7 +16,7 @@ const Section4 = () => {
       <div className="w-45/100 p-4 shadow-lg bg-white rounded-lg mt-4 md:w-22/100">
         <div className="flex justify-center">
           <span className="p-2 font-extrabold circle m-2  text-color text-small-bold ">
-            112 +
+            ----
           </span>
         </div>
         <p className="text-gray-500 w-2/3 mx-auto text-center text-sm ">
@@ -26,7 +26,7 @@ const Section4 = () => {
       <div className="w-45/100 p-4 shadow-lg bg-white rounded-lg mt-4 md:w-22/100">
         <div className="flex justify-center">
           <span className="p-2 font-extrabold circle m-2  text-color text-small-bold ">
-            96% +
+            ----
           </span>
         </div>
         <p className="text-gray-500 w-2/3 mx-auto text-center text-sm ">

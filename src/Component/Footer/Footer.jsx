@@ -26,7 +26,7 @@ const Footer = () => {
           <FaTelegramPlane className="w-8 h-8 text-gray-600 mx-4" />
         </a>
         <a href="#">
-          <FaWhatsapp className="w-8 h-8 text-gray-600 mx-4" />
+          <FaWhatsapp id="footer" className="w-8 h-8 text-gray-600 mx-4" />
         </a>
       </div>
     </div>

@@ -91,7 +91,7 @@ export default function Nav() {
                               <p className="inline"><CgMenuRight className="inline mr-1 ml-2 text-lg"/>دوره های آموزشی</p>
                           </li>
                         </Link>
-                        <li onClick={() => { toggle(); handleShowMenu();}}><AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg"/>درباره من</li>
+                        <a href="#footer"><li onClick={() => { toggle(); handleShowMenu();}}><AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg"/>درباره من</li></a>
                         <li onClick={() => { toggle(); handleShowMenu();}}><VscCallIncoming className="inline mr-1 ml-2 text-lg"/>تماس با من</li>
                       </ul>
                     </div>
@@ -124,9 +124,9 @@ export default function Nav() {
                     <p> دوره های آموزشی </p>
                   </Link>
                 </p>
-                <p className="my-auto mr-6 hover:text-yellow-500 cursor-pointer">
+                <a href="#footer"><p className="my-auto mr-6 hover:text-yellow-500 cursor-pointer">
                   درباره من
-                </p>
+                </p></a>
               </Box>
               <Box sx={{ flexGrow: "1" }} />
               <IconButton

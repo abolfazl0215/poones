@@ -64,7 +64,8 @@ const Article = (props) => {
                 borderRadius: "5px",
               }}
             >
-              {!loading ? (
+             <p className="mt-12 text-center font-bold text-red-500">به زودی ...</p>
+              {/* {!loading ? (
                 <p className="mt-8 text-center fixed right-0 w-full">
                   اگه نمیاره فندق شکنتو خاموش کن
                 </p>
@@ -77,111 +78,12 @@ const Article = (props) => {
                 webkitallowfullscreen="true"
                 mozallowfullscreen="true"
                 onLoad={()=>setLoading(true)}
-              ></iframe>
+              ></iframe>*/}
               
             </Box>
           </Fade>
         </Modal>
-        <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
-            <div className="shadow-lg rounded overflow-hidden">
-            <img className="w-full" src="/image/roadMap.jpg" alt="roadMap"/>
-              <h1 className="p-4 text-gray-600 font-bold text-center">
-                نقشه راه طراحی وب
-              </h1>
-            </div>
-          </div>
-          <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={open}>
-            <Box
-              sx={{
-                bgcolor: "background.paper",
-                position: "relative",
-                top: "7%",
-                height:"80vh",
-                width:"80%",
-                marginRight: "10%",
-                p: 1,
-                borderRadius: "5px",
-              }}
-            >
-              {!loading ? (
-                <p className="mt-8 text-center fixed right-0 w-full">
-                  اگه نمیاره فندق شکنتو خاموش کن
-                </p>
-              ):""}
-                <iframe
-                title="معرفی دوره"
-                className="w-full h-full rounded"
-                src="https://www.aparat.com/video/video/embed/videohash/CLrgf/vt/frame"
-                allowFullScreen="true"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                onLoad={()=>setLoading(true)}
-              ></iframe>
-              
-            </Box>
-          </Fade>
-        </Modal>
-        <div onClick={handleOpen} className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
-            <div className="shadow-lg rounded overflow-hidden">
-            <img className="w-full" src="/image/roadMap.jpg" alt="roadMap"/>
-              <h1 className="p-4 text-gray-600 font-bold text-center">
-                نقشه راه طراحی وب
-              </h1>
-            </div>
-          </div>
-          <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={open}>
-            <Box
-              sx={{
-                bgcolor: "background.paper",
-                position: "relative",
-                top: "7%",
-                height:"80vh",
-                width:"80%",
-                marginRight: "10%",
-                p: 1,
-                borderRadius: "5px",
-              }}
-            >
-              {!loading ? (
-                <p className="mt-8 text-center fixed right-0 w-full">
-                  اگه نمیاره فندق شکنتو خاموش کن
-                </p>
-              ):""}
-                <iframe
-                title="معرفی دوره"
-                className="w-full h-full rounded"
-                src="https://www.aparat.com/video/video/embed/videohash/CLrgf/vt/frame"
-                allowFullScreen="true"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                onLoad={()=>setLoading(true)}
-              ></iframe>
-              
-            </Box>
-          </Fade>
-        </Modal>
+
         
         
       </div>
