@@ -1,13 +1,11 @@
-
 .borderSingleCourse {
-    border: 1px solid #e2e2e2;
-    border-radius: 3px;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
 }
-.borderSingleCourseResponse{
-    border: 1px solid #9cdbe6;
-    border-radius: 3px;
-
+.borderSingleCourseResponse {
+  border: 1px solid #9cdbe6;
+  border-radius: 3px;
 }
-.border-color{
-    border-color: #4f46e5;
+.border-color {
+  border-color: #4f46e5;
 }

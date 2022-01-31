@@ -7,11 +7,10 @@ import Article from "./../Article/Article";
 import AllCourse from "../Course/AllCourse";
 
 const Home = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return (
     <div>
       <Section1 />

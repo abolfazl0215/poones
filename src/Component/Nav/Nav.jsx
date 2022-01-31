@@ -19,9 +19,8 @@ import { BiHomeHeart } from "react-icons/bi";
 import { CgMenuRight } from "react-icons/cg";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { VscCallIncoming } from "react-icons/vsc";
-import jwt from 'jsonwebtoken'
+import jwt from "jsonwebtoken";
 import Context from "../../Context/Context";
-
 
 const useStyles = makeStyles({
   bgWhite: {
@@ -45,9 +44,7 @@ export default function Nav() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-
   };
-  
 
   return (
     <div>
@@ -82,17 +79,51 @@ export default function Nav() {
                     >
                       <ul className="p-4 pt-0 leading-10 text-sm font-bold text-gray-500">
                         <Link to="/">
-                          <li onClick={() => { toggle(); handleShowMenu();}}>
-                              <p className="inline"><BiHomeHeart className="inline mr-1 ml-2 text-lg"/>خانه </p>
+                          <li
+                            onClick={() => {
+                              toggle();
+                              handleShowMenu();
+                            }}
+                          >
+                            <p className="inline">
+                              <BiHomeHeart className="inline mr-1 ml-2 text-lg" />
+                              خانه{" "}
+                            </p>
                           </li>
                         </Link>
                         <Link to="/courses">
-                          <li onClick={() => { toggle(); handleShowMenu();}}>
-                              <p className="inline"><CgMenuRight className="inline mr-1 ml-2 text-lg"/>دوره های آموزشی</p>
+                          <li
+                            onClick={() => {
+                              toggle();
+                              handleShowMenu();
+                            }}
+                          >
+                            <p className="inline">
+                              <CgMenuRight className="inline mr-1 ml-2 text-lg" />
+                              دوره های آموزشی
+                            </p>
                           </li>
                         </Link>
-                        <a href="#footer"><li onClick={() => { toggle(); handleShowMenu();}}><AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg"/>درباره من</li></a>
-                        <li onClick={() => { toggle(); handleShowMenu();}}><VscCallIncoming className="inline mr-1 ml-2 text-lg"/>تماس با من</li>
+                        <a href="#footer">
+                          <li
+                            onClick={() => {
+                              toggle();
+                              handleShowMenu();
+                            }}
+                          >
+                            <AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg" />
+                            درباره من
+                          </li>
+                        </a>
+                        <li
+                          onClick={() => {
+                            toggle();
+                            handleShowMenu();
+                          }}
+                        >
+                          <VscCallIncoming className="inline mr-1 ml-2 text-lg" />
+                          تماس با من
+                        </li>
                       </ul>
                     </div>
                     {/* end menu collapse */}
@@ -100,12 +131,12 @@ export default function Nav() {
                 )}
               />
               <picture>
-                      <source srcSet="/image/poones.webp" />
-                      <img
-                        className="w-7 h-7 mr-2 cursor-pointer"
-                        src="/image/poones.png"
-                        alt="logo"
-                      />
+                <source srcSet="/image/poones.webp" />
+                <img
+                  className="w-7 h-7 mr-2 cursor-pointer"
+                  src="/image/poones.png"
+                  alt="logo"
+                />
               </picture>
               <Box
                 sx={{
@@ -124,9 +155,11 @@ export default function Nav() {
                     <p> دوره های آموزشی </p>
                   </Link>
                 </p>
-                <a href="#footer"><p className="my-auto mr-6 hover:text-yellow-500 cursor-pointer">
-                  درباره من
-                </p></a>
+                <a href="#footer">
+                  <p className="my-auto mr-6 hover:text-yellow-500 cursor-pointer">
+                    درباره من
+                  </p>
+                </a>
               </Box>
               <Box sx={{ flexGrow: "1" }} />
               <IconButton
@@ -148,7 +181,7 @@ export default function Nav() {
               </IconButton>
 
               <IconButton sx={{ ml: 1, color: "#4f46e5" }}>
-                <Link to={context.token ? "":"/login"}>
+                <Link to={context.token ? "" : "/login"}>
                   <AccountCircleOutlinedIcon
                     onClick={localStorage.getItem("token") ? handleOpen : null}
                     sx={{ fontSize: "1.2em" }}
@@ -184,10 +217,19 @@ export default function Nav() {
               }}
             >
               <p className="p-2 cursor-pointer">
-                {localStorage.getItem("token") ? jwt.decode(localStorage.getItem("token")).user.fullName : ""}
+                {localStorage.getItem("token")
+                  ? jwt.decode(localStorage.getItem("token")).user.fullName
+                  : ""}
               </p>
               <hr />
-              <p onClick={() => { handleLogout(); handleClose();context.setToken(false)}} className="p-2 cursor-pointer">
+              <p
+                onClick={() => {
+                  handleLogout();
+                  handleClose();
+                  context.setToken(false);
+                }}
+                className="p-2 cursor-pointer"
+              >
                 خروج از حساب کاربری
               </p>
             </Box>

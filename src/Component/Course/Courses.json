@@ -1,8 +1,9 @@
 [
-    {
-        "name":"دوه هیولای طراحی سایت",
-        "price":"رایگان","image_url1":"/image/courseDesign.webp",
-        "image_url2":"/image/courseDesign.jpg","id":1
-    }
-
+  {
+    "name": "دوره هیولای طراحی سایت",
+    "price": "رایگان",
+    "image_url1": "/image/courseDesign.webp",
+    "image_url2": "/image/courseDesign.jpg",
+    "id": 1
+  }
 ]

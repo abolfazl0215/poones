@@ -4,7 +4,6 @@ import Context from "./../../Context/Context";
 
 const Register = () => {
   const context = useContext(Context);
-  
 
   return (
     <div>
@@ -20,69 +19,61 @@ const Register = () => {
         </p>
 
         <div className="p-3 mt-3">
-          <label>
-            نام و نام خانوادگی:
-            </label>
-            <input
-              type="text"
-              name="fullName"
-              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
-              value={context.fullName}
-              onChange={(e) => context.setFullName(e.target.value)}
-            />
-            
-            {context.validator.current.message(
-              "fullname",
-              context.fullName,
-              "min:3|required"
-            )}
-          <label>
-            ایمیل:
-            </label>
-            <input
-              type="email"
-              name="email"
-              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
-              value={context.email}
-              onChange={(e) => context.setEmail(e.target.value)}
-            />
-            {context.validator.current.message(
-              "email",
-              context.email,
-              "required|email"
-            )}
-          <label>
-          رمز عبور:
-          </label>
-            <input
-              type="password"
-              name="password"
-              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
-              value={context.password}
-              onChange={(e) => context.setPassword(e.target.value)}
-            />
-            {context.validator.current.message(
-              "password",
-              context.password,
-              "min:5|required"
-            )}
-          <label>
-            تکرار رمز عبور
-            </label>
-            
-            <input
-              type="password"
-              name="confirmPassword"
-              className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
-              value={context.confirmPassword}
-              onChange={(e) => context.setConfirmPassword(e.target.value)}
-            />
-            <p className="text-red-400">{context.passwordConfirmResponse}</p>
-            {context.validator.current.message(
-              "confirmPassword",
-              context.confirmPassword,
-              "min:5|required"
-            )}
+          <label>نام و نام خانوادگی:</label>
+          <input
+            type="text"
+            name="fullName"
+            className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
+            value={context.fullName}
+            onChange={(e) => context.setFullName(e.target.value)}
+          />
+
+          {context.validator.current.message(
+            "fullname",
+            context.fullName,
+            "min:3|required"
+          )}
+          <label>ایمیل:</label>
+          <input
+            type="email"
+            name="email"
+            className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
+            value={context.email}
+            onChange={(e) => context.setEmail(e.target.value)}
+          />
+          {context.validator.current.message(
+            "email",
+            context.email,
+            "required|email"
+          )}
+          <label>رمز عبور:</label>
+          <input
+            type="password"
+            name="password"
+            className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
+            value={context.password}
+            onChange={(e) => context.setPassword(e.target.value)}
+          />
+          {context.validator.current.message(
+            "password",
+            context.password,
+            "min:5|required"
+          )}
+          <label>تکرار رمز عبور</label>
+
+          <input
+            type="password"
+            name="confirmPassword"
+            className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
+            value={context.confirmPassword}
+            onChange={(e) => context.setConfirmPassword(e.target.value)}
+          />
+          <p className="text-red-400">{context.passwordConfirmResponse}</p>
+          {context.validator.current.message(
+            "confirmPassword",
+            context.confirmPassword,
+            "min:5|required"
+          )}
         </div>
         <p className="px-3 text-sm text-red-700">
           <Link to="/login">قبلا ثبت نام کردم (ورود به سایت)</Link>

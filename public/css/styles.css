@@ -1,14 +1,14 @@
 @font-face {
   font-family: "iranYekan";
-  src: url("IRANYekanWebRegular.woff2") format('woff2')
+  src: url("IRANYekanWebRegular.woff2") format("woff2");
 }
 @font-face {
   font-family: "iranYekan2";
-  src: url("IRANYekanWebRegular.woff") format('woff')
+  src: url("IRANYekanWebRegular.woff") format("woff");
 }
 * {
   scroll-behavior: smooth;
-  font-family: "iranYekan","iranYekan2";
+  font-family: "iranYekan", "iranYekan2";
 }
 #root {
   margin: 0px;
@@ -95,10 +95,17 @@
   display: block !important;
 }
 
-.vjs-poster {     background-size: cover!important;     object-fit: cover!important; }  video[poster] {     object-fit: contain;     background-color:transparent; } 
+.vjs-poster {
+  background-size: cover !important;
+  object-fit: cover !important;
+}
+video[poster] {
+  object-fit: contain;
+  background-color: transparent;
+}
 
-#earth {
-  position: absolute; 
+#earthMap {
+  position: absolute;
   top: 0px;
   width: 80%;
   height: 60%;
@@ -108,8 +115,8 @@
   background-position: center;
   /* background-color: #0c55ad; */
   box-shadow: 
-    /* inset -20px 20px 40px rgba(235, 225, 52, 0.3), */
-    inset 10px -10px 30px rgba(2, 16, 31, 0.3),
+    /* inset -20px 20px 40px rgba(235, 225, 52, 0.3), */ inset
+      10px -10px 30px rgba(2, 16, 31, 0.3),
     inset 10px -10px 5px rgba(2, 16, 31, 0.1);
   transform-style: preserve-3d;
   transform: rotate(15deg);
@@ -117,7 +124,10 @@
 }
 
 @keyframes rotate {
-  0%   { background-position: 0 0; } 
-  100% { background-position: 545px 0; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 545px 0;
+  }
 }
-

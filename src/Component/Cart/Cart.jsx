@@ -13,7 +13,7 @@ const Cart = () => {
         <div className="w-full px-2 flex flex-wrap">
           {cartContext.cartShop.map((p) => (
             <section
-              //   style={{ zIndex: "-1" }} 
+              //   style={{ zIndex: "-1" }}
               className="p-4 w-full md:w-1/2 text-sm"
             >
               <div className=" border-2 rounded flex flex-wrap p-3 ">

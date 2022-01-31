@@ -9,14 +9,14 @@ import "./index.css";
 const Comments = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
-  console.log("comment is :",comment)
+  console.log("comment is :", comment);
   const context = useContext(Context);
 
   useEffect(async () => {
     try {
       const getComment = await http.get("https://api.pounes.ir/getComment");
       setComments(getComment.data.comments);
-      console.log("data is :",getComment.data.message);
+      console.log("data is :", getComment.data.message);
     } catch (err) {
       console.log(err);
     }
@@ -27,15 +27,15 @@ const Comments = () => {
     const token = context.token;
     try {
       if (token) {
-        const fullName =await jwt.decode(localStorage.getItem("token"))
+        const fullName = await jwt.decode(localStorage.getItem("token"));
         await http.post(
           "https://api.pounes.ir/setComment",
-          JSON.stringify({ comment, fullName:fullName.user.fullName })
+          JSON.stringify({ comment, fullName: fullName.user.fullName })
         );
         toastr.success("نظر شما به زودی ثبت میشود");
-        setComment("")
+        setComment("");
       } else {
-        toastr.warning("برای ثبت نظر ابتدا در سایت ثبت نام کنید")
+        toastr.warning("برای ثبت نظر ابتدا در سایت ثبت نام کنید");
       }
     } catch (err) {
       console.log(err);
@@ -68,44 +68,46 @@ const Comments = () => {
           </button>
         )}
       </form>
-      {comments ? 
+      {comments ? (
         <div>
-        {comments
-          .filter((p) => p.isAllowed === true)
-          .reverse()
-          .map((c) => (
-            <div>
-              <div className="w-full borderSingleCourse mt-4 p-2">
-                <div className="flex">
-                  <div className="w-12 h-12 circle bg-gray-200"></div>
-                  <p className="mt-4 mr-2 text-sm font-bold">علی محمدی</p>
-                </div>
-                <p className="m-2 mt-4 text-sm">{c.comment}</p>
-              </div>
-              {c.response ? (
-                <div className="pr-4">
-                  <div className="w-full borderSingleCourseResponse mt-2 p-2">
-                    <div className="flex">
-                      <img
-                        src="image/avatar.png"
-                        alt="avatar"
-                        className="w-12 h-12 circle border-2 "
-                      ></img>
-                      <p className="mt-4 mr-2 text-sm font-bold">
-                        ابوالفضل مختاری{" "}
-                        <span className="text-sm font-light">(مدیرسایت)</span>
-                      </p>
-                    </div>
-                    <p className="m-2 mt-4 text-sm">{c.response}</p>
+          {comments
+            .filter((p) => p.isAllowed === true)
+            .reverse()
+            .map((c) => (
+              <div>
+                <div className="w-full borderSingleCourse mt-4 p-2">
+                  <div className="flex">
+                    <div className="w-12 h-12 circle bg-gray-200"></div>
+                    <p className="mt-4 mr-2 text-sm font-bold">{c.fullName}</p>
                   </div>
+                  <p className="m-2 mt-4 text-sm">{c.comment}</p>
                 </div>
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
+                {c.response ? (
+                  <div className="pr-4">
+                    <div className="w-full borderSingleCourseResponse mt-2 p-2">
+                      <div className="flex">
+                        <img
+                          src="image/avatar.png"
+                          alt="avatar"
+                          className="w-12 h-12 circle border-2 "
+                        ></img>
+                        <p className="mt-4 mr-2 text-sm font-bold">
+                          ابوالفضل مختاری{" "}
+                          <span className="text-sm font-light">(مدیرسایت)</span>
+                        </p>
+                      </div>
+                      <p className="m-2 mt-4 text-sm">{c.response}</p>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            ))}
         </div>
-        : ""}
+      ) : (
+        ""
+      )}
     </div>
   );
 };

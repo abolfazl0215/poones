@@ -19,13 +19,13 @@ const Footer = () => {
       </p>
       <p className="pt-8 text-sm">شماره تماس : 09224883894</p>
       <div className="flex justify-center mt-8">
-        <a href="#">
+        <a href="https://www.instagram.com/pounes.ir/">
           <IoLogoInstagram className="w-8 h-8 text-gray-600 mx-4" />
         </a>
-        <a href="#">
+        <a href="https://t.me/pounes_ir">
           <FaTelegramPlane className="w-8 h-8 text-gray-600 mx-4" />
         </a>
-        <a href="#">
+        <a href="https://wa.me/message/EY76CNLTMECOB1">
           <FaWhatsapp id="footer" className="w-8 h-8 text-gray-600 mx-4" />
         </a>
       </div>
