@@ -14,7 +14,9 @@ const Comments = () => {
 
   useEffect(async () => {
     try {
-      const getComment = await http.get("https://api.pounes.ir/getComment");
+      const getComment = await http.get(
+        "https://api.pounes.ir/getComment",
+      );
       setComments(getComment.data.comments);
       console.log("data is :", getComment.data.message);
     } catch (err) {
@@ -27,10 +29,15 @@ const Comments = () => {
     const token = context.token;
     try {
       if (token) {
-        const fullName = await jwt.decode(localStorage.getItem("token"));
+        const fullName = await jwt.decode(
+          localStorage.getItem("token"),
+        );
         await http.post(
           "https://api.pounes.ir/setComment",
-          JSON.stringify({ comment, fullName: fullName.user.fullName })
+          JSON.stringify({
+            comment,
+            fullName: fullName.user.fullName,
+          }),
         );
         toastr.success("نظر شما به زودی ثبت میشود");
         setComment("");
@@ -43,7 +50,7 @@ const Comments = () => {
     }
   };
   return (
-    <div className="shadow-xl w-full mt-3 md:p-5 p-3  bg-white rounded pb-32">
+    <div className="shadow-xl mb-28 w-full mt-3 md:p-5 p-3  bg-white rounded pb-32">
       <h3 className="font-bold p-2 text-gray-700">نظرات :</h3>
       <form onSubmit={(e) => handleSubmit(e)} className="pb-6">
         <textarea
@@ -53,13 +60,11 @@ const Comments = () => {
           name="comment"
           rows="6"
           className="w-full p-2 borderSingleCourse"
-          placeholder="نظرت رو برام بنویس ..."
-        ></textarea>
+          placeholder="نظرت رو برام بنویس ..."></textarea>
         {context.token ? (
           <button
             className="bg-indigo-600 mt-2 text-white font-bold px-4 py-2 rounded w-full md:w-1/5"
-            type="submit"
-          >
+            type="submit">
             ارسال نظر
           </button>
         ) : (
@@ -78,7 +83,9 @@ const Comments = () => {
                 <div className="w-full borderSingleCourse mt-4 p-2">
                   <div className="flex">
                     <div className="w-12 h-12 circle bg-gray-200"></div>
-                    <p className="mt-4 mr-2 text-sm font-bold">{c.fullName}</p>
+                    <p className="mt-4 mr-2 text-sm font-yekan">
+                      {c.fullName}
+                    </p>
                   </div>
                   <p className="m-2 mt-4 text-sm">{c.comment}</p>
                 </div>
@@ -89,11 +96,12 @@ const Comments = () => {
                         <img
                           src="image/avatar.png"
                           alt="avatar"
-                          className="w-12 h-12 circle border-2 "
-                        ></img>
-                        <p className="mt-4 mr-2 text-sm font-bold">
+                          className="w-12 h-12 circle border-2 "></img>
+                        <p className="mt-4 mr-2 text-sm font-yekan">
                           ابوالفضل مختاری{" "}
-                          <span className="text-sm font-light">(مدیرسایت)</span>
+                          <span className="text-sm font-light">
+                            (مدیرسایت)
+                          </span>
                         </p>
                       </div>
                       <p className="m-2 mt-4 text-sm">{c.response}</p>

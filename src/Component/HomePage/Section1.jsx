@@ -4,7 +4,6 @@ import Fade from "@mui/material/Fade";
 import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
 import web from "./web.png";
-import "./index.css";
 
 const Section1 = () => {
   const [open, setOpen] = React.useState(false);
@@ -20,7 +19,12 @@ const Section1 = () => {
     <div className="pt-24 pb-20 rounded-br-3xl rounded-bl-3xl border-b-2 md:pt-28 bg-gray-100 relative">
       <div className="md:flex">
         <div className="w-2/3 m-auto md:w-1/4 relative">
-          <img src={web} className="w-full" alt="logo" loop />
+          <img
+            src={web}
+            className="w-full"
+            alt="logo"
+            loading="lazy"
+          />
           <div id="earthMap"></div>
         </div>
         <div className="md:mx-auto md:my-auto ">
@@ -30,13 +34,13 @@ const Section1 = () => {
           </h1>
           <p
             style={{ fontSize: "16px" }}
-            className="text-center text-gray-500 mt-3 tracking-wider">
+            className="text-center text-gray-500 mt-3 tracking-wider font-yekan">
             از صفر تا ورود به بازار کار با شما هستیم
           </p>
           <p
             onClick={handleOpen}
             className="text-center text-indigo-600 mt-4">
-            <button className="rounded-xl shadow-lg p-2 px-4 hover:bg-indigo-600 hover:text-white border-l-2 border-r-2 select-none font-bold tracking-wider">
+            <button className="rounded-xl shadow-lg p-2 px-4 hover:bg-indigo-600 transition-all hover:text-white border-l-2 border-r-2 select-none font-yekan tracking-wider">
               راهنمای تازه کارها
             </button>
           </p>
@@ -45,7 +49,7 @@ const Section1 = () => {
 
       <div className="absolute w-full -bottom-8  text-center">
         <a href="#bottom">
-          <div className="rounded-full cursor-pointer border-2 bg-white bg-gray-100 mx-auto inline-block">
+          <div className="rounded-full hover:border-4 hover:border-indigo-600 transition-all cursor-pointer border-2 bg-white bg-gray-100 mx-auto inline-block">
             <div className="bg-white w-full h-full rounded-full p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

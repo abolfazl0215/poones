@@ -47,17 +47,21 @@ export default function Nav() {
   };
 
   return (
-    <div>
+    <div className="font-yekan">
       <Box sx={{ flexGrow: "1" }}>
         <AppBar sx={{ p: 0, py: 0.5 }} className={classes.bgWhite}>
           <Container sx={{ p: "0" }} maxWidth="xl">
             <Toolbar sx={{ p: "0" }}>
+              {/* menu humbereger collapse  */}
               <SlideToggle
                 collapsed="true"
                 render={({ toggle, setCollapsibleElement }) => (
                   <IconButton
-                    sx={{ display: { md: "none" }, mr: 1, color: "#4f46e5" }}
-                  >
+                    sx={{
+                      display: { md: "none" },
+                      mr: 1,
+                      color: "#4f46e5",
+                    }}>
                     {showMenu ? (
                       <div onClick={handleShowMenu}>
                         <ArrowCircleUpIcon
@@ -67,7 +71,10 @@ export default function Nav() {
                       </div>
                     ) : (
                       <div onClick={handleShowMenu}>
-                        <MenuIcon sx={{ fontSize: "1.2em" }} onClick={toggle} />
+                        <MenuIcon
+                          sx={{ fontSize: "1.2em" }}
+                          onClick={toggle}
+                        />
                       </div>
                     )}
                     {/* menu collapse */}
@@ -75,16 +82,14 @@ export default function Nav() {
                       ref={setCollapsibleElement}
                       style={{ zIndex: "999" }}
                       id="menu-collapse"
-                      className="w-full fixed right-0 top-16 text-right bg-white shadow-xl md:hidden"
-                    >
-                      <ul className="p-4 pt-0 leading-10 text-sm font-bold text-gray-500">
+                      className="w-full fixed right-0 top-16 text-right bg-white shadow-xl md:hidden">
+                      <ul className="p-4 pt-0 leading-10 text-sm text-indigo-800">
                         <Link to="/">
                           <li
                             onClick={() => {
                               toggle();
                               handleShowMenu();
-                            }}
-                          >
+                            }}>
                             <p className="inline">
                               <BiHomeHeart className="inline mr-1 ml-2 text-lg" />
                               خانه{" "}
@@ -96,8 +101,7 @@ export default function Nav() {
                             onClick={() => {
                               toggle();
                               handleShowMenu();
-                            }}
-                          >
+                            }}>
                             <p className="inline">
                               <CgMenuRight className="inline mr-1 ml-2 text-lg" />
                               دوره های آموزشی
@@ -109,27 +113,28 @@ export default function Nav() {
                             onClick={() => {
                               toggle();
                               handleShowMenu();
-                            }}
-                          >
+                            }}>
                             <AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg" />
                             درباره من
                           </li>
                         </a>
-                        <li
-                          onClick={() => {
-                            toggle();
-                            handleShowMenu();
-                          }}
-                        >
-                          <VscCallIncoming className="inline mr-1 ml-2 text-lg" />
-                          تماس با من
-                        </li>
+                        <a href="#footer">
+                          <li
+                            onClick={() => {
+                              toggle();
+                              handleShowMenu();
+                            }}>
+                            <VscCallIncoming className="inline mr-1 ml-2 text-lg" />
+                            تماس با من
+                          </li>
+                        </a>
                       </ul>
                     </div>
                     {/* end menu collapse */}
                   </IconButton>
                 )}
               />
+              {/* end menu humbereger collapse  */}
               <picture>
                 <source srcSet="/image/poones.webp" />
                 <img
@@ -143,35 +148,41 @@ export default function Nav() {
                   mr: 2,
                   fontSize: "16px",
                   display: { xs: "none", md: "flex" },
-                }}
-              >
-                <p className="my-auto mr-6 hover:text-yellow-500 cursor-pointer">
+                }}>
+                <p className="my-auto mr-3 cursor-pointer">
                   <Link to="/">
-                    <p>خانه</p>
+                    <p className=" hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded">
+                      خانه
+                    </p>
                   </Link>
                 </p>
-                <p className="my-auto mr-6 hover:text-yellow-500 cursor-pointer">
+                <p className="my-auto mr-3 cursor-pointer">
                   <Link to="/courses">
-                    <p> دوره های آموزشی </p>
+                    <p className=" hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded">
+                      {" "}
+                      دوره های آموزشی{" "}
+                    </p>
                   </Link>
                 </p>
                 <a href="#footer">
-                  <p className="my-auto mr-6 hover:text-yellow-500 cursor-pointer">
+                  <p className="my-auto mr-3 hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded cursor-pointer">
                     درباره من
                   </p>
                 </a>
               </Box>
               <Box sx={{ flexGrow: "1" }} />
+              {/* icon shopping cart */}
               <IconButton
                 sx={{
                   ml: { xs: 1, md: 4 },
                   color: "#4f46e5",
                   fontSize: "0.90em",
-                }}
-              >
+                }}>
                 <Link to="/cart">
                   <span className="h-5 w-5 font-bold font-xs -pt-1 rounded-3xl bg-red-500 text-white text-center  absolute right-6 -top-1">
-                    {cartContext.cartShop ? cartContext.cartShop.length : "0"}
+                    {cartContext.cartShop
+                      ? cartContext.cartShop.length
+                      : "0"}
                   </span>
 
                   <ShoppingCartOutlinedIcon
@@ -179,20 +190,26 @@ export default function Nav() {
                   />
                 </Link>
               </IconButton>
-
+              {/* end icon shopping cart */}
+              {/* icon account profile */}
               <IconButton sx={{ ml: 1, color: "#4f46e5" }}>
                 <Link to={context.token ? "" : "/login"}>
                   <AccountCircleOutlinedIcon
-                    onClick={localStorage.getItem("token") ? handleOpen : null}
+                    onClick={
+                      localStorage.getItem("token")
+                        ? handleOpen
+                        : null
+                    }
                     sx={{ fontSize: "1.2em" }}
                   />
                 </Link>
               </IconButton>
+              {/* end icon account profile */}
             </Toolbar>
           </Container>
         </AppBar>
       </Box>
-      {/* modal */}
+      {/* modal for profile */}
       <div>
         <Modal
           aria-labelledby="transition-modal-title"
@@ -203,8 +220,7 @@ export default function Nav() {
           BackdropComponent={Backdrop}
           BackdropProps={{
             timeout: 500,
-          }}
-        >
+          }}>
           <Fade in={open}>
             <Box
               sx={{
@@ -214,11 +230,11 @@ export default function Nav() {
                 left: "7%",
                 p: 1,
                 borderRadius: "5px",
-              }}
-            >
+              }}>
               <p className="p-2 cursor-pointer">
                 {localStorage.getItem("token")
-                  ? jwt.decode(localStorage.getItem("token")).user.fullName
+                  ? jwt.decode(localStorage.getItem("token")).user
+                      .fullName
                   : ""}
               </p>
               <hr />
@@ -228,15 +244,14 @@ export default function Nav() {
                   handleClose();
                   context.setToken(false);
                 }}
-                className="p-2 cursor-pointer"
-              >
+                className="p-2 cursor-pointer">
                 خروج از حساب کاربری
               </p>
             </Box>
           </Fade>
         </Modal>
       </div>
-      {/* end modal */}
+      {/* end modal for profile */}
     </div>
   );
 }

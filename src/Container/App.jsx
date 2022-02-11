@@ -1,12 +1,12 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-const AllCourse = lazy(() => import("../Component/Course/AllCourse"));
-const Home = lazy(() => import("../Component/HomePage/Home"));
-const MainLayout = lazy(() => import("../Layouts/MainLayout"));
-const SingleCourse = lazy(() => import("../Component/Course/SingleCourse"));
-const Register = lazy(() => import("../Component/Register/Register"));
-const Login = lazy(() => import("./../Component/Login/Login"));
-const Cart = lazy(() => import("../Component/Cart/Cart"));
+import AllCourse from "../Component/Course/AllCourse";
+import SingleCourse from "../Component/Course/SingleCourse";
+import Register from "../Component/Register/Register";
+import Login from "./../Component/Login/Login";
+import Cart from "../Component/Cart/Cart";
+import MainLayout from "../Layouts/MainLayout";
+import Home from "../Component/HomePage/Home";
 const App = () => {
   return (
     <div>
@@ -15,8 +15,7 @@ const App = () => {
           <div className="mt-28 p-12 font-extrabold text-center bg-red-100">
             الان میاد ...
           </div>
-        }
-      >
+        }>
         <MainLayout>
           <Routes>
             <Route path="/" element={<Home />} />

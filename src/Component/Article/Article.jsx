@@ -43,6 +43,7 @@ const Article = (props) => {
               className="w-full"
               src="/image/roadMap.jpg"
               alt="roadMap"
+              loading="lazy"
             />
             <h1 className="p-4 text-gray-600 font-bold text-center">
               نقشه راه طراحی وب

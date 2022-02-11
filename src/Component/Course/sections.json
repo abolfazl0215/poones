@@ -1,0 +1,343 @@
+[
+  {
+    "name": " فصل اول : HTML",
+    "role": 2
+  },
+  {
+    "number": 1,
+    "name": "معرفی دوره",
+    "time": "00:3:23",
+    "url": "/videos/1-html.zip",
+    "role": 1
+  },
+  {
+    "name": "html چیست",
+    "number": 2,
+    "url": "/videos/2-html.zip",
+    "time": "00:8:41",
+    "role": 1
+  },
+  {
+    "name": "نصب محیط کدنویسی",
+    "number": 3,
+    "url": "/videos/3-html.zip",
+    "time": "00:2:53",
+    "role": 1
+  },
+  {
+    "name": "تگ های text",
+    "number": 4,
+    "url": "/videos/4-html.zip",
+    "time": "00:12:14",
+    "role": 1
+  },
+  {
+    "name": "تگ های title",
+    "number": 5,
+    "url": "/videos/5-html.zip",
+    "time": "00:7:12",
+    "role": 1
+  },
+  {
+    "name": "entity (موجودیت ها)",
+    "number": 6,
+    "url": "/videos/6-html.zip",
+    "time": "00:3:39",
+    "role": 1
+  },
+  {
+    "name": "متاتگ ها",
+    "number": 7,
+    "url": "/videos/7-html.zip",
+    "time": "00:2:52",
+    "role": 1
+  },
+  {
+    "name": "لیست ها",
+    "number": 8,
+    "url": "/videos/8-html.zip",
+    "time": "00:5:38",
+    "role": 1
+  },
+  {
+    "name": "عکس ها",
+    "number": 9,
+    "url": "/videos/9-html.zip",
+    "time": "00:15:53",
+    "role": 1
+  },
+  {
+    "name": "تگ picture",
+    "number": 10,
+    "url": "/videos/10-html.zip",
+    "time": "00:8:20",
+    "role": 1
+  },
+  {
+    "name": "قراردادن موزیک و ویدیو",
+    "number": 11,
+    "url": "/videos/11-html.zip",
+    "time": "00:05:52",
+    "role": 1
+  },
+  {
+    "name": "لینک ها",
+    "number": 12,
+    "url": "/videos/12-html.zip",
+    "time": "00:10:25",
+    "role": 1
+  },
+  {
+    "name": "تگ map",
+    "number": 13,
+    "url": "/videos/13-html.zip",
+    "time": "00:04:51",
+    "role": 1
+  },
+  {
+    "name": "ساخت جدول",
+    "number": 14,
+    "url": "/videos/14-html.zip",
+    "time": "00:6:35",
+    "role": 1
+  },
+  {
+    "name": "ساخت فرم",
+    "number": 15,
+    "url": "/videos/15-html.zip",
+    "time": "00:11:31",
+    "role": 1
+  },
+  {
+    "name": "انواع اینپوت ها",
+    "number": 16,
+    "url": "/videos/16-html.zip",
+    "time": "00:018:58",
+    "role": 1
+  },
+  {
+    "name": "global-attribute",
+    "number": 17,
+    "url": "/videos/17-html.zip",
+    "time": "00:05:10",
+    "role": 1
+  },
+  {
+    "name": "استفاده از آیکون ها",
+    "number": 18,
+    "url": "/videos/18-html.zip",
+    "time": "00:07:48",
+    "role": 1
+  },
+  {
+    "name": "تگ progress و meter",
+    "number": 19,
+    "url": "/videos/19-html.zip",
+    "time": "00:01:42",
+    "role": 1
+  },
+  {
+    "name": "ساختاربندی html",
+    "number": 20,
+    "url": "/videos/20-html.zip",
+    "time": "00:05:46",
+    "role": 1
+  },
+  {
+    "name": " فصل دوم : css (درحال تکمیل)",
+    "role": 2
+  },
+  {
+    "number": 21,
+    "name": "شروع کار با css",
+    "time": "00:10:46",
+    "url": "/videos/21-css.zip",
+    "role": 1
+  },
+  {
+    "number": 22,
+    "name": "شروع کار با css",
+    "time": "00:08:55",
+    "url": "/videos/22-css.zip",
+    "role": 1
+  },
+  {
+    "number": 23,
+    "name": "رنگ ها",
+    "time": "00:05:40",
+    "url": "/videos/23-css.zip",
+    "role": 1
+  },
+  {
+    "number": 24,
+    "name": "عرض و ارتفاع",
+    "time": "00:03:50",
+    "url": "/videos/24-css.zip",
+    "role": 1
+  },
+  {
+    "number": 25,
+    "name": "ویژگی های متن ها",
+    "time": "00:03:25",
+    "url": "/videos/25-css.zip",
+    "role": 1
+  },
+  {
+    "number": 26,
+    "name": "background-image",
+    "time": "00:08:37",
+    "url": "/videos/26-css.zip",
+    "role": 1
+  },
+  {
+    "number": 27,
+    "name": "سایه ها",
+    "time": "00:06:02",
+    "url": "/videos/27-css.zip",
+    "role": 1
+  },
+  {
+    "number": 28,
+    "name": "border (کادر)",
+    "time": "00:06:43",
+    "url": "/videos/28-css.zip",
+    "role": 1
+  },
+  {
+    "number": 29,
+    "name": "outline",
+    "time": "00:02:59",
+    "url": "/videos/29-css.zip",
+    "role": 1
+  },
+  {
+    "number": 30,
+    "name": "margin و padding",
+    "time": "00:06:40",
+    "url": "/videos/30-css.zip",
+    "role": 1
+  },
+  {
+    "number": 31,
+    "name": "فونت 1",
+    "time": "00:06:55",
+    "url": "/videos/31-css.zip",
+    "role": 1
+  },
+  {
+    "number": 32,
+    "name": "فونت 2",
+    "time": "00:05:08",
+    "url": "/videos/32-css.zip",
+    "role": 1
+  },
+  {
+    "number": 33,
+    "name": "واحدهای اندازه گیری 1",
+    "time": "00:12:24",
+    "url": "/videos/33-css.zip",
+    "role": 1
+  },
+  {
+    "number": 34,
+    "name": "واحدهای اندازه گیری 2",
+    "time": "00:04:19",
+    "url": "/videos/34-css.zip",
+    "role": 1
+  },
+  {
+    "number": 35,
+    "name": "حالت های لینک",
+    "time": "00:03:57",
+    "url": "/videos/35-css.zip",
+    "role": 1
+  },
+  {
+    "number": 36,
+    "name": "ارث بری",
+    "time": "00:03:48",
+    "url": "/videos/36-css.zip",
+    "role": 1
+  },
+  {
+    "number": 37,
+    "name": "لیست",
+    "time": "00:03:57",
+    "url": "/videos/37-css.zip",
+    "role": 1
+  },
+  {
+    "number": 38,
+    "name": "جدول",
+    "time": "00:03:11",
+    "url": "/videos/38-css.zip",
+    "role": 1
+  },
+  {
+    "number": 39,
+    "name": "display",
+    "time": "00:05:34",
+    "url": "/videos/39-css.zip",
+    "role": 1
+  },
+  {
+    "number": 40,
+    "name": "selector specificity",
+    "time": "00:05:10",
+    "url": "/videos/40-css.zip",
+    "role": 1
+  },
+  {
+    "number": 41,
+    "name": "overflow",
+    "time": "00:02:24",
+    "url": "/videos/41-css.zip",
+    "role": 1
+  },
+  {
+    "number": 42,
+    "name": "float (شناوری)",
+    "time": "00:03:41",
+    "url": "/videos/42-css.zip",
+    "role": 1
+  },
+  {
+    "number": 43,
+    "name": "position",
+    "time": "00:11:45",
+    "url": "/videos/43-css.zip",
+    "role": 1
+  },
+  {
+    "name": " فصل سوم : طراحی سه بعدی (به زودی)",
+    "role": 2
+  },
+  {
+    "name": " فصل چهارم : flex (به زودی)",
+    "role": 2
+  },
+  {
+    "name": "فصل پنجم : grid (به زودی)",
+    "role": 2
+  },
+  {
+    "name": "فصل ششم : افزایش سرعت و بهینه سازی (به زودی) ",
+    "role": 2
+  },
+  {
+    "name": "فصل هفتم : امنیت (به زودی) ",
+    "role": 2
+  },
+  {
+    "name": " فصل هشتم : sass  (به زودی)",
+    "role": 2
+  },
+  {
+    "name": "فصل نهم : آشنایی با tailwind (به زودی) ",
+    "role": 2
+  },
+  {
+    "name": "فصل دهم : پیاده سازی پروژه (به زودی)",
+    "role": 2
+  }
+]

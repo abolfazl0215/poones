@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import CartContext from "./../../Context/CartContext";
 
 const AllCourse = () => {
@@ -11,6 +13,15 @@ const AllCourse = () => {
   }, []);
   return (
     <div className="inline-block w-full md:pt-24 pt-10">
+      {location.pathname === "/courses" ? (
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>دوره های آموزشی پونس</title>
+          <link rel="canonical" href="https://pounes.ir" />
+        </Helmet>
+      ) : (
+        ""
+      )}
       {location.pathname === "/" ? (
         <div className="text-center">
           <h1 className="inline-block py-2 px-8 rounded-3xl text-white bg-indigo-600 font-bold md:text-xl">
@@ -29,7 +40,7 @@ const AllCourse = () => {
           <div
             onClick={() => cartContext.goToCourse(p.id)}
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small">
-            <div className="pb-4 shadow-lg rounded overflow-hidden">
+            <div className="pb-4 shadow-lg rounded overflow-hidden hover:border-b-4 border-indigo-600 transition">
               <Link to="/singleCourse" className="p-0">
                 <picture>
                   <source srcSet={p.image_url1} />
@@ -37,6 +48,7 @@ const AllCourse = () => {
                     className="w-full"
                     src={p.image_url2}
                     alt="course"
+                    loading="lazy"
                   />
                 </picture>
                 <h1 className="p-4 text-gray-600 font-bold">
@@ -73,7 +85,7 @@ const AllCourse = () => {
                       <circle cx="12" cy="12" r="10"></circle>
                       <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    <p className="pr-2 text-color">02:43:05</p>
+                    <p className="pr-2 text-color">04:44:07</p>
                   </div>
                   <div>
                     <div className="text-red-400">
@@ -83,7 +95,7 @@ const AllCourse = () => {
                         </s>
                       </p>
                       <span className="text-gray-600">
-                        صد نفر اول
+                        دویست نفر اول
                       </span>
                       <span className="font-bold"> (رایگان) </span>
                     </div>

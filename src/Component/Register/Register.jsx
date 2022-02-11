@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Context from "./../../Context/Context";
 
 const Register = () => {
@@ -7,12 +8,16 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ثبت نام | پونس</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
       <h1 className="">.</h1>
 
       <form
         onSubmit={(e) => context.handleSubmitRegister(e)}
-        className="mt-16 md:mt-24 mx-auto  border-2  border-gray-200 w-4/5 md:w-1/3 p-4 text-indigo-700 text-sm rounded-lg"
-      >
+        className="mt-16 md:mt-24 mx-auto  border-2  border-gray-200 w-4/5 md:w-1/3 p-4 text-indigo-700 text-sm rounded-lg">
         <p className="text-center text-2xl font-extrabold">پونس</p>
         <p className=" text-center p-3 mt-4 bg-color-fade rounded-lg">
           ثبت نام
@@ -31,7 +36,7 @@ const Register = () => {
           {context.validator.current.message(
             "fullname",
             context.fullName,
-            "min:3|required"
+            "min:3|required",
           )}
           <label>ایمیل:</label>
           <input
@@ -44,7 +49,7 @@ const Register = () => {
           {context.validator.current.message(
             "email",
             context.email,
-            "required|email"
+            "required|email",
           )}
           <label>رمز عبور:</label>
           <input
@@ -57,7 +62,7 @@ const Register = () => {
           {context.validator.current.message(
             "password",
             context.password,
-            "min:5|required"
+            "min:5|required",
           )}
           <label>تکرار رمز عبور</label>
 
@@ -66,13 +71,17 @@ const Register = () => {
             name="confirmPassword"
             className="w-full border-2 border-gray-200 mt-2 mb-2 h-11 rounded-lg"
             value={context.confirmPassword}
-            onChange={(e) => context.setConfirmPassword(e.target.value)}
+            onChange={(e) =>
+              context.setConfirmPassword(e.target.value)
+            }
           />
-          <p className="text-red-400">{context.passwordConfirmResponse}</p>
+          <p className="text-red-400">
+            {context.passwordConfirmResponse}
+          </p>
           {context.validator.current.message(
             "confirmPassword",
             context.confirmPassword,
-            "min:5|required"
+            "min:5|required",
           )}
         </div>
         <p className="px-3 text-sm text-red-700">
@@ -81,8 +90,7 @@ const Register = () => {
         <div className="p-3">
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white p-3 rounded-lg mt-3"
-          >
+            className="w-full bg-indigo-600 text-white p-3 rounded-lg mt-3">
             ثبت نام
           </button>
         </div>

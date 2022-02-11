@@ -8,7 +8,7 @@ const Section5 = () => {
           <div className="w-1/4 hidden md:block">
             <picture>
               <source srcSet="/image/3.webp" alt="website-image" />
-              <img src="/image/3.png" alt="Website" />
+              <img src="/image/3.png" alt="Website" loading="lazy" />
             </picture>
           </div>
           <div className="text-gray-700 float-right my-auto text-small sm:text-sm">
@@ -26,12 +26,13 @@ const Section5 = () => {
                   stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
-                  stroke-linejoin="round"
-                >
+                  stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5 mt-2">مشاوره رایگان</span>
+              <span className=" mr-5 mt-2 text-sm text-gray-500">
+                مشاوره رایگان
+              </span>
             </p>
             <p className="flex">
               <span className="absolute mt-2">
@@ -44,12 +45,13 @@ const Section5 = () => {
                   stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
-                  stroke-linejoin="round"
-                >
+                  stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5 mt-2">پشتیبانی فوق العاده</span>
+              <span className=" mr-5 mt-2 text-sm text-gray-500">
+                پشتیبانی فوق العاده
+              </span>
             </p>
             <p className="flex">
               <span className="absolute mt-2">
@@ -62,12 +64,11 @@ const Section5 = () => {
                   stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
-                  stroke-linejoin="round"
-                >
+                  stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5 mt-2">
+              <span className=" mr-5 mt-2 text-sm text-gray-500">
                 همراهی شما عزیزان از شروع تا ورود به بازار کار
               </span>
             </p>
@@ -82,12 +83,11 @@ const Section5 = () => {
                   stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
-                  stroke-linejoin="round"
-                >
+                  stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5 mt-2">
+              <span className=" mr-5 mt-2 text-sm text-gray-500">
                 احترام به وقت شما عزیزان و ارایه محتوای باارزش
               </span>
             </p>
@@ -102,12 +102,11 @@ const Section5 = () => {
                   stroke="#4f46e5"
                   stroke-width="1.5"
                   stroke-linecap="butt"
-                  stroke-linejoin="round"
-                >
+                  stroke-linejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
               </span>
-              <span className=" mr-5 mt-2">
+              <span className=" mr-5 mt-2 text-sm text-gray-500">
                 محتوای باکیفیت و باارزش نسبت به هزینه و گاها رایگان
               </span>
             </p>
