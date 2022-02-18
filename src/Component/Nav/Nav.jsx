@@ -82,16 +82,17 @@ export default function Nav() {
                       ref={setCollapsibleElement}
                       style={{ zIndex: "999" }}
                       id="menu-collapse"
-                      className="w-full fixed right-0 top-16 text-right bg-white shadow-xl md:hidden">
+                      className="w-full fixed right-0 top-16 text-right bg-white shadow-xl lg:hidden">
                       <ul className="p-4 pt-0 leading-10 text-sm text-indigo-800">
                         <Link to="/">
                           <li
+                            className="bg-gray-50"
                             onClick={() => {
                               toggle();
                               handleShowMenu();
                             }}>
-                            <p className="inline">
-                              <BiHomeHeart className="inline mr-1 ml-2 text-lg" />
+                            <p className="inline font-yekan">
+                              <BiHomeHeart className="inline mr-1 ml-2 text-lg text-red-500" />
                               خانه{" "}
                             </p>
                           </li>
@@ -102,29 +103,31 @@ export default function Nav() {
                               toggle();
                               handleShowMenu();
                             }}>
-                            <p className="inline">
-                              <CgMenuRight className="inline mr-1 ml-2 text-lg" />
+                            <p className="inline font-yekan">
+                              <CgMenuRight className="inline mr-1 ml-2 text-lg text-green-500" />
                               دوره های آموزشی
                             </p>
                           </li>
                         </Link>
                         <a href="#footer">
                           <li
+                            className="font-yekan bg-gray-50"
                             onClick={() => {
                               toggle();
                               handleShowMenu();
                             }}>
-                            <AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg" />
+                            <AiOutlineQuestionCircle className="inline mr-1 ml-2 text-lg text-blue-500" />
                             درباره من
                           </li>
                         </a>
                         <a href="#footer">
                           <li
+                            className="font-yekan"
                             onClick={() => {
                               toggle();
                               handleShowMenu();
                             }}>
-                            <VscCallIncoming className="inline mr-1 ml-2 text-lg" />
+                            <VscCallIncoming className="inline mr-1 ml-2 text-lg text-pink-500" />
                             تماس با من
                           </li>
                         </a>

@@ -88,19 +88,28 @@ const SingleCourse = () => {
         <div className="md:w-1/5 w-full mt-3 md:mt-0 md:pl-3 order-2 md:order-1">
           <div className="  h-full text-gray-600 p-5 text-sm bg-white rounded">
             <p className="font-bold text-purple-800 text-sm">
-              قیمت این دوره : <s>390/000</s>
-              <p className="text-red-600 mt-4">
-                <span className="text-gray-600 font-medium">
-                  دویست نفر اول
-                </span>
-                <span className="font-bold"> (رایگان) </span>
-              </p>
+              قیمت این دوره : <s className="text-gray-400">390/000</s>
+              <span className="font-bold text-red-500">
+                {" "}
+                (رایگان){" "}
+              </span>
               {/* <span className="text-orange">{Course[0].price}</span>*/}
             </p>
             <hr className="mt-2" />
-            <p className="mt-5 mr-2">مدت زمان دوره : 04:44:07</p>
-            <p className="mt-2 mr-2">تعداد دانشجو : {length}</p>
-            <p className="mt-2 mr-2">سطح دوه : مقدماتی تا پیشرفته</p>
+            <p className="mt-5 mr-2">
+              مدت زمان دوره :{" "}
+              <span className="text-stone-500"> 05:58:06</span>
+            </p>
+            <p className="mt-2 mr-2">
+              تعداد دانشجو :{" "}
+              <span className="text-stone-500">{length}</span>
+            </p>
+            <p className="mt-2 mr-2">
+              سطح دوه :{" "}
+              <span className="text-stone-500">
+                مقدماتی تا پیشرفته
+              </span>
+            </p>
             <p className="mt-2 mr-2 border-b-2 pb-4">
               وضعیت دوره :{" "}
               <span className="text-green-600">در حال برگزاری</span>

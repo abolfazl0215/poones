@@ -112,7 +112,7 @@
     "name": "انواع اینپوت ها",
     "number": 16,
     "url": "/videos/16-html.zip",
-    "time": "00:018:58",
+    "time": "00:18:58",
     "role": 1
   },
   {
@@ -144,7 +144,7 @@
     "role": 1
   },
   {
-    "name": " فصل دوم : css (درحال تکمیل)",
+    "name": " فصل دوم : css",
     "role": 2
   },
   {
@@ -309,8 +309,85 @@
     "role": 1
   },
   {
-    "name": " فصل سوم : طراحی سه بعدی (به زودی)",
+    "number": 44,
+    "name": "combinators (ترکیب کننده ها)",
+    "time": "00:04:14",
+    "url": "/videos/44-css.zip",
+    "role": 1
+  },
+  {
+    "number": 45,
+    "name": "attr-selectors",
+    "time": "00:08:17",
+    "url": "/videos/45-css.zip",
+    "role": 1
+  },
+  {
+    "number": 46,
+    "name": "pseudo-class",
+    "time": "00:09:01",
+    "url": "/videos/46-css.zip",
+    "role": 1
+  },
+  {
+    "number": 47,
+    "name": "pseudo-element",
+    "time": "00:04:55",
+    "url": "/videos/47-css.zip",
+    "role": 1
+  },
+  {
+    "number": 48,
+    "name": "transition",
+    "time": "00:05:32",
+    "url": "/videos/48-css.zip",
+    "role": 1
+  },
+  {
+    "number": 49,
+    "name": "transform",
+    "time": "00:08:23",
+    "url": "/videos/49-css.zip",
+    "role": 1
+  },
+  {
+    "number": 50,
+    "name": "animation",
+    "time": "00:08:41",
+    "url": "/videos/50-css.zip",
+    "role": 1
+  },
+  {
+    "number": 51,
+    "name": "responsive (واکنشگرایی)",
+    "time": "00:07:33",
+    "url": "/videos/51-css.zip",
+    "role": 1
+  },
+  {
+    "number": 52,
+    "name": "border-box",
+    "time": "00:04:00",
+    "url": "/videos/52-css.zip",
+    "role": 1
+  },
+  {
+    "name": " فصل سوم : طراحی سه بعدی",
     "role": 2
+  },
+  {
+    "number": 53,
+    "name": "طراحی سه بعدی",
+    "time": "00:03:03",
+    "url": "/videos/53-3d.zip",
+    "role": 1
+  },
+  {
+    "number": 54,
+    "name": "تمرین",
+    "time": "00:10:23",
+    "url": "/videos/54-3d.zip",
+    "role": 1
   },
   {
     "name": " فصل چهارم : flex (به زودی)",

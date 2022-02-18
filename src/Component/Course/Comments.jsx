@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import toastr from "toastr";
 import jwt from "jsonwebtoken";
+import moment from "jalali-moment";
 
 import http from "../../Services/httpService";
 import Context from "./../../Context/Context";
@@ -37,6 +38,7 @@ const Comments = () => {
           JSON.stringify({
             comment,
             fullName: fullName.user.fullName,
+            createAt: Date.now(),
           }),
         );
         toastr.success("نظر شما به زودی ثبت میشود");
@@ -83,9 +85,22 @@ const Comments = () => {
                 <div className="w-full borderSingleCourse mt-4 p-2">
                   <div className="flex">
                     <div className="w-12 h-12 circle bg-gray-200"></div>
-                    <p className="mt-4 mr-2 text-sm font-yekan">
-                      {c.fullName}
-                    </p>
+                    <div>
+                      <p className="mt-2 mr-2 text-sm">
+                        {c.fullName}
+                      </p>
+                      {c.createAt > 100 ? (
+                        <p className=" mr-2 text-sm text-gray-400">
+                          {/* {c.createAt} */}
+                          {moment(parseInt(c.createAt))
+                            .locale("fa")
+                            .format("YYYY/MM/DD")}
+                          {console.log(c.createAt)}
+                        </p>
+                      ) : (
+                        ""
+                      )}
+                    </div>
                   </div>
                   <p className="m-2 mt-4 text-sm">{c.comment}</p>
                 </div>
@@ -97,11 +112,8 @@ const Comments = () => {
                           src="image/avatar.png"
                           alt="avatar"
                           className="w-12 h-12 circle border-2 "></img>
-                        <p className="mt-4 mr-2 text-sm font-yekan">
+                        <p className="mt-4 mr-2 text-sm">
                           ابوالفضل مختاری{" "}
-                          <span className="text-sm font-light">
-                            (مدیرسایت)
-                          </span>
                         </p>
                       </div>
                       <p className="m-2 mt-4 text-sm">{c.response}</p>

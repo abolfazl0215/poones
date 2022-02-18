@@ -71,7 +71,7 @@ const AllCourse = () => {
                   <p className="pr-2 text-gray-500"> مختاری</p>
                 </div>
                 <div className="flex pr-4 pl-4 mt-3 justify-between">
-                  <div className="flex mt-7">
+                  <div className="flex">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="18"
@@ -85,18 +85,13 @@ const AllCourse = () => {
                       <circle cx="12" cy="12" r="10"></circle>
                       <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    <p className="pr-2 text-color">04:44:07</p>
+                    <p className="pr-2 text-color">05:58:06</p>
                   </div>
                   <div>
                     <div className="text-red-400">
-                      <p className="text-center">
-                        <s className="mx-auto text-lg text-gray-400">
-                          390/000
-                        </s>
-                      </p>
-                      <span className="text-gray-600">
-                        دویست نفر اول
-                      </span>
+                      <s className="mx-auto text-lg text-gray-400">
+                        390/000
+                      </s>
                       <span className="font-bold"> (رایگان) </span>
                     </div>
                   </div>
