@@ -63,7 +63,7 @@
     "name": "عکس ها",
     "number": 9,
     "url": "/videos/9-html.zip",
-    "time": "00:15:53",
+    "time": "00:20:14",
     "role": 1
   },
   {
@@ -156,7 +156,7 @@
   },
   {
     "number": 22,
-    "name": "شروع کار با css",
+    "name": "نصب محیط کدنویسی",
     "time": "00:08:55",
     "url": "/videos/22-css.zip",
     "role": 1
@@ -390,31 +390,92 @@
     "role": 1
   },
   {
-    "name": " فصل چهارم : flex (به زودی)",
+    "name": " فصل چهارم : flex ",
     "role": 2
   },
   {
-    "name": "فصل پنجم : grid (به زودی)",
+    "number": 55,
+    "name": "flex-1",
+    "time": "00:11:40",
+    "url": "/videos/55-flex.zip",
+    "role": 1
+  },
+  {
+    "number": 56,
+    "name": "flex-2",
+    "time": "00:15:04",
+    "url": "/videos/56-flex.zip",
+    "role": 1
+  },
+  {
+    "name": "فصل پنجم : grid ",
     "role": 2
   },
   {
-    "name": "فصل ششم : افزایش سرعت و بهینه سازی (به زودی) ",
+    "number": 57,
+    "name": "grid-1",
+    "time": "00:12:46",
+    "url": "/videos/57-grid.zip",
+    "role": 1
+  },
+  {
+    "number": 58,
+    "name": "grid-2",
+    "time": "00:06:30",
+    "url": "/videos/58-grid.zip",
+    "role": 1
+  },
+  {
+    "number": 59,
+    "name": "grid-3",
+    "time": "00:07:07",
+    "url": "/videos/59-grid.zip",
+    "role": 1
+  },
+  {
+    "name": "فصل ششم : پیاده سازی پروژه ",
     "role": 2
   },
   {
-    "name": "فصل هفتم : امنیت (به زودی) ",
-    "role": 2
+    "number": 60,
+    "name": "navbar",
+    "time": "00:21:13",
+    "url": "/videos/60-project.zip",
+    "role": 1
   },
   {
-    "name": " فصل هشتم : sass  (به زودی)",
-    "role": 2
+    "number": 61,
+    "name": "header",
+    "time": "00:24:42",
+    "url": "/videos/61-project.zip",
+    "role": 1
   },
   {
-    "name": "فصل نهم : آشنایی با tailwind (به زودی) ",
-    "role": 2
+    "number": 62,
+    "name": "طراحی بخش دوم",
+    "time": "00:23:04",
+    "url": "/videos/62-project.zip",
+    "role": 1
   },
   {
-    "name": "فصل دهم : پیاده سازی پروژه (به زودی)",
-    "role": 2
+    "number": 63,
+    "name": "پس زمینه هاشوری",
+    "time": "00:19:39",
+    "url": "/videos/63-project.zip",
+    "role": 1
+  },
+  {
+    "number": 64,
+    "name": "بخش محصولات",
+    "time": "00:40:03",
+    "url": "/videos/64-project.zip",
+    "role": 1
+  },
+  {
+    "number": 65,
+    "name": "بخش آخر",
+    "time": "00:35:59",
+    "url": "/videos/65-project.zip",
+    "role": 1
   }
 ]

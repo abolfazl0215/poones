@@ -22,8 +22,11 @@ const Section2 = () => {
           />
         </div>
         {/* end animation icon support */}
-        <p className="text-center text-sm mt-2"> همراهی من</p>
-        <p className="text-center text-gray-500 text-sm m-2">
+        <p className="text-center text-sm mt-2 text-gray-700">
+          {" "}
+          همراهی من
+        </p>
+        <p className="text-center text-gray-500 text-xs m-2">
           عین عقاب بالاسرتونم و حواسم بهتون هست
         </p>
       </div>
@@ -42,8 +45,11 @@ const Section2 = () => {
           </div>
           {/* end animation icon returned */}
         </div>
-        <p className="text-center text-sm mt-2"> تضمین بازگشت وجه </p>
-        <p className="text-center text-gray-500 text-sm m-2">
+        <p className="text-center text-sm mt-2 text-gray-700">
+          {" "}
+          تضمین بازگشت وجه{" "}
+        </p>
+        <p className="text-center text-gray-500 text-xs m-2">
           اگه از دوره ای خوشت نیومد درجا پول تو حسابته
         </p>
       </div>
@@ -62,8 +68,11 @@ const Section2 = () => {
           </div>
           {/* end animation icon quality */}
         </div>
-        <p className="text-center text-sm mt-2"> تضمین کیفیت </p>
-        <p className="text-center text-gray-500 text-sm m-2">
+        <p className="text-center text-sm mt-2 text-gray-700">
+          {" "}
+          تضمین کیفیت{" "}
+        </p>
+        <p className="text-center text-gray-500 text-xs m-2">
           تمام سعیم رو میکنم تا بهترین مطالب رو با بهترین کیفیت منتشر
           کنم
         </p>
@@ -83,8 +92,11 @@ const Section2 = () => {
           </div>
           {/* end animation icon performance */}
         </div>
-        <p className="text-center text-sm mt-2"> کاربردی</p>
-        <p className="text-center text-gray-500 text-sm m-2">
+        <p className="text-center text-sm mt-2 text-gray-700">
+          {" "}
+          کاربردی
+        </p>
+        <p className="text-center text-gray-500 text-xs m-2">
           {" "}
           انجام پروژه های مختلف و اماده سازی شما عزیزان برای کسب درامد
         </p>

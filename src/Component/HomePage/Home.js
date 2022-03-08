@@ -4,7 +4,7 @@ import Section2 from "./Section2";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
 import Article from "./../Article/Article";
-import AllCourse from "../Course/AllCourse";
+import AllCourse from "../Course/AllCourse/AllCourse";
 import { Helmet } from "react-helmet";
 
 const Home = () => {

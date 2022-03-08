@@ -1,0 +1,24 @@
+[
+  {
+    "name": "دوره هیولای طراحی سایت",
+    "discount": "390,000",
+    "price": "(رایگان)",
+    "image_url1": "/image/courseDesign.webp",
+    "image_url2": "/image/courseDesign.jpg",
+    "time": "09:40:12",
+    "level": "مقدماتی تا پیشرفته",
+    "courseStatus": "در حال برگزاری",
+    "id": 1
+  },
+  {
+    "name": "دوره جاوااسکریپت",
+    "discount": "",
+    "price": "به زودی",
+    "image_url1": "/image/courseJs.webp",
+    "image_url2": "/image/courseJs.jpg",
+    "time": "20:00:00",
+    "level": "مقدماتی تا پیشرفته",
+    "courseStatus": "به زودی",
+    "id": 2
+  }
+]

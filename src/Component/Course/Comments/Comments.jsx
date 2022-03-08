@@ -3,17 +3,18 @@ import toastr from "toastr";
 import jwt from "jsonwebtoken";
 import moment from "jalali-moment";
 
-import http from "../../Services/httpService";
-import Context from "./../../Context/Context";
-import "./index.css";
+import http from "../../../Services/httpService";
+import Context from "../../../Context/Context";
+import "../index.css";
 
 const Comments = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
-  console.log("comment is :", comment);
+
   const context = useContext(Context);
 
   useEffect(async () => {
+    // get comments from database
     try {
       const getComment = await http.get(
         "https://api.pounes.ir/getComment",
@@ -23,9 +24,11 @@ const Comments = () => {
     } catch (err) {
       console.log(err);
     }
+    // End get comments from database
   }, []);
 
-  const handleSubmit = async (e) => {
+  // set comment in database
+  const createComment = async (e) => {
     e.preventDefault();
     const token = context.token;
     try {
@@ -51,10 +54,11 @@ const Comments = () => {
       toastr.error("فکر کنم اینترنتت خاموش شده");
     }
   };
+  // End set comment in database
   return (
     <div className="shadow-xl mb-28 w-full mt-3 md:p-5 p-3  bg-white rounded pb-32">
       <h3 className="font-bold p-2 text-gray-700">نظرات :</h3>
-      <form onSubmit={(e) => handleSubmit(e)} className="pb-6">
+      <form onSubmit={(e) => createComment(e)} className="pb-6">
         <textarea
           required
           onChange={(e) => setComment(e.target.value)}

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -154,21 +154,21 @@ export default function Nav() {
                 }}>
                 <p className="my-auto mr-3 cursor-pointer">
                   <Link to="/">
-                    <p className=" hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded">
+                    <p className=" hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded cursor-pointer text-sm font-yekan">
                       خانه
                     </p>
                   </Link>
                 </p>
                 <p className="my-auto mr-3 cursor-pointer">
                   <Link to="/courses">
-                    <p className=" hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded">
+                    <p className=" hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded cursor-pointer text-sm font-yekan">
                       {" "}
                       دوره های آموزشی{" "}
                     </p>
                   </Link>
                 </p>
                 <a href="#footer">
-                  <p className="my-auto mr-3 hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded cursor-pointer">
+                  <p className="my-auto mr-3 hover:bg-indigo-600 hover:text-white transition-all p-2 px-4 rounded cursor-pointer text-sm font-yekan">
                     درباره من
                   </p>
                 </a>

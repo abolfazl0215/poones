@@ -41,7 +41,7 @@ const Article = (props) => {
           <div className="shadow-lg rounded overflow-hidden">
             <img
               className="w-full"
-              src="/image/roadMap.jpg"
+              src="/image/roadMap.png"
               alt="roadMap"
               loading="lazy"
             />

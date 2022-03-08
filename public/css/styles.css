@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "iranYekan2";
-  src: url("IRANYekanWebBold.woff") format("woff");
+  src: url("IRANYekanWebMedium.woff") format("woff");
 }
 * {
   scroll-behavior: smooth;

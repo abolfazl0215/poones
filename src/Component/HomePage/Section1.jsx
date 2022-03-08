@@ -28,19 +28,17 @@ const Section1 = () => {
           <div id="earthMap"></div>
         </div>
         <div className="md:mx-auto md:my-auto ">
-          <h1 className="text-xl text-center mt-5 md:text-3xl text-gray-500 font-bold">
+          <h1 className="text-lg text-center mt-5 md:text-2xl text-gray-500 font-yekan font-bold">
             آموزشگاه آنلاین{" "}
             <span className="text-amber-500">پونس</span>
           </h1>
-          <p
-            style={{ fontSize: "16px" }}
-            className="text-center text-gray-500 mt-3 tracking-wider font-yekan">
+          <p className="text-center text-gray-500 mt-3  text-sm tracking-wider font-yekan">
             از صفر تا ورود به بازار کار با شما هستم
           </p>
           <p
             onClick={handleOpen}
             className="text-center text-indigo-600 mt-4">
-            <button className="rounded-xl shadow-lg p-2 px-4 hover:bg-indigo-600 transition-all hover:text-white border-l-2 border-r-2 select-none font-yekan tracking-wider">
+            <button className="text-sm font-yekan rounded-xl shadow-lg p-2 px-4 hover:bg-indigo-600 transition-all hover:text-white border-l-2 border-r-2 select-none font-yekan tracking-wider">
               راهنمای تازه کارها
             </button>
           </p>

@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-import CartContext from "./../../Context/CartContext";
+import CartContext from "../../../Context/CartContext";
+import courses from "./Courses.json";
 
 const AllCourse = () => {
   const location = useLocation();
   const cartContext = useContext(CartContext);
-  const [length, setLength] = useState("");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -36,12 +36,14 @@ const AllCourse = () => {
         ""
       )}
       <div className="p-5 w-full md:px-20 mt-4 md:flex flex-wrap md:justify-start">
-        {cartContext.courses.map((p) => (
+        {courses.map((p) => (
           <div
             onClick={() => cartContext.goToCourse(p.id)}
             className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small">
             <div className="pb-4 shadow-lg rounded overflow-hidden hover:border-b-4 border-indigo-600 transition">
-              <Link to="/singleCourse" className="p-0">
+              <Link
+                to={p.id === 1 ? "/singleCourse" : ""}
+                className="p-0">
                 <picture>
                   <source srcSet={p.image_url1} />
                   <img
@@ -85,14 +87,14 @@ const AllCourse = () => {
                       <circle cx="12" cy="12" r="10"></circle>
                       <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    <p className="pr-2 text-color">05:58:06</p>
+                    <p className="pr-2 text-color">{p.time}</p>
                   </div>
                   <div>
                     <div className="text-red-400">
-                      <s className="mx-auto text-lg text-gray-400">
-                        390/000
+                      <s className="mx-auto text-sm text-gray-400">
+                        {`${p.discount}`}
                       </s>
-                      <span className="font-bold"> (رایگان) </span>
+                      <span className="font-bold"> {p.price} </span>
                     </div>
                   </div>
                 </div>
