@@ -9,10 +9,12 @@ const AllCourse = () => {
   const location = useLocation();
   const cartContext = useContext(CartContext);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="inline-block w-full md:pt-24 pt-10">
+    <div
+      style={{ width: "96%", marginRight: "2%" }}
+      className="inline-block  mt-8 pb-12 rounded-3xl   ">
       {location.pathname === "/courses" ? (
         <Helmet>
           <meta charSet="utf-8" />
@@ -24,38 +26,29 @@ const AllCourse = () => {
       )}
       {location.pathname === "/" ? (
         <div className="text-center">
-          <h1 className="inline-block py-2 px-8 rounded-3xl text-white bg-indigo-600 font-bold md:text-xl">
+          <h1 className="courses-title text-indigo-600 relative -top-5 px-32   inline-block py-2 rounded-3xl  font-bold md:text-lg  ">
             دوره های پونس
           </h1>
-          <hr
-            style={{ height: "1.9px" }}
-            className="bg-indigo-600 -mt-5"
-          />
         </div>
       ) : (
         ""
       )}
-      <div className="p-5 w-full md:px-20 mt-4 md:flex flex-wrap md:justify-start">
+      <div className="px-5 py-2 w-full md:px-20 mt-4 md:flex flex-wrap md:justify-start">
         {courses.map((p) => (
           <div
             onClick={() => cartContext.goToCourse(p.id)}
-            className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small">
-            <div className="pb-4 shadow-lg rounded overflow-hidden hover:border-b-4 border-indigo-600 transition">
-              <Link
-                to={p.id === 1 ? "/singleCourse" : ""}
-                className="p-0">
-                <picture>
-                  <source srcSet={p.image_url1} />
-                  <img
-                    className="w-full"
-                    src={p.image_url2}
-                    alt="course"
-                    loading="lazy"
-                  />
-                </picture>
-                <h1 className="p-4 text-gray-600 font-bold">
+            className="sm:w-full md:p-4 mt-5  md:w-1/3 sm:text-sm text-small ">
+            <div className="box-dark pb-4 shadow-lg overflow-hidden hover:shadow-xl rounded-3xl transition bg-white">
+              <Link to="/singleCourse" className="p-0">
+                <img
+                  className="w-full"
+                  src={p.image_url1}
+                  alt="course"
+                  loading="lazy"
+                />
+                <h2 className="p-4 text-gray-600 font-bold">
                   {p.name}
-                </h1>
+                </h2>
                 <div className="flex pr-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +83,7 @@ const AllCourse = () => {
                     <p className="pr-2 text-color">{p.time}</p>
                   </div>
                   <div>
-                    <div className="text-red-400">
+                    <div className="text-green-500">
                       <s className="mx-auto text-sm text-gray-400">
                         {`${p.discount}`}
                       </s>

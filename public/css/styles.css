@@ -6,12 +6,19 @@
   font-family: "iranYekan2";
   src: url("IRANYekanWebMedium.woff") format("woff");
 }
+@font-face {
+  font-family: "iranYekan3";
+  src: url("IRANYekanWebExtraBold.woff") format("woff");
+}
 * {
   scroll-behavior: smooth;
   font-family: "iranYekan", sans-serif;
 }
 .font-yekan {
   font-family: "iranYekan2";
+}
+.font-yekan-bold {
+  font-family: "iranYekan3";
 }
 #root {
   margin: 0px;
@@ -100,7 +107,7 @@
   width: 80%;
   height: 60%;
   border-radius: 50%;
-  background: url("/image/earthMaps.jpg");
+  background: url("/image/earthMaps.png");
   background-size: 34rem;
   background-position: center;
   /* background-color: #0c55ad; */
@@ -127,4 +134,29 @@
 }
 .img-zoom:hover {
   width: 120%;
+}
+.section1 {
+  background-image: linear-gradient(to bottom, #182848, #3c5694);
+  width: 96%;
+  margin-right: 2.06%;
+  margin-left: 2%;
+}
+.radiuser {
+  background-image: url("/image/radius.png");
+  background-size: 100% 100%;
+}
+.footer {
+  background-image: linear-gradient(to bottom, #1d3057, #243d6b);
+}
+.footer-radiuser {
+  background-image: url("/image/radius2.png");
+  background-size: 100% 100%;
+}
+.location {
+  filter: invert(1) hue-rotate(200deg);
+}
+
+.courses-title {
+  background-image: url("/image/radius3.svg") !important;
+  background-size: 100% 100%;
 }

@@ -1,0 +1,77 @@
+html[theme="dark-mode"] {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #dbebfb;
+}
+.section1 {
+  background-image: linear-gradient(
+    to bottom,
+    #c6d9fa,
+    #92ace9
+  ) !important;
+  width: 96%;
+  margin-right: 2.06%;
+  margin-left: 2%;
+}
+/* .footer {
+  background-image: linear-gradient(
+    to bottom,
+    #c6d9fa,
+    #92ace9
+  ) !important;
+  color: #bfdbfe;
+} */
+.help-button {
+  box-shadow: 0px 0px 0px red !important;
+  color: #bfdbfe;
+}
+
+#pounes-text {
+  color: #fcd34d !important;
+}
+.nav-color {
+  background-color: #c6d9fa !important;
+  color: rgb(255, 84, 84) !important;
+  box-shadow: 0px 0px 0px #c9d9f3 !important;
+  width: 96% !important;
+  margin-top: 1rem !important;
+  border-radius: 1.5rem 1.5rem 0 0 !important;
+  position: relative !important;
+}
+.text-fix-color {
+  color: #0c1934 !important;
+}
+.radiuser {
+  background-image: url("/image/radiusDark.png") !important;
+  background-size: 100% 100%;
+}
+.arrow-bottom {
+  color: #c9d9f3;
+}
+
+.box-dark {
+  background-color: #c7dcef !important;
+  box-shadow: 0px 0px 0px red !important;
+  border: 1px solid #c1e3fd;
+}
+.bg-dark {
+  background-color: #e0eefb !important;
+}
+.footer-radiuser {
+  background-image: url("/image/radiusDark2.png") !important;
+  background-size: 100% 100%;
+  color: #cfdde8;
+}
+
+img,
+iframe,
+#earthMap,
+#sonEarth,
+.help-button,
+.pounes-text,
+#text-main,
+.radiuser,
+.footer,
+#menu-collapse {
+  filter: invert(1) hue-rotate(-180deg);
+}
+/* 91abe8 */

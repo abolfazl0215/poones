@@ -20,21 +20,25 @@ const Home = () => {
         <title>پونس | آموزش تخصصی برنامه نویسی و طراحی سایت </title>
         <meta
           name="description"
-          content="پونس آموزش تخصصی برنامه نویسی و طراحی وب با پشتیبانی رایگان مربی"
+          content="پونس آموزش تخصصی برنامه نویسی و طراحی وب با پشتیبانی vip مربی"
         />
         <meta
           name="keywords"
-          content="پونس , طراحی سایت , طراحی وب"
+          content=" آموزش طراحی سایت , آموزش طراحی وب ,آموزش جاوااسکریپت ,جاوااسکریپت ,پونس , طراحی سایت , طراحی وب"
         />
         <meta property="og:locale" content="fa" />
         <meta property="og:brand" content="پونس" />
       </Helmet>
+      <h2 className="hidden">
+        آموزش تخصصی برنامه نویسی و طراحی سایت پونس با پشتیبانی ویژه و
+        کاملا رایگان . دوره html و css . دوره جاوااسکریپت
+      </h2>
       <Section1 />
       <Section2 />
       <AllCourse />
+      <Section5 />
       <Article />
       <Section4 />
-      <Section5 />
     </div>
   );
 };

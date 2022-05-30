@@ -2,18 +2,15 @@
   {
     "name": "دوره هیولای طراحی سایت",
     "discount": "390,000",
-    "price": "رایگان",
-    "image_url1": "/image/courseDesign.svg",
-    "time": "010:23:08",
+    "price": "0",
+    "image_url1": "/image/courseDesign.webp",
+    "image_url2": "/image/courseDesign.jpg",
+    "time": "09:40:12",
     "level": "مقدماتی تا پیشرفته",
     "courseStatus": "به اتمام رسیده !",
-    "filmDesc": "https://www.aparat.com/video/video/embed/videohash/Xespz/vt/frame",
+    "filmDesc": "https://www.aparat.com/video/video/embed/videohash/LNZBa/vt/frame",
     "id": 1,
     "desc": [
-      {
-        "head": "پیش نیاز های این دوره ؟",
-        "content": "پیش نیاز این دوره آشنایی با html و css هست ."
-      },
       {
         "head": "چرا باید html و css رو یاد بگیریم ؟",
         "content": "ببینید html و css اسکلت و ظاهر سایت مارو تشکیل میدن و ساختار و اسکلت همه سایت های دنیا به همین صورته پس یادگیری این دوره یک ضرورته برای ورود به دنیای طراحی سایت و سایت بدون اسکلت و ظاهر معنایی نداره"
@@ -39,11 +36,12 @@
   {
     "name": "دوره جاوااسکریپت",
     "discount": "",
-    "price": "790,000",
+    "price": "790000",
     "image_url1": "/image/courseJs.svg",
-    "time": "06:22:30",
+    "image_url2": "/image/courseJs.jpg",
+    "time": "20:00:00",
     "level": "مقدماتی تا پیشرفته",
-    "courseStatus": "در حال برگذاری",
+    "courseStatus": "به زودی",
     "filmDesc": "https://www.aparat.com/video/video/embed/videohash/lzVLs/vt/frame",
     "id": 2,
     "desc": [

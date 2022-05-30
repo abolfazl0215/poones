@@ -10,7 +10,11 @@ const Article = (props) => {
 
   const [open, setOpen] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const [id, setId] = React.useState();
+  const handleOpen = (x) => {
+    setId(x);
+    setOpen(true);
+  };
   const handleClose = () => {
     setOpen(false);
     setTimeout(() => {
@@ -19,34 +23,46 @@ const Article = (props) => {
   };
 
   return (
-    <div className="md:pt-24 pt-10">
+    <div
+      style={{ width: "96%", marginRight: "2%" }}
+      className="mt-24 pb-12 bg-indigo-900 rounded-3xl">
       {location.pathname === "/" ? (
         <div className="text-center">
-          <h1 className="inline-block py-2 px-8 rounded-3xl text-white bg-indigo-600 font-bold md:text-xl">
+          <h1 className="courses-title text-indigo-600 relative -top-5 px-24 pt-6  inline-block py-2 rounded-3xl  font-bold md:text-lg  ">
             آخرین مقالات
           </h1>
-
-          <hr
-            style={{ height: "1.9px" }}
-            className="bg-indigo-600 -mt-5"
-          />
         </div>
       ) : (
         ""
       )}
-      <div className="p-5 md:px-20 mt-4 md:flex relative flex-wrap md:justify-start">
+      <div className="px-5 py-4 pt-8 md:px-20 mt-3 md:flex relative flex-wrap md:justify-start ">
         <div
-          onClick={handleOpen}
-          className="sm:w-full pb-4 md:p-4 cursor-pointer mt-5 md:w-1/3 sm:text-sm text-small relative">
-          <div className="shadow-lg rounded overflow-hidden">
+          onClick={() => handleOpen(1)}
+          className="sm:w-full pb-4 md:p-4 cursor-pointer mt-1 md:w-1/3 sm:text-sm text-small relative">
+          <div className="box-dark shadow-lg rounded overflow-hidden hover:shadow-xl bg-white rounded-3xl transition">
             <img
               className="w-full"
-              src="/image/roadMap.png"
+              src="/image/roadMap.svg"
               alt="roadMap"
               loading="lazy"
             />
             <h1 className="p-4 text-gray-600 font-bold text-center">
               نقشه راه طراحی وب
+            </h1>
+          </div>
+        </div>
+        <div
+          onClick={() => handleOpen(2)}
+          className="sm:w-full pb-4 md:p-4 cursor-pointer mt-1 md:w-1/3 sm:text-sm text-small relative">
+          <div className="box-dark shadow-lg rounded overflow-hidden hover:shadow-xl bg-white rounded-3xl transition">
+            <img
+              className="w-full"
+              src="/image/ui.svg"
+              alt="roadMap"
+              loading="lazy"
+            />
+            <h1 className="p-4 text-gray-600 font-bold text-center">
+              ui و ux چی هستن ؟
             </h1>
           </div>
         </div>
@@ -79,15 +95,25 @@ const Article = (props) => {
               ) : (
                 ""
               )}
-              <iframe
-                title="مسیر راه فرانت اند"
-                src="https://www.aparat.com/video/video/embed/videohash/Ocp3D/vt/frame?recom=none"
-                className="w-full h-full rounded"
-                allowFullScreen="true"
-                webkitallowfullscreen="true"
-                mozallowfullscreen="true"
-                onLoad={() => setLoading(true)}></iframe>
-              "
+              {id == 1 ? (
+                <iframe
+                  title="مسیر راه فرانت اند"
+                  src="https://www.aparat.com/video/video/embed/videohash/Ocp3D/vt/frame?recom=none"
+                  className="w-full h-full rounded"
+                  allowFullScreen="true"
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  onLoad={() => setLoading(true)}></iframe>
+              ) : (
+                <iframe
+                  title="مسیر راه فرانت اند"
+                  src="https://www.aparat.com/video/video/embed/videohash/S7FPo/vt/frame"
+                  className="w-full h-full rounded"
+                  allowFullScreen="true"
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  onLoad={() => setLoading(true)}></iframe>
+              )}
             </Box>
           </Fade>
         </Modal>

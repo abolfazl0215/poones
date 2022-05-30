@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import lottie from "lottie-web";
 import Lottie from "react-lottie-player";
 
 import returned from "./iconsJson/return.json";
@@ -10,7 +9,7 @@ import performance from "./iconsJson/performance.json";
 const Section2 = () => {
   return (
     <div className="mt-16 flex flex-wrap justify-around p-4 md:px-28 pb-12">
-      <div className="w-48/100 section2-box py-6 m-3 p-2 shadow-md  md:shadow-none  mx-auto rounded-xl box-collapse md:w-1/5 cursor-pointer ">
+      <div className="box-dark w-48/100 section2-box py-6 m-3 p-2 shadow-md  md:shadow-none  mx-auto rounded-xl box-collapse md:w-1/5 cursor-pointer ">
         {/* animation icon support */}
         <div className="text-center w-full">
           <Lottie
@@ -31,7 +30,7 @@ const Section2 = () => {
         </p>
       </div>
 
-      <div className="w-48/100 section2-box py-6 m-3 p-2 shadow-md md:shadow-none  mx-auto rounded-2xl  box-collapse md:w-1/5 cursor-pointer ">
+      <div className="box-dark w-48/100 section2-box py-6 m-3 p-2 shadow-md md:shadow-none  mx-auto rounded-2xl  box-collapse md:w-1/5 cursor-pointer ">
         <div className="text-center">
           {/* animation icon returned */}
           <div className="text-center w-full">
@@ -54,7 +53,7 @@ const Section2 = () => {
         </p>
       </div>
 
-      <div className="w-48/100 section2-box py-6 m-3 p-2 shadow-md md:shadow-none  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer ">
+      <div className="box-dark w-48/100 section2-box py-6 m-3 p-2 shadow-md md:shadow-none  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer ">
         <div className="text-center">
           {/* animation icon quality */}
           <div className="text-center w-full">
@@ -78,7 +77,7 @@ const Section2 = () => {
         </p>
       </div>
 
-      <div className="w-48/100 section2-box py-6 m-3 p-2 shadow-md md:shadow-none  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer ">
+      <div className="box-dark w-48/100 section2-box py-6 m-3 p-2 shadow-md md:shadow-none  mx-auto rounded-xl  box-collapse md:w-1/5 cursor-pointer ">
         <div className="text-center">
           {/* animation icon performance */}
           <div className="text-center w-full">

@@ -1,481 +1,444 @@
 [
   {
-    "name": " فصل اول : HTML",
+    "name": " فصل اول : آشنایی با زبان جاوااسکریپت",
     "role": 2
   },
   {
     "number": 1,
     "name": "معرفی دوره",
-    "time": "00:3:23",
-    "url": "/videos/1-html.zip",
+    "time": "00:12:02",
     "role": 1
   },
   {
-    "name": "html چیست",
     "number": 2,
-    "url": "/videos/2-html.zip",
-    "time": "00:8:41",
+    "name": "اولین کد در جاوااسکریپت",
+    "time": "00:10:42",
     "role": 1
   },
   {
-    "name": "نصب محیط کدنویسی",
+    "name": " فصل دوم : متغیرها",
+    "role": 2
+  },
+  {
     "number": 3,
-    "url": "/videos/3-html.zip",
-    "time": "00:2:53",
+    "name": "متغیر چیست ؟",
+    "time": "00:12:40",
     "role": 1
   },
   {
-    "name": "تگ های text",
     "number": 4,
-    "url": "/videos/4-html.zip",
-    "time": "00:12:14",
+    "name": "تفاوت cons ,let ,var",
+    "time": "00:09:03",
     "role": 1
   },
   {
-    "name": "تگ های title",
     "number": 5,
-    "url": "/videos/5-html.zip",
-    "time": "00:7:12",
+    "name": "انواع داده",
+    "time": "00:09:02",
     "role": 1
   },
   {
-    "name": "entity (موجودیت ها)",
     "number": 6,
-    "url": "/videos/6-html.zip",
-    "time": "00:3:39",
+    "name": "درباره جاوااسکریپت",
+    "time": "00:02:52",
     "role": 1
   },
   {
-    "name": "متاتگ ها",
+    "name": " فصل سوم : عملگرها",
+    "role": 2
+  },
+  {
     "number": 7,
-    "url": "/videos/7-html.zip",
-    "time": "00:2:52",
+    "name": "انواع عملگرها",
+    "time": "00:01:37",
     "role": 1
   },
   {
-    "name": "لیست ها",
     "number": 8,
-    "url": "/videos/8-html.zip",
-    "time": "00:5:38",
+    "name": "Arithmatic",
+    "time": "00:05:27",
     "role": 1
   },
   {
-    "name": "عکس ها",
     "number": 9,
-    "url": "/videos/9-html.zip",
-    "time": "00:20:14",
+    "name": "Assignment",
+    "time": "00:02:56",
     "role": 1
   },
   {
-    "name": "تگ picture",
     "number": 10,
-    "url": "/videos/10-html.zip",
-    "time": "00:8:20",
+    "name": "Comperison",
+    "time": "00:04:04",
     "role": 1
   },
   {
-    "name": "قراردادن موزیک و ویدیو",
     "number": 11,
-    "url": "/videos/11-html.zip",
-    "time": "00:05:52",
+    "name": "equality",
+    "time": "00:03:13",
     "role": 1
   },
   {
-    "name": "لینک ها",
     "number": 12,
-    "url": "/videos/12-html.zip",
-    "time": "00:10:25",
+    "name": "logical",
+    "time": "00:06:21",
     "role": 1
   },
   {
-    "name": "تگ map",
     "number": 13,
-    "url": "/videos/13-html.zip",
-    "time": "00:04:51",
+    "name": "truthy & falsy",
+    "time": "00:06:30",
     "role": 1
   },
   {
-    "name": "ساخت جدول",
+    "name": " فصل چهارم : دستورات شرطی",
+    "role": 2
+  },
+  {
     "number": 14,
-    "url": "/videos/14-html.zip",
-    "time": "00:6:35",
+    "name": "انواع شرط",
+    "time": "00:01:21",
     "role": 1
   },
   {
-    "name": "ساخت فرم",
     "number": 15,
-    "url": "/videos/15-html.zip",
-    "time": "00:11:31",
+    "name": "ternary operator",
+    "time": "00:06:48",
     "role": 1
   },
   {
-    "name": "انواع اینپوت ها",
     "number": 16,
-    "url": "/videos/16-html.zip",
-    "time": "00:18:58",
+    "name": "multiple ternary operator",
+    "time": "00:03:28",
     "role": 1
   },
   {
-    "name": "global-attribute",
     "number": 17,
-    "url": "/videos/17-html.zip",
+    "name": "if-else",
+    "time": "00:10:34",
+    "role": 1
+  },
+  {
+    "number": 18,
+    "name": "switch-case",
     "time": "00:05:10",
     "role": 1
   },
   {
-    "name": "استفاده از آیکون ها",
-    "number": 18,
-    "url": "/videos/18-html.zip",
-    "time": "00:07:48",
-    "role": 1
-  },
-  {
-    "name": "تگ progress و meter",
     "number": 19,
-    "url": "/videos/19-html.zip",
-    "time": "00:01:42",
+    "name": "تمرین-1",
+    "time": "00:09:26",
     "role": 1
   },
   {
-    "name": "ساختاربندی html",
     "number": 20,
-    "url": "/videos/20-html.zip",
-    "time": "00:05:46",
+    "name": "تمرین-2",
+    "time": "00:05:47",
     "role": 1
   },
   {
-    "name": " فصل دوم : css",
+    "name": " فصل پنجم : حلقه ها",
     "role": 2
   },
   {
     "number": 21,
-    "name": "شروع کار با css",
-    "time": "00:10:46",
-    "url": "/videos/21-css.zip",
+    "name": "انواع حلقه",
+    "time": "00:01:18",
     "role": 1
   },
   {
     "number": 22,
-    "name": "نصب محیط کدنویسی",
-    "time": "00:08:55",
-    "url": "/videos/22-css.zip",
+    "name": "for",
+    "time": "00:09:36",
     "role": 1
   },
   {
     "number": 23,
-    "name": "رنگ ها",
-    "time": "00:05:40",
-    "url": "/videos/23-css.zip",
+    "name": "while",
+    "time": "00:05:46",
     "role": 1
   },
   {
     "number": 24,
-    "name": "عرض و ارتفاع",
-    "time": "00:03:50",
-    "url": "/videos/24-css.zip",
+    "name": "do-while",
+    "time": "00:03:21",
     "role": 1
   },
   {
     "number": 25,
-    "name": "ویژگی های متن ها",
-    "time": "00:03:25",
-    "url": "/videos/25-css.zip",
+    "name": "تمرین-1",
+    "time": "00:09:20",
     "role": 1
   },
   {
     "number": 26,
-    "name": "background-image",
-    "time": "00:08:37",
-    "url": "/videos/26-css.zip",
+    "name": "تمرین-2",
+    "time": "00:05:22",
     "role": 1
   },
   {
+    "name": " مفاهیم مورد نیاز ",
+    "role": 2
+  },
+  {
     "number": 27,
-    "name": "سایه ها",
-    "time": "00:06:02",
-    "url": "/videos/27-css.zip",
+    "name": "function",
+    "time": "00:08:20",
     "role": 1
   },
   {
     "number": 28,
-    "name": "border (کادر)",
-    "time": "00:06:43",
-    "url": "/videos/28-css.zip",
+    "name": "return",
+    "time": "00:01:41",
     "role": 1
   },
   {
     "number": 29,
-    "name": "outline",
-    "time": "00:02:59",
-    "url": "/videos/29-css.zip",
+    "name": "تمرین",
+    "time": "00:04:14",
     "role": 1
   },
   {
     "number": 30,
-    "name": "margin و padding",
-    "time": "00:06:40",
-    "url": "/videos/30-css.zip",
+    "name": "آبجکت",
+    "time": "00:11:46",
     "role": 1
   },
   {
     "number": 31,
-    "name": "فونت 1",
-    "time": "00:06:55",
-    "url": "/videos/31-css.zip",
+    "name": "آرایه",
+    "time": "00:04:31",
     "role": 1
   },
   {
+    "name": " فصل ششم : آبجکت",
+    "role": 2
+  },
+  {
     "number": 32,
-    "name": "فونت 2",
-    "time": "00:05:08",
-    "url": "/videos/32-css.zip",
+    "name": "مرور آبجکت",
+    "time": "00:09:18",
     "role": 1
   },
   {
     "number": 33,
-    "name": "واحدهای اندازه گیری 1",
-    "time": "00:12:24",
-    "url": "/videos/33-css.zip",
+    "name": "dynamic nature of object",
+    "time": "00:05:39",
     "role": 1
   },
   {
     "number": 34,
-    "name": "واحدهای اندازه گیری 2",
-    "time": "00:04:19",
-    "url": "/videos/34-css.zip",
+    "name": "json",
+    "time": "00:06:26",
     "role": 1
   },
   {
     "number": 35,
-    "name": "حالت های لینک",
-    "time": "00:03:57",
-    "url": "/videos/35-css.zip",
+    "name": "primitive vs refrence (clone )",
+    "time": "00:06:26",
     "role": 1
   },
   {
     "number": 36,
-    "name": "ارث بری",
-    "time": "00:03:48",
-    "url": "/videos/36-css.zip",
+    "name": "object clone",
+    "time": "00:11:52",
     "role": 1
   },
   {
     "number": 37,
-    "name": "لیست",
-    "time": "00:03:57",
-    "url": "/videos/37-css.zip",
+    "name": "factory function",
+    "time": "00:06:57",
     "role": 1
   },
   {
     "number": 38,
-    "name": "جدول",
-    "time": "00:03:11",
-    "url": "/videos/38-css.zip",
+    "name": "constructor function",
+    "time": "00:03:28",
     "role": 1
   },
   {
     "number": 39,
-    "name": "display",
-    "time": "00:05:34",
-    "url": "/videos/39-css.zip",
+    "name": "method apply-call",
+    "time": "00:06:33",
     "role": 1
   },
   {
     "number": 40,
-    "name": "selector specificity",
-    "time": "00:05:10",
-    "url": "/videos/40-css.zip",
+    "name": "for-in",
+    "time": "00:03:05",
     "role": 1
   },
   {
     "number": 41,
-    "name": "overflow",
-    "time": "00:02:24",
-    "url": "/videos/41-css.zip",
+    "name": "تمرین-1",
+    "time": "00:04:18",
     "role": 1
   },
   {
     "number": 42,
-    "name": "float (شناوری)",
-    "time": "00:03:41",
-    "url": "/videos/42-css.zip",
+    "name": "تمرین-2",
+    "time": "00:05:42",
     "role": 1
   },
   {
+    "name": " متد های کاربردی ",
+    "role": 2
+  },
+  {
     "number": 43,
-    "name": "position",
-    "time": "00:11:45",
-    "url": "/videos/43-css.zip",
+    "name": "Math",
+    "time": "00:06:31",
     "role": 1
   },
   {
     "number": 44,
-    "name": "combinators (ترکیب کننده ها)",
-    "time": "00:04:14",
-    "url": "/videos/44-css.zip",
+    "name": "String",
+    "time": "00:10:06",
     "role": 1
   },
   {
     "number": 45,
-    "name": "attr-selectors",
-    "time": "00:08:17",
-    "url": "/videos/45-css.zip",
+    "name": "Date",
+    "time": "00:07:57",
     "role": 1
   },
   {
+    "name": " فصل هفتم : آرایه ",
+    "role": 2
+  },
+  {
     "number": 46,
-    "name": "pseudo-class",
-    "time": "00:09:01",
-    "url": "/videos/46-css.zip",
+    "name": "مرور آرایه",
+    "time": "00:04:09",
     "role": 1
   },
   {
     "number": 47,
-    "name": "pseudo-element",
-    "time": "00:04:55",
-    "url": "/videos/47-css.zip",
+    "name": "Add to Array",
+    "time": "00:05:24",
     "role": 1
   },
   {
     "number": 48,
-    "name": "transition",
-    "time": "00:05:32",
-    "url": "/videos/48-css.zip",
+    "name": "delete from array",
+    "time": "00:02:31",
     "role": 1
   },
   {
     "number": 49,
-    "name": "transform",
-    "time": "00:08:23",
-    "url": "/videos/49-css.zip",
+    "name": "splice-slice",
+    "time": "00:07:10",
     "role": 1
   },
   {
     "number": 50,
-    "name": "animation",
-    "time": "00:08:41",
-    "url": "/videos/50-css.zip",
+    "name": "clone array",
+    "time": "00:06:54",
     "role": 1
   },
   {
     "number": 51,
-    "name": "responsive (واکنشگرایی)",
-    "time": "00:07:33",
-    "url": "/videos/51-css.zip",
+    "name": "combined array",
+    "time": "00:04:16",
     "role": 1
   },
   {
     "number": 52,
-    "name": "border-box",
-    "time": "00:04:00",
-    "url": "/videos/52-css.zip",
+    "name": "split-join",
+    "time": "00:05:09",
     "role": 1
   },
   {
-    "name": " فصل سوم : طراحی سه بعدی",
-    "role": 2
-  },
-  {
     "number": 53,
-    "name": "طراحی سه بعدی",
-    "time": "00:03:03",
-    "url": "/videos/53-3d.zip",
+    "name": "lenth-toString-sort-reverse",
+    "time": "00:04:33",
     "role": 1
   },
   {
     "number": 54,
-    "name": "تمرین",
-    "time": "00:10:23",
-    "url": "/videos/54-3d.zip",
+    "name": "find primitive type",
+    "time": "00:05:04",
     "role": 1
   },
   {
-    "name": " فصل چهارم : flex ",
-    "role": 2
-  },
-  {
     "number": 55,
-    "name": "flex-1",
-    "time": "00:11:40",
-    "url": "/videos/55-flex.zip",
+    "name": "find refrence type",
+    "time": "00:09:02",
     "role": 1
   },
   {
     "number": 56,
-    "name": "flex-2",
-    "time": "00:15:04",
-    "url": "/videos/56-flex.zip",
+    "name": "متدهای every و some",
+    "time": "00:03:30",
     "role": 1
   },
   {
-    "name": "فصل پنجم : grid ",
-    "role": 2
-  },
-  {
     "number": 57,
-    "name": "grid-1",
-    "time": "00:12:46",
-    "url": "/videos/57-grid.zip",
+    "name": "forEach",
+    "time": "00:06:53",
     "role": 1
   },
   {
     "number": 58,
-    "name": "grid-2",
-    "time": "00:06:30",
-    "url": "/videos/58-grid.zip",
+    "name": "map()",
+    "time": "00:02:35",
     "role": 1
   },
   {
     "number": 59,
-    "name": "grid-3",
-    "time": "00:07:07",
-    "url": "/videos/59-grid.zip",
+    "name": "filter()",
+    "time": "00:05:02",
     "role": 1
   },
   {
-    "name": "فصل ششم : پیاده سازی پروژه ",
-    "role": 2
-  },
-  {
     "number": 60,
-    "name": "navbar",
-    "time": "00:21:13",
-    "url": "/videos/60-project.zip",
+    "name": "for of",
+    "time": "00:01:25",
     "role": 1
   },
   {
     "number": 61,
-    "name": "header",
-    "time": "00:24:42",
-    "url": "/videos/61-project.zip",
+    "name": "rediuce()",
+    "time": "00:12:43",
     "role": 1
   },
   {
     "number": 62,
-    "name": "طراحی بخش دوم",
-    "time": "00:23:04",
-    "url": "/videos/62-project.zip",
+    "name": "template literals",
+    "time": "00:03:40",
     "role": 1
   },
   {
     "number": 63,
-    "name": "پس زمینه هاشوری",
-    "time": "00:19:39",
-    "url": "/videos/63-project.zip",
+    "name": "تمرین",
+    "time": "00:03:54",
     "role": 1
   },
   {
-    "number": 64,
-    "name": "بخش محصولات",
-    "time": "00:40:03",
-    "url": "/videos/64-project.zip",
-    "role": 1
+    "name": " فصل هشتم : function (تابع)",
+    "role": 2
   },
   {
-    "number": 65,
-    "name": "بخش آخر",
-    "time": "00:35:59",
-    "url": "/videos/65-project.zip",
-    "role": 1
+    "name": " فصل نهم : DOM",
+    "role": 2
+  },
+  {
+    "name": " فصل دهم : BOM",
+    "role": 2
+  },
+  {
+    "name": " فصل یازدهم : پروژه",
+    "role": 2
+  },
+  {
+    "name": " فصل دوازدهم : برنامه نویسی شی گرا (oop)",
+    "role": 2
+  },
+  {
+    "name": " فصل سیزدهم : ajax , axios",
+    "role": 2
+  },
+  {
+    "name": " فصل چهاردهم : پروژه",
+    "role": 2
   }
 ]

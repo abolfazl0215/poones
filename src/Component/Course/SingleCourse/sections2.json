@@ -1,0 +1,502 @@
+[
+  {
+    "name": " فصل اول : HTML",
+    "role": 2
+  },
+  {
+    "number": 1,
+    "name": "معرفی دوره",
+    "time": "00:12:34",
+    "url": "/videos/1-new-html.zip",
+    "role": 1
+  },
+  {
+    "name": "html چیست",
+    "number": 2,
+    "url": "/videos/2-new-html.zip",
+    "time": "00:14:54",
+    "role": 1
+  },
+  {
+    "name": "نصب محیط کدنویسی",
+    "number": 3,
+    "url": "/videos/3-new-html.zip",
+    "time": "00:04:06",
+    "role": 1
+  },
+  {
+    "name": "عناصر پاراگراف",
+    "number": 4,
+    "url": "/videos/4-new-html.zip",
+    "time": "00:13:41",
+    "role": 1
+  },
+  {
+    "name": "عناصر قالب بندی",
+    "number": 5,
+    "url": "/videos/5-new-html.zip",
+    "time": "00:14:53",
+    "role": 1
+  },
+  {
+    "name": "عناصر نقل قول",
+    "number": 6,
+    "url": "/videos/6-new-html.zip",
+    "time": "00:06:16",
+    "role": 1
+  },
+  {
+    "name": "کامنت گذاری",
+    "number": 7,
+    "url": "/videos/7-new-html.zip",
+    "time": "00:02:53",
+    "role": 1
+  },
+  {
+    "name": "entities & emojies",
+    "number": 8,
+    "url": "/videos/8-new-html.zip",
+    "time": "00:04:14",
+    "role": 1
+  },
+  {
+    "name": "عناصر heading",
+    "number": 9,
+    "url": "/videos/9-new-html.zip",
+    "time": "00:07:35",
+    "role": 1
+  },
+  {
+    "name": "متاتگ ها",
+    "number": 10,
+    "url": "/videos/7-html.zip",
+    "time": "00:2:52",
+    "role": 1
+  },
+  {
+    "name": "لیست ها",
+    "number": 11,
+    "url": "/videos/8-html.zip",
+    "time": "00:5:38",
+    "role": 1
+  },
+  {
+    "name": "عکس ها",
+    "number": 12,
+    "url": "/videos/9-html.zip",
+    "time": "00:20:14",
+    "role": 1
+  },
+  {
+    "name": "تگ picture",
+    "number": 13,
+    "url": "/videos/10-html.zip",
+    "time": "00:8:20",
+    "role": 1
+  },
+  {
+    "name": "قراردادن موزیک و ویدیو",
+    "number": 14,
+    "url": "/videos/11-html.zip",
+    "time": "00:05:52",
+    "role": 1
+  },
+  {
+    "name": "لینک ها",
+    "number": 15,
+    "url": "/videos/12-html.zip",
+    "time": "00:10:25",
+    "role": 1
+  },
+  {
+    "name": "تگ map",
+    "number": 16,
+    "url": "/videos/13-html.zip",
+    "time": "00:04:51",
+    "role": 1
+  },
+  {
+    "name": "ساخت جدول",
+    "number": 17,
+    "url": "/videos/14-html.zip",
+    "time": "00:6:35",
+    "role": 1
+  },
+  {
+    "name": "ساخت فرم",
+    "number": 18,
+    "url": "/videos/15-html.zip",
+    "time": "00:11:31",
+    "role": 1
+  },
+  {
+    "name": "انواع اینپوت ها",
+    "number": 19,
+    "url": "/videos/16-html.zip",
+    "time": "00:18:58",
+    "role": 1
+  },
+  {
+    "name": "global-attribute",
+    "number": 20,
+    "url": "/videos/17-html.zip",
+    "time": "00:05:10",
+    "role": 1
+  },
+  {
+    "name": "استفاده از آیکون ها",
+    "number": 21,
+    "url": "/videos/18-html.zip",
+    "time": "00:07:48",
+    "role": 1
+  },
+  {
+    "name": "تگ progress و meter",
+    "number": 22,
+    "url": "/videos/19-html.zip",
+    "time": "00:01:42",
+    "role": 1
+  },
+  {
+    "name": "ساختاربندی html",
+    "number": 23,
+    "url": "/videos/20-html.zip",
+    "time": "00:05:46",
+    "role": 1
+  },
+  {
+    "name": " فصل دوم : css",
+    "role": 2
+  },
+  {
+    "number": 24,
+    "name": "شروع کار با css",
+    "time": "00:10:46",
+    "url": "/videos/21-css.zip",
+    "role": 1
+  },
+  {
+    "number": 25,
+    "name": "نصب محیط کدنویسی",
+    "time": "00:08:55",
+    "url": "/videos/22-css.zip",
+    "role": 1
+  },
+  {
+    "number": 26,
+    "name": "رنگ ها",
+    "time": "00:05:40",
+    "url": "/videos/23-css.zip",
+    "role": 1
+  },
+  {
+    "number": 27,
+    "name": "عرض و ارتفاع",
+    "time": "00:03:50",
+    "url": "/videos/24-css.zip",
+    "role": 1
+  },
+  {
+    "number": 28,
+    "name": "ویژگی های متن ها",
+    "time": "00:03:25",
+    "url": "/videos/25-css.zip",
+    "role": 1
+  },
+  {
+    "number": 29,
+    "name": "background-image",
+    "time": "00:08:37",
+    "url": "/videos/26-css.zip",
+    "role": 1
+  },
+  {
+    "number": 30,
+    "name": "سایه ها",
+    "time": "00:06:02",
+    "url": "/videos/27-css.zip",
+    "role": 1
+  },
+  {
+    "number": 31,
+    "name": "border (کادر)",
+    "time": "00:06:43",
+    "url": "/videos/28-css.zip",
+    "role": 1
+  },
+  {
+    "number": 32,
+    "name": "outline",
+    "time": "00:02:59",
+    "url": "/videos/29-css.zip",
+    "role": 1
+  },
+  {
+    "number": 33,
+    "name": "margin و padding",
+    "time": "00:06:40",
+    "url": "/videos/30-css.zip",
+    "role": 1
+  },
+  {
+    "number": 34,
+    "name": "فونت 1",
+    "time": "00:06:55",
+    "url": "/videos/31-css.zip",
+    "role": 1
+  },
+  {
+    "number": 35,
+    "name": "فونت 2",
+    "time": "00:05:08",
+    "url": "/videos/32-css.zip",
+    "role": 1
+  },
+  {
+    "number": 36,
+    "name": "واحدهای اندازه گیری 1",
+    "time": "00:12:24",
+    "url": "/videos/33-css.zip",
+    "role": 1
+  },
+  {
+    "number": 37,
+    "name": "واحدهای اندازه گیری 2",
+    "time": "00:04:19",
+    "url": "/videos/34-css.zip",
+    "role": 1
+  },
+  {
+    "number": 38,
+    "name": "حالت های لینک",
+    "time": "00:03:57",
+    "url": "/videos/35-css.zip",
+    "role": 1
+  },
+  {
+    "number": 39,
+    "name": "ارث بری",
+    "time": "00:03:48",
+    "url": "/videos/36-css.zip",
+    "role": 1
+  },
+  {
+    "number": 40,
+    "name": "لیست",
+    "time": "00:03:57",
+    "url": "/videos/37-css.zip",
+    "role": 1
+  },
+  {
+    "number": 41,
+    "name": "جدول",
+    "time": "00:03:11",
+    "url": "/videos/38-css.zip",
+    "role": 1
+  },
+  {
+    "number": 42,
+    "name": "display",
+    "time": "00:05:34",
+    "url": "/videos/39-css.zip",
+    "role": 1
+  },
+  {
+    "number": 43,
+    "name": "selector specificity",
+    "time": "00:05:10",
+    "url": "/videos/40-css.zip",
+    "role": 1
+  },
+  {
+    "number": 44,
+    "name": "overflow",
+    "time": "00:02:24",
+    "url": "/videos/41-css.zip",
+    "role": 1
+  },
+  {
+    "number": 45,
+    "name": "float (شناوری)",
+    "time": "00:03:41",
+    "url": "/videos/42-css.zip",
+    "role": 1
+  },
+  {
+    "number": 46,
+    "name": "position",
+    "time": "00:11:45",
+    "url": "/videos/43-css.zip",
+    "role": 1
+  },
+  {
+    "number": 47,
+    "name": "combinators (ترکیب کننده ها)",
+    "time": "00:04:14",
+    "url": "/videos/44-css.zip",
+    "role": 1
+  },
+  {
+    "number": 48,
+    "name": "attr-selectors",
+    "time": "00:08:17",
+    "url": "/videos/45-css.zip",
+    "role": 1
+  },
+  {
+    "number": 49,
+    "name": "pseudo-class",
+    "time": "00:09:01",
+    "url": "/videos/46-css.zip",
+    "role": 1
+  },
+  {
+    "number": 50,
+    "name": "pseudo-element",
+    "time": "00:04:55",
+    "url": "/videos/47-css.zip",
+    "role": 1
+  },
+  {
+    "number": 51,
+    "name": "transition",
+    "time": "00:05:32",
+    "url": "/videos/48-css.zip",
+    "role": 1
+  },
+  {
+    "number": 52,
+    "name": "transform",
+    "time": "00:08:23",
+    "url": "/videos/49-css.zip",
+    "role": 1
+  },
+  {
+    "number": 53,
+    "name": "animation",
+    "time": "00:08:41",
+    "url": "/videos/50-css.zip",
+    "role": 1
+  },
+  {
+    "number": 54,
+    "name": "responsive (واکنشگرایی)",
+    "time": "00:07:33",
+    "url": "/videos/51-css.zip",
+    "role": 1
+  },
+  {
+    "number": 55,
+    "name": "border-box",
+    "time": "00:04:00",
+    "url": "/videos/52-css.zip",
+    "role": 1
+  },
+  {
+    "name": " فصل سوم : طراحی سه بعدی",
+    "role": 2
+  },
+  {
+    "number": 56,
+    "name": "طراحی سه بعدی",
+    "time": "00:03:03",
+    "url": "/videos/53-3d.zip",
+    "role": 1
+  },
+  {
+    "number": 57,
+    "name": "تمرین",
+    "time": "00:10:23",
+    "url": "/videos/54-3d.zip",
+    "role": 1
+  },
+  {
+    "name": " فصل چهارم : flex ",
+    "role": 2
+  },
+  {
+    "number": 58,
+    "name": "flex-1",
+    "time": "00:11:40",
+    "url": "/videos/55-flex.zip",
+    "role": 1
+  },
+  {
+    "number": 59,
+    "name": "flex-2",
+    "time": "00:15:04",
+    "url": "/videos/56-flex.zip",
+    "role": 1
+  },
+  {
+    "name": "فصل پنجم : grid ",
+    "role": 2
+  },
+  {
+    "number": 60,
+    "name": "grid-1",
+    "time": "00:12:46",
+    "url": "/videos/57-grid.zip",
+    "role": 1
+  },
+  {
+    "number": 61,
+    "name": "grid-2",
+    "time": "00:06:30",
+    "url": "/videos/58-grid.zip",
+    "role": 1
+  },
+  {
+    "number": 62,
+    "name": "grid-3",
+    "time": "00:07:07",
+    "url": "/videos/59-grid.zip",
+    "role": 1
+  },
+  {
+    "name": "فصل ششم : پیاده سازی پروژه ",
+    "role": 2
+  },
+  {
+    "number": 63,
+    "name": "navbar",
+    "time": "00:21:13",
+    "url": "/videos/60-project.zip",
+    "role": 1
+  },
+  {
+    "number": 64,
+    "name": "header",
+    "time": "00:24:42",
+    "url": "/videos/61-project.zip",
+    "role": 1
+  },
+  {
+    "number": 65,
+    "name": "طراحی بخش دوم",
+    "time": "00:23:04",
+    "url": "/videos/62-project.zip",
+    "role": 1
+  },
+  {
+    "number": 66,
+    "name": "پس زمینه هاشوری",
+    "time": "00:19:39",
+    "url": "/videos/63-project.zip",
+    "role": 1
+  },
+  {
+    "number": 67,
+    "name": "بخش محصولات",
+    "time": "00:40:03",
+    "url": "/videos/64-project.zip",
+    "role": 1
+  },
+  {
+    "number": 68,
+    "name": "بخش آخر",
+    "time": "00:35:59",
+    "url": "/videos/65-project.zip",
+    "role": 1
+  }
+]

@@ -8,7 +8,12 @@ const Section5 = () => {
           <div className="w-1/4 hidden md:block">
             <picture>
               <source srcSet="/image/3.webp" alt="website-image" />
-              <img src="/image/3.png" alt="Website" loading="lazy" />
+              <img
+                id="website"
+                src="/image/3.png"
+                alt="Website"
+                loading="lazy"
+              />
             </picture>
           </div>
           <div className="text-gray-700 float-right my-auto text-small sm:text-sm">

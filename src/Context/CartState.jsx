@@ -1,8 +1,9 @@
-import React from "react";
-import courses from "./Courses.json";
+import React, { useState } from "react";
 import CartContext from "./CartContext";
 
 const CartState = ({ children }) => {
+  const [cartLength, setCartLength] = useState();
+
   // go to singleCourse page
   const goToCourse = (id) => {
     localStorage.setItem("singleCourse", JSON.stringify(id));
@@ -14,6 +15,8 @@ const CartState = ({ children }) => {
       <CartContext.Provider
         value={{
           goToCourse,
+          cartLength,
+          setCartLength,
         }}>
         {children}
       </CartContext.Provider>

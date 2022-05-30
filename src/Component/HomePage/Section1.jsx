@@ -2,8 +2,11 @@ import React from "react";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Box from "@mui/material/Box";
+import Lottie from "react-lottie-player";
 import Backdrop from "@mui/material/Backdrop";
-import web from "./web.png";
+import web from "./web1.svg";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import location from "./iconsJson/location.json";
 
 const Section1 = () => {
   const [open, setOpen] = React.useState(false);
@@ -16,51 +19,48 @@ const Section1 = () => {
     }, 500);
   };
   return (
-    <div className="pt-24 pb-20 rounded-br-3xl rounded-bl-3xl border-b-2 border-stone-200 md:pt-28 bg-stone-100 relative">
+    <div className="section1  pb-24 pt-8 -mt-1 rounded-br-3xl rounded-bl-3xl md:pt-28 relative">
       <div className="md:flex">
         <div className="w-2/3 m-auto md:w-1/4 relative">
           <img
             src={web}
+            id="sonEarth"
             className="w-full"
             alt="logo"
             loading="lazy"
           />
+
           <div id="earthMap"></div>
         </div>
         <div className="md:mx-auto md:my-auto ">
-          <h1 className="text-lg text-center mt-5 md:text-2xl text-gray-500 font-yekan font-bold">
+          <h1
+            id="text-main"
+            className="text-lg text-center mt-5 md:text-2xl text-indigo-100 font-yekan font-bold">
             آموزشگاه آنلاین{" "}
-            <span className="text-amber-500">پونس</span>
+            <span id="pounes-text " className="text-amber-300">
+              پونس
+            </span>
           </h1>
-          <p className="text-center text-gray-500 mt-3  text-sm tracking-wider font-yekan">
+          <p className=" text-fix-color text-center text-indigo-200 mt-3  text-sm tracking-wider font-yekan">
             از صفر تا ورود به بازار کار با شما هستم
           </p>
           <p
             onClick={handleOpen}
-            className="text-center text-indigo-600 mt-4">
-            <button className="text-sm font-yekan rounded-xl shadow-lg p-2 px-4 hover:bg-indigo-600 transition-all hover:text-white border-l-2 border-r-2 select-none font-yekan tracking-wider">
-              راهنمای تازه کارها
+            className="text-fix-color text-center text-indigo-100 mt-4">
+            <button
+              style={{ backgroundColor: "#3c5694" }}
+              className="help-button text-sm relative items-center font-yekan rounded-xl shadow-lg p-2 px-6 py-3 hover:bg-indigo-600 transition-all hover:text-white select-none font-yekan tracking-wider">
+              راهنمای تازه کارها{" "}
             </button>
           </p>
         </div>{" "}
       </div>
 
-      <div className="absolute w-full -bottom-8  text-center">
+      <div className="absolute w-full -bottom-3.5 text-center select-none">
         <a href="#bottom">
-          <div className="rounded-full hover:border-4 hover:border-indigo-600 transition-all cursor-pointer border-2 border-stone-200 bg-white bg-gray-100 mx-auto inline-block">
-            <div className="bg-white w-full h-full rounded-full p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="29"
-                height="29"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#4f46e5"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="bevel">
-                <path d="M12 5v13M5 12l7 7 7-7" />
-              </svg>
+          <div className="rounded-full transition-all cursor-pointer mx-auto inline-block">
+            <div className="radiuser h-12 flex justify-center inline-block w-40  rounded-full p-2">
+              <MdKeyboardArrowDown className="text-2xl arrow-bottom" />
             </div>
           </div>
         </a>

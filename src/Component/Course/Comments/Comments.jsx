@@ -10,6 +10,7 @@ import "../index.css";
 const Comments = () => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  const [courseId, setCourseId] = useState();
 
   const context = useContext(Context);
 
@@ -20,10 +21,12 @@ const Comments = () => {
         "https://api.pounes.ir/getComment",
       );
       setComments(getComment.data.comments);
-      console.log("data is :", getComment.data.message);
     } catch (err) {
       console.log(err);
     }
+
+    const cId = await localStorage.getItem("singleCourse");
+    setCourseId(cId);
     // End get comments from database
   }, []);
 
@@ -42,6 +45,7 @@ const Comments = () => {
             comment,
             fullName: fullName.user.fullName,
             createAt: Date.now(),
+            number: courseId,
           }),
         );
         toastr.success("نظر شما به زودی ثبت میشود");
@@ -84,6 +88,7 @@ const Comments = () => {
           {comments
             .filter((p) => p.isAllowed === true)
             .reverse()
+            .filter((p) => p.number == courseId)
             .map((c) => (
               <div>
                 <div className="w-full borderSingleCourse mt-4 p-2">
@@ -99,7 +104,6 @@ const Comments = () => {
                           {moment(parseInt(c.createAt))
                             .locale("fa")
                             .format("YYYY/MM/DD")}
-                          {console.log(c.createAt)}
                         </p>
                       ) : (
                         ""

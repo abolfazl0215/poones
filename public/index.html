@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" dir="rtl" theme="dark-mode">
   <head>
     <meta charset="utf-8" />
 
@@ -24,19 +24,16 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link id="darkmode" rel="stylesheet" />
     <link
       rel="preload"
       href="/css/styles.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link
-      rel="preload"
-      href="./js/tailwind.js"
-      as="script"
-    />
-    
-    </style>
+    <link rel="preload" href="./js/tailwind.js" as="script" />
+
+    <style></style>
 
     <title>پونس</title>
   </head>
@@ -46,7 +43,46 @@
       ><link rel="stylesheet" href="/css/style.css"
     /></noscript>
     <div id="root"></div>
-  <script src="./js/tailwind.js"></script>
+    <script src="./js/tailwind.js"></script>
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal(".reveal", { duration: 6000 });
+
+      (function () {
+        "use strict";
+
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
+
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+          var rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight ||
+                document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth ||
+                document.documentElement.clientWidth)
+          );
+        }
+
+        function callbackFunc() {
+          for (var i = 0; i < items.length; i++) {
+            if (isElementInViewport(items[i])) {
+              items[i].classList.add("in-view");
+            }
+          }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+      })();
+    </script>
   </body>
 </html>
-
